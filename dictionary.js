@@ -43,7 +43,7 @@ try {
         let category = entry[2]
 
         if(!(category == "dont add" || category == "Phrases")){
-            console.log(dict.dict[category])
+            console.log(dict.dict[category], key, value, category)
         }
     })
 

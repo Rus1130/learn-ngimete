@@ -101,46 +101,46 @@ e'e	where	Interrogatives
 ten/teng	when	Interrogatives
 tawu/tewu	how	Interrogatives
 mawu/mewu	who	Interrogatives
-süm	to need/get/want	Basic Verb
-tsi	to go	Basic Verb
-eme	to do	Basic Verb
-meowi	to build/create/make	Basic Verb
-ndawi	to run	Basic Verb
-pele	to know	Basic Verb
+süm	to need/get/want	Basic Verbs
+tsi	to go	Basic Verbs
+eme	to do	Basic Verbs
+meowi	to build/create/make	Basic Verbs
+ndawi	to run	Basic Verbs
+pele	to know	Basic Verbs
 pelepele	to understand	Verbs
-ken	to fuck	Basic Verb
-ima	to sleep	Basic Verb
-më	to speak	Basic Verb
-ngale/nggale	to drink	Basic Verb
-sene	to shriek/make noise	Basic Verb
-owa le	to agree	Basic Verb
-tsi'an	to move	Basic Verb
-napa	to eat	Basic Verb
-tiwi	to rise	Basic Verb
-lowi	to lower	Basic Verb
-ngaowi	to attack/fight	Basic Verb
-nggala le	to fish	Basic Verb
-pelele	to learn	Basic Verb
+ken	to fuck	Basic Verbs
+ima	to sleep	Basic Verbs
+më	to speak	Basic Verbs
+ngale/nggale	to drink	Basic Verbs
+sene	to shriek/make noise	Basic Verbs
+owa le	to agree	Basic Verbs
+tsi'an	to move	Basic Verbs
+napa	to eat	Basic Verbs
+tiwi	to rise	Basic Verbs
+lowi	to lower	Basic Verbs
+ngaowi	to attack/fight	Basic Verbs
+nggala le	to fish	Basic Verbs
+pelele	to learn	Basic Verbs
 mëmë	to translate	Verbs
-yáni	to think	Basic Verb
+yáni	to think	Basic Verbs
 ngálowi/ngärlowi	to mangle	dont add
 ngátiwi	to annihilate	dont add
-kúnu	to involve	Basic Verb
-yíse	to love	Basic Verb
-tsuti	to wander	Basic Verb
-ngá	to kill	Basic Verb
-né le	to light	Basic Verb
-som	to give	Basic Verb
-kini	to lend	Basic Verb
-witsu	to find, to have (physically), to look out for (an emotion)	Basic Verb
-tapa	to touch/feel (something)	Basic Verb
-fasu'i	to smell	Basic Verb
-bëm	to feel (an emotion)	Basic Verb
-nde'o	to see	Basic Verb
-wisiwisi	to cover	Basic Verb
-getsilu	to keep away	Basic Verb
-witsunde'o	to forage	Basic Verb
-míki	to hear	Basic Verb
+kúnu	to involve	Basic Verbs
+yíse	to love	Basic Verbs
+tsuti	to wander	Basic Verbs
+ngá	to kill	Basic Verbs
+né le	to light	Basic Verbs
+som	to give	Basic Verbs
+kini	to lend	Basic Verbs
+witsu	to find, to have (physically), to look out for (an emotion)	Basic Verbs
+tapa	to touch/feel (something)	Basic Verbs
+fasu'i	to smell	Basic Verbs
+bëm	to feel (an emotion)	Basic Verbs
+nde'o	to see	Basic Verbs
+wisiwisi	to cover	Basic Verbs
+getsilu	to keep away	Basic Verbs
+witsunde'o	to forage	Basic Verbs
+míki	to hear	Basic Verbs
 noa	dead/poisonous/deadly	Adjectives
 mboko	stupid	Adjectives
 géni/génti	rotten	Adjectives
@@ -253,7 +253,7 @@ ima'on	to knock unconscious (tr)	Verbs
 ngaowi'on	to defend (from attack)	Verbs
 mbigye	treasure/dearest (informally)	Nouns
 angtiwí'o	ridiculous	Adjectives
-ndálohí	to survive/prosper/pass (time)	Basic Verb
+ndálohí	to survive/prosper/pass (time)	Basic Verbs
 ndálohí máfëtär	pass (the days) safely	Phrases
 ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	"did you have to waste all the food by eating it when you weren't hungry?"	Phrases
 ndálohí gima te	to be pulling an all nighter	dont add
@@ -305,3 +305,5 @@ galu ken yá	voogigna	Nouns about Bones, Limbs, Body Parts, and Death
 ábe	human	dont add
 kole	comitative	dont add
 u'u	animal	dont add
+keloniwi	lower body	Nouns about Bones, Limbs, Body Parts, and Death
+ketiniwi	upper body	Nouns about Bones, Limbs, Body Parts, and Death
