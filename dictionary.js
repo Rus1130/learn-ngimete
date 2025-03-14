@@ -39,9 +39,9 @@ try {
     data.forEach(entry => {
         entry = entry.split("\t");
 
-        let category = entry[0].trim();
-        let word = entry[2].trim().split("/");
+        let word = entry[0].trim().split("/");
         let definition = entry[1].trim();
+        let category = entry[2].trim();
 
         if(["dont add", "Phrase"].includes(category)) dict.addWord(category, new Word(word[0], ...word.slice(1), definition));
     })
