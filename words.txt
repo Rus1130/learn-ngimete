@@ -94,7 +94,7 @@ lulu'i	here	Nouns
 fusa	plain/valley	Nouns
 gemëte	nonsense, unintelligible	Nouns
 giya	word	Nouns
-mbo	so	Miscellaneous
+mbo	so	Interjections and Miscellaneous
 kome	why	Interrogatives
 'e	what	Interrogatives
 e'e	where	Interrogatives
