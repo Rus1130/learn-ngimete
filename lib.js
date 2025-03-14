@@ -34,21 +34,21 @@ export class Word {
     static setDialects(dialects) {
         Word.dialects = dialects;
     }
-
-    constructor(word, definition) {
-        this.word = word;
-        this.definition = {};
+    
+    constructor(key, value) {
+        this.key = key;
+        this.value = {};
 
         if(arguments.length - 1 < Word.dialects.length){
-            this.definition[Word.dialects[0]] = definition;
+            this.value[Word.dialects[0]] = value;
         } else {
             for(let i = 1; i < arguments.length; i++){
-                this.definition[Word.dialects[i-1]] = arguments[i];
+                this.value[Word.dialects[i-1]] = arguments[i];
             }
         }
     }
 
     toArray() {
-        return [this.word, this.definition];
+        return [this.key, this.value];
     }
 }

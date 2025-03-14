@@ -47,7 +47,7 @@ tsi'i	berry(s)	Nouns
 noa tsi'i	poisonous berry(s)	Nouns
 ewu	health/blood	Nouns
 ná	hunger	Nouns
-bawë kopa/mbawë kopa	sky/air	dont add
+bawë kopa/alu	sky/air	dont add
 kaha tsi'an te	wood mover	Nouns
 gala tapu yá	deer skin	Nouns about Bones, Limbs, Body Parts, and Death
 NODEF	sap	dont add
@@ -150,25 +150,25 @@ silsetsalo	beautiful	Adjectives
 wána ngingi/wángingina	ugly	Adjectives
 wi'ia	healthy/healing	Adjectives
 tembe/tembbe	hungry	Adjectives
-sepi	hot	dont add
-NODEF	warm	dont add
-NODEF	cold	dont add
-NODEF	bloody	dont add
-NODEF	dry	dont add
+sindda	hot	dont add
+sepi	warm	dont add
+/ärlu	cold	dont add
+e'omo	bloody	dont add
+ngeka	dry	dont add
 wána/wá>N<na	akin to/same	Adjectives
 no'i	cowardly, scared	Adjectives
 kasë	black	Adjectives
-ge	no	Miscellaneous
-gege	definite no	Miscellaneous
-owaowa	definite yes	Miscellaneous
-owa	yes	Miscellaneous
-giwa 	maybe	Miscellaneous
-mi	ok/neutral yes	Miscellaneous
-gogowa	wrong	Miscellaneous
-owilowa	correct	Miscellaneous
+ge	no	Interjections and Miscellaneous
+gege	definite no	Interjections and Miscellaneous
+owaowa	definite yes	Interjections and Miscellaneous
+owa	yes	Interjections and Miscellaneous
+giwa 	maybe	Interjections and Miscellaneous
+mi	ok/neutral yes	Interjections and Miscellaneous
+gogowa	wrong	Interjections and Miscellaneous
+owilowa	correct	Interjections and Miscellaneous
 NODEF	hello/hi	dont add
-ilo/ano	this/that	Miscellaneous
-sülu/sëlu	got it (killed/caught something)	Miscellaneous
+ilo/ano	this/that	Interjections and Miscellaneous
+sülu/sëlu	got it (killed/caught something)	Interjections and Miscellaneous
 gegela	zero/nothing	Numerals
 gela	one, any number except 2	Numerals
 la	two	Numerals
@@ -181,11 +181,12 @@ wé	seven	Numerals
 ana	eight	Numerals
 miki	nine	Numerals
 kó	ten	Numerals
-nam	and	Miscellaneous
-yëpütu	forever	Miscellaneous
-na'ë	too	Miscellaneous
+nam	and	Interjections and Miscellaneous
+yëpütu	forever	Interjections and Miscellaneous
+na'ë	too	Interjections and Miscellaneous
 apelelala	to plead	Verbs
-ute	or	Miscellaneous
+ute	or	Interjections and Miscellaneous
+úte	very, so	Interjections and Miscellaneous
 e'aya	procedure	Nouns
 mbaba mboko	a really big idiot	Nouns
 keki	limb	Nouns about Bones, Limbs, Body Parts, and Death
@@ -223,7 +224,7 @@ yíse'an	to fall in love	Verbs
 ima'an	to fall asleep (intr)	Verbs
 tapa'an	to press against	Verbs
 sana	to shoot (an arrow)	Verbs
-NODEF	sun	dont add
+yana	sun	dont add
 a'a	moon	Nouns
 ngá'an	to manslaughter	Verbs
 né'an	to commit arson/light ablaze	Verbs
@@ -253,8 +254,8 @@ ngaowi'on	to defend (from attack)	Verbs
 mbigye	treasure/dearest (informally)	Nouns
 angtiwí'o	ridiculous	Adjectives
 ndálohí	to survive/prosper/pass (time)	Basic Verb
-ndálohí máfëtär	pass (the days) safely	Miscellaneous
-ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	"did you have to waste all the food by eating it when you weren't hungry?"	Miscellaneous
+ndálohí máfëtär	pass (the days) safely	Phrases
+ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	"did you have to waste all the food by eating it when you weren't hungry?"	Phrases
 ndálohí gima te	to be pulling an all nighter	dont add
 kehibó	mountain(s)	Nouns
 mbitsë	land/nation	Nouns
@@ -296,7 +297,7 @@ wulë	hello	dont add
 em	to go	dont add
 witsundehohan ya	hungry	dont add
 ë	and	dont add
-bunse/buntse	strange creature	Nouns
+buntse	strange creature	Nouns
 vovi	fire	dont add
 noni'i	human god, the first god	Religious Terms
 kaoki ken	peepnis	Nouns about Bones, Limbs, Body Parts, and Death

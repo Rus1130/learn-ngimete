@@ -38,12 +38,15 @@ try {
 
     data.forEach(entry => {
         entry = entry.split("\t");
+        let key = entry[0].split("/").map(x => x.replaceAll(" ", "-"));
+        let value = entry[1]
+        let category = entry[2]
 
-        let word = entry[0].trim().split("/");
-        let definition = entry[1].trim();
-        let category = entry[2].trim();
+        if(!["dont add", "Phrases"].includes(category)) {
+            console.log(category)
+            dict.addWord(category, new Word(value, ...key));
+        }
 
-        if(["dont add", "Phrase"].includes(category)) dict.addWord(category, new Word(word[0], ...word.slice(1), definition));
     })
 
 
