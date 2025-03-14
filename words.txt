@@ -3,7 +3,7 @@ tapu	turtle (shell)/hide	Nouns
 bawë/mbawë	bird(s)	Nouns
 ngingi	monkey(s)/cannibal(s)	Cannibals and Mutants
 né	fire	Nouns
-yam	foodstuff(s)	Nouns
+yam	foodstuff(s)	Irregular Plural Nouns
 yepë	day	Nouns
 yepwá	midday/noon	Nouns
 á'á	night	Nouns
@@ -12,7 +12,7 @@ kopa	house	Nouns
 mem pele	knowledge	Nouns
 më te	language/talk/tongue	Nouns
 ngimëte	monkey talk	dont add
-wisi	leaf(s)	Nouns
+wisi	leaf(s)	Irregular Plural Nouns
 mbaba	idiot	Nouns
 táne	beach/shore/path	Nouns
 so'o	north of the bonfire, down the hill	Religious Terms
@@ -21,13 +21,13 @@ sitwi	west of the bonfire, to the rolling hill	Religious Terms
 láma	east of the bonfire, to the beach	Religious Terms
 ngawu tapu	water collecter	Nouns
 yá	meat	Nouns
-tapu yá	shell/skin	Nouns about Bones, Limbs, Body Parts, and Death
+tapu yá	shell/skin	Nouns
 lu	thing/it/this	Nouns
 sepü	lake	Nouns
 us	rabbit	Nouns
-us tapu yá	rabbit skin	Nouns about Bones, Limbs, Body Parts, and Death
+us tapu yá	rabbit skin	Nouns
 kilikali	lizard	Nouns
-kilikali tapu yá	lizard skin	Nouns about Bones, Limbs, Body Parts, and Death
+kilikali tapu yá	lizard skin	Nouns
 ngawu te	drink	Nouns
 ken wisi	drug	Nouns
 kopa me	village/camp	Nouns
@@ -37,14 +37,14 @@ pula/närla	place	Nouns
 sene ngingi	shrieker monkey(s)	Cannibals and Mutants
 bawë wisi/mbawë wisi	feather	Nouns
 tesi	pouch	Nouns
-fwí	arrow(s)	Nouns
+fwí	arrow(s)	Irregular Plural Nouns
 ngawu tesi	waterskin	Nouns
 fwí tesi	quiver	Nouns
 hiho	stamina	Nouns
 nggala	fish	Nouns
-nggala tapu yá	fish scale(s)	Nouns about Bones, Limbs, Body Parts, and Death
-tsi'i	berry(s)	Nouns
-noa tsi'i	poisonous berry(s)	Nouns
+nggala tapu yá	fish scale(s)	Irregular Plural Nouns
+tsi'i	berry(s)	Irregular Plural Nouns
+noa tsi'i	poisonous berry(s)	Irregular Plural Nouns
 ewu	health/blood	Nouns
 ná	hunger	Nouns
 bawë kopa/alu	sky/air	dont add
@@ -90,7 +90,7 @@ hihi	nose	Nouns about Bones, Limbs, Body Parts, and Death
 payepë	yesterday	Nouns
 ilu	there/that/(it)	Nouns
 lulu'i	here	Nouns
-ábe	breast(s) (chest)	Nouns about Bones, Limbs, Body Parts, and Death
+ábe	breast(s) (chest)	Irregular Plural Nouns
 fusa	plain/valley	Nouns
 gemëte	nonsense, unintelligible	Nouns
 giya	word	Nouns
@@ -257,7 +257,7 @@ ndálohí	to survive/prosper/pass (time)	Basic Verbs
 ndálohí máfëtär	pass (the days) safely	Phrases
 ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	"did you have to waste all the food by eating it when you weren't hungry?"	Phrases
 ndálohí gima te	to be pulling an all nighter	dont add
-kehibó	mountain(s)	Nouns
+kehibó	mountain(s)	Irregular Plural Nouns
 mbitsë	land/nation	Nouns
 NODEF	bay	dont add
 NODEF	bone marrow	dont add
@@ -305,5 +305,5 @@ galu ken yá	voogigna	Nouns about Bones, Limbs, Body Parts, and Death
 ábe	human	dont add
 kole	comitative	dont add
 u'u	animal	dont add
-keloniwi	lower body	Nouns about Bones, Limbs, Body Parts, and Death
-ketiniwi	upper body	Nouns about Bones, Limbs, Body Parts, and Death
+keloyani	lower body	Nouns about Bones, Limbs, Body Parts, and Death
+ketiyani	upper body	Nouns about Bones, Limbs, Body Parts, and Death
