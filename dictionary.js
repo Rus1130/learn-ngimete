@@ -25,12 +25,18 @@ dict.addWord("Pronouns",
     new Word("third person plural reflexive",         "oitem", "si")
 )
 
-let nouns = fetch("./nouns.txt")
-    .then(response => response.text())
-    .then(text => {
-        dict.bulkAddWords("Basic Nouns", "\n", "#", "/", text);
-    })
-    .catch(error => console.error('Error:', error));
+console.log()
+
+dict.categories.forEach(category => {
+    console.log(category);
+})
+
+    //  fetch("https://rus1130.github.io/learn-ngimete/")
+    // .then(response => response.text())
+    // .then(text => {
+    //     dict.bulkAddWords("Basic Nouns", "\n", "#", "/", text);
+    // })
+    // .catch(error => console.error('Error:', error));
 
 //dict.bulkAddWords("Basic Nouns", "\n", "#", "/", ``);
 
