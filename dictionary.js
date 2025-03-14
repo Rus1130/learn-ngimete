@@ -28,27 +28,7 @@ dict.addWord("Pronouns",
 
 let url = `https://rus1130.github.io/learn-ngimete/words.txt`;
 
-// console.log the response
-try {
-    let response = await fetch(url);
-    if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
-    let data = await response.text()
-
-    data = data.split("\n")
-
-    data.forEach(entry => {
-        entry = entry.split("\t");
-        let key = entry[0].split("/").map(x => x.replaceAll(" ", "-"));
-        let value = entry[1]
-        let category = entry[2]
-
-        if(!(category == "dont add" || category == "Phrases")){
-            dict.addWord(category, new Word(category, value, ...key));
-        }
-    })
-
-
-} catch (error) {}
+dict.addWordsFromGoogleSheetsCopiedText(url, "\n", "\t", "/");
 
 //dict.bulkAddWords("Basic Nouns", "\n", "#", "/", ``);
 

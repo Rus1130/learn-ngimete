@@ -6,6 +6,34 @@ export class Dictionary {
         }
     }
 
+    async addWordsFromGoogleSheetsCopiedText(url, entryDelimiter, definitionDelimiter, dialectDelimiter) {
+        try {
+            let response = await fetch(url);
+            if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
+            let data = await response.text()
+        
+            data = data.split(entryDelimiter)
+        
+            data.forEach(entry => {
+                entry = entry.split(definitionDelimiter);
+        
+
+                let other = entry[0].split(dialectDelimiter)
+                let english = entry[1];
+                let category = entry[2];
+        
+                if(!(category == "dont add" || category == "Phrases")){
+                    if(!(category == "Grammar" || category == "Tenses")){
+                        other = other.map(x => x.replaceAll(" ", "-"))
+                    }
+                    this.addWord(category, new Word(english, ...other));
+                }
+            })
+        
+        
+        } catch (error) {}
+    }
+
     addWord(category, word) {
         for(let i = 1; i < arguments.length; i++){
             if(this.dict[category] === undefined){
