@@ -1,14 +1,21 @@
 export class Dictionary {
-    dict = [];
+    dict = {};
     constructor(categories) {
         for(let i = 0; i < arguments.length; i++){
-            this.dict.push({name: arguments[i], words: []})
+            this.dict[arguments[i]] = [];
         }
     }
 
     addWord(category, word) {
         for(let i = 1; i < arguments.length; i++){
-            this.dict.find(x => x.name === category).words.push(arguments[i]);
+            if(this.dict[category] === undefined){
+                this.dict[category] = [];
+            }
+            if(word instanceof Word){
+                this.dict[category].push(word);
+            } else {
+                this.dict[category].push(arguments[i]);
+            }
         }
     }
 

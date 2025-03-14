@@ -42,11 +42,9 @@ try {
         let value = entry[1]
         let category = entry[2]
 
-        if(!["dont add", "Phrases"].includes(category)) {
-            console.log(category)
-            dict.addWord(category, new Word(value, ...key));
+        if(!(category == "dont add" || category == "Phrases")){
+            console.log(dict.dict[category])
         }
-
     })
 
 
