@@ -1,95 +1,306 @@
-Nouns	ngawu/nggawu	rain
-Nouns	tapu	turtle (shell)/hide
-Nouns	bawë/mbawë	bird(s)
-Cannibals and Mutants	ngingi	monkey(s)/cannibal(s)
-Nouns	né	fire
-Nouns	yam	foodstuff(s)
-Nouns	yepë	day
-Nouns	yepwá	midday/noon
-Nouns	á'á	night
-Nouns	kaha	wood/tree
-Nouns	kopa	house
-Nouns	mem pele	knowledge
-Nouns	më te	language/talk/tongue
-dont add	ngimëte	monkey talk
-Nouns	wisi	leaf(s)
-Nouns	mbaba	idiot
-Nouns	táne	beach/shore/path
-Religious Terms	so'o	north of the bonfire, down the hill
-Religious Terms	néna	south of the bonfire, off the cliff
-Religious Terms	sitwi	west of the bonfire, to the rolling hill
-Religious Terms	láma	east of the bonfire, to the beach
-Nouns	ngawu tapu	water collecter
-Nouns	yá	meat
-Nouns about Bones, Limbs, Body Parts, and Death	tapu yá	shell/skin
-Nouns	lu	thing/it/this
-Nouns	sepü	lake
-Nouns	us	rabbit
-Nouns about Bones, Limbs, Body Parts, and Death	us tapu yá	rabbit skin
-Nouns	kilikali	lizard
-Nouns about Bones, Limbs, Body Parts, and Death	kilikali tapu yá	lizard skin
-Nouns	ngawu te	drink
-Nouns	ken wisi	drug
-Nouns	kopa me	village/camp
-Cannibals and Mutants	noa ngingi	blue monkey(s)
-Nouns	gala	elk/deer
-Nouns	pula/närla	place
-Cannibals and Mutants	sene ngingi	shrieker monkey(s)
-Nouns	bawë/mbawë wisi	feather
-Nouns	tesi	pouch
-Nouns	fwí	arrow(s)
-Nouns	ngawu tesi	waterskin
-Nouns	fwí tesi	quiver
-Nouns	hiho	stamina
-Nouns	nggala	fish
-Nouns about Bones, Limbs, Body Parts, and Death	nggala tapu yá	fish scale(s)
-Nouns	tsi'i	berry(s)
-Nouns	noa tsi'i	poisonous berry(s)
-Nouns	ewu	health/blood
-Nouns	ná	hunger
-dont add	bawë/mbawë kopa	sky/air
-Nouns	kaha tsi'an te	wood mover
-Nouns about Bones, Limbs, Body Parts, and Death	gala tapu yá	deer skin
-x	NODEF	sap
-Cannibals and Mutants	nggusa	armsy
-Nouns	vin/ven	an annoying person
-Religious Terms	túwus	bonfire
-Cannibals and Mutants	pumpum	cowman
-Cannibals and Mutants	paena/haina	virginia
-Nouns	boyepë	tomorrow 
-Nouns	yua	father
-Nouns	alo'a/äwa	mother
-Nouns	iluyepë	today
-Nouns	ati yua	grandfather
-Nouns	ati alo'a/ati äwa	grandmother
-Nouns	yam pula/yam näla	drying rack
-Nouns	kaha pula/kaha näla	wood storage
-dont add	guda	a selfish person
-Religious Terms	nggawi'i	water god
-Religious Terms	vovi'i	fire god
-Nouns about Bones, Limbs, Body Parts, and Death	dom	head
-Nouns about Bones, Limbs, Body Parts, and Death	gám 	arm
-Nouns about Bones, Limbs, Body Parts, and Death	ke	hand
-Nouns about Bones, Limbs, Body Parts, and Death	kili	torso
-Nouns about Bones, Limbs, Body Parts, and Death	gí 	leg
-Nouns about Bones, Limbs, Body Parts, and Death	mban	foot
-Religious Terms	lengki	demon, foul-soul
-dont add	papap	sexual intercourse
-Nouns about Bones, Limbs, Body Parts, and Death	iela	back
-Nouns about Bones, Limbs, Body Parts, and Death	gyelu	waist
-Nouns	nona	human/person
-Nouns	tike	animal
-Nouns about Bones, Limbs, Body Parts, and Death	keleni	body
-Nouns	lata'a	part, piece
-Nouns about Bones, Limbs, Body Parts, and Death	kaoleni	skeleton
-Nouns about Bones, Limbs, Body Parts, and Death	kaoki	bone
-Nouns	sene tapu yá	metal/pot
-Nouns about Bones, Limbs, Body Parts, and Death	nditi	eye
-Nouns about Bones, Limbs, Body Parts, and Death	wá	mouth
-Nouns about Bones, Limbs, Body Parts, and Death	hihi	nose
-Nouns	payepë	yesterday
-Nouns	ilu	there/that/(it)
-Nouns	lulu'i	here
-Nouns about Bones, Limbs, Body Parts, and Death	ábe	breast(s) (chest)
-Nouns	fusa	plain/valley
-Nouns	gemëte	nonsense, unintelligible
+ngawu/nggawu	rain	Nouns
+tapu	turtle (shell)/hide	Nouns
+bawë/mbawë	bird(s)	Nouns
+ngingi	monkey(s)/cannibal(s)	Cannibals and Mutants
+né	fire	Nouns
+yam	foodstuff(s)	Nouns
+yepë	day	Nouns
+yepwá	midday/noon	Nouns
+á'á	night	Nouns
+kaha	wood/tree	Nouns
+kopa	house	Nouns
+mem pele	knowledge	Nouns
+më te	language/talk/tongue	Nouns
+ngimëte	monkey talk	dont add
+wisi	leaf(s)	Nouns
+mbaba	idiot	Nouns
+táne	beach/shore/path	Nouns
+so'o	north of the bonfire, down the hill	Religious Terms
+néna	south of the bonfire, off the cliff	Religious Terms
+sitwi	west of the bonfire, to the rolling hill	Religious Terms
+láma	east of the bonfire, to the beach	Religious Terms
+ngawu tapu	water collecter	Nouns
+yá	meat	Nouns
+tapu yá	shell/skin	Nouns about Bones, Limbs, Body Parts, and Death
+lu	thing/it/this	Nouns
+sepü	lake	Nouns
+us	rabbit	Nouns
+us tapu yá	rabbit skin	Nouns about Bones, Limbs, Body Parts, and Death
+kilikali	lizard	Nouns
+kilikali tapu yá	lizard skin	Nouns about Bones, Limbs, Body Parts, and Death
+ngawu te	drink	Nouns
+ken wisi	drug	Nouns
+kopa me	village/camp	Nouns
+noa ngingi	blue monkey(s)	Cannibals and Mutants
+gala	elk/deer	Nouns
+pula/närla	place	Nouns
+sene ngingi	shrieker monkey(s)	Cannibals and Mutants
+bawë wisi/mbawë wisi	feather	Nouns
+tesi	pouch	Nouns
+fwí	arrow(s)	Nouns
+ngawu tesi	waterskin	Nouns
+fwí tesi	quiver	Nouns
+hiho	stamina	Nouns
+nggala	fish	Nouns
+nggala tapu yá	fish scale(s)	Nouns about Bones, Limbs, Body Parts, and Death
+tsi'i	berry(s)	Nouns
+noa tsi'i	poisonous berry(s)	Nouns
+ewu	health/blood	Nouns
+ná	hunger	Nouns
+bawë kopa/mbawë kopa	sky/air	dont add
+kaha tsi'an te	wood mover	Nouns
+gala tapu yá	deer skin	Nouns about Bones, Limbs, Body Parts, and Death
+NODEF	sap	dont add
+nggusa	armsy	Cannibals and Mutants
+vin/ven	an annoying person	Nouns
+túwus	bonfire	Religious Terms
+pumpum	cowman	Cannibals and Mutants
+paena/haina	virginia	Cannibals and Mutants
+boyepë	tomorrow 	Nouns
+yua	father	Nouns
+alo'a/äwa	mother	Nouns
+iluyepë	today	Nouns
+ati yua	grandfather	Nouns
+ati alo'a/ati äwa	grandmother	Nouns
+yam pula/yam närla	drying rack	Nouns
+kaha pula/kaha näla	wood storage	Nouns
+guda	a selfish person	dont add
+nggawi'i	water god	Religious Terms
+vovi'i	fire god	Religious Terms
+dom	head	Nouns about Bones, Limbs, Body Parts, and Death
+gám 	arm	Nouns about Bones, Limbs, Body Parts, and Death
+ke	hand	Nouns about Bones, Limbs, Body Parts, and Death
+kili	torso	Nouns about Bones, Limbs, Body Parts, and Death
+gí 	leg	Nouns about Bones, Limbs, Body Parts, and Death
+mban	foot	Nouns about Bones, Limbs, Body Parts, and Death
+lengki	demon, foul-soul	Religious Terms
+papap	sexual intercourse	dont add
+iela	back	Nouns about Bones, Limbs, Body Parts, and Death
+gyelu	waist	Nouns about Bones, Limbs, Body Parts, and Death
+nona	human/person	Nouns
+tike	animal	Nouns
+keleni	body	Nouns about Bones, Limbs, Body Parts, and Death
+lata'a	part, piece	Nouns
+kaoleni	skeleton	Nouns about Bones, Limbs, Body Parts, and Death
+kaoki	bone	Nouns about Bones, Limbs, Body Parts, and Death
+sene tapu yá	metal/pot	Nouns
+nditi	eye	Nouns about Bones, Limbs, Body Parts, and Death
+wá	mouth	Nouns about Bones, Limbs, Body Parts, and Death
+hihi	nose	Nouns about Bones, Limbs, Body Parts, and Death
+payepë	yesterday	Nouns
+ilu	there/that/(it)	Nouns
+lulu'i	here	Nouns
+ábe	breast(s) (chest)	Nouns about Bones, Limbs, Body Parts, and Death
+fusa	plain/valley	Nouns
+gemëte	nonsense, unintelligible	Nouns
+giya	word	Nouns
+mbo	so	Miscellaneous
+kome	why	Interrogatives
+'e	what	Interrogatives
+e'e	where	Interrogatives
+ten/teng	when	Interrogatives
+tawu/tewu	how	Interrogatives
+mawu/mewu	who	Interrogatives
+süm	to need/get/want	Basic Verb
+tsi	to go	Basic Verb
+eme	to do	Basic Verb
+meowi	to build/create/make	Basic Verb
+ndawi	to run	Basic Verb
+pele	to know	Basic Verb
+pelepele	to understand	Verbs
+ken	to fuck	Basic Verb
+ima	to sleep	Basic Verb
+më	to speak	Basic Verb
+ngale/nggale	to drink	Basic Verb
+sene	to shriek/make noise	Basic Verb
+owa le	to agree	Basic Verb
+tsi'an	to move	Basic Verb
+napa	to eat	Basic Verb
+tiwi	to rise	Basic Verb
+lowi	to lower	Basic Verb
+ngaowi	to attack/fight	Basic Verb
+nggala le	to fish	Basic Verb
+pelele	to learn	Basic Verb
+mëmë	to translate	Verbs
+yáni	to think	Basic Verb
+ngálowi/ngärlowi	to mangle	dont add
+ngátiwi	to annihilate	dont add
+kúnu	to involve	Basic Verb
+yíse	to love	Basic Verb
+tsuti	to wander	Basic Verb
+ngá	to kill	Basic Verb
+né le	to light	Basic Verb
+som	to give	Basic Verb
+kini	to lend	Basic Verb
+witsu	to find, to have (physically), to look out for (an emotion)	Basic Verb
+tapa	to touch/feel (something)	Basic Verb
+fasu'i	to smell	Basic Verb
+bëm	to feel (an emotion)	Basic Verb
+nde'o	to see	Basic Verb
+wisiwisi	to cover	Basic Verb
+getsilu	to keep away	Basic Verb
+witsunde'o	to forage	Basic Verb
+míki	to hear	Basic Verb
+noa	dead/poisonous/deadly	Adjectives
+mboko	stupid	Adjectives
+géni/génti	rotten	Adjectives
+ati	more, big	Adjectives
+gati	less, small	Adjectives
+silsetsalo	beautiful	Adjectives
+wána ngingi/wángingina	ugly	Adjectives
+wi'ia	healthy/healing	Adjectives
+tembe/tembbe	hungry	Adjectives
+sepi	hot	dont add
+NODEF	warm	dont add
+NODEF	cold	dont add
+NODEF	bloody	dont add
+NODEF	dry	dont add
+wána/wá>N<na	akin to/same	Adjectives
+no'i	cowardly, scared	Adjectives
+kasë	black	Adjectives
+ge	no	Miscellaneous
+gege	definite no	Miscellaneous
+owaowa	definite yes	Miscellaneous
+owa	yes	Miscellaneous
+giwa 	maybe	Miscellaneous
+mi	ok/neutral yes	Miscellaneous
+gogowa	wrong	Miscellaneous
+owilowa	correct	Miscellaneous
+NODEF	hello/hi	dont add
+ilo/ano	this/that	Miscellaneous
+sülu/sëlu	got it (killed/caught something)	Miscellaneous
+gegela	zero/nothing	Numerals
+gela	one, any number except 2	Numerals
+la	two	Numerals
+bese/befe	three	Numerals
+sála/särla	four	Numerals
+sála/särla	wellbeing	Nouns
+kimi	five	Numerals
+molo	six	Numerals
+wé	seven	Numerals
+ana	eight	Numerals
+miki	nine	Numerals
+kó	ten	Numerals
+nam	and	Miscellaneous
+yëpütu	forever	Miscellaneous
+na'ë	too	Miscellaneous
+apelelala	to plead	Verbs
+ute	or	Miscellaneous
+e'aya	procedure	Nouns
+mbaba mboko	a really big idiot	Nouns
+keki	limb	Nouns about Bones, Limbs, Body Parts, and Death
+tikao	animal remains	Nouns about Bones, Limbs, Body Parts, and Death
+langki	cremation ash	Nouns about Bones, Limbs, Body Parts, and Death
+galu	hip bone	Nouns about Bones, Limbs, Body Parts, and Death
+ilolo	spinal cord	Nouns about Bones, Limbs, Body Parts, and Death
+damo	skull	Nouns about Bones, Limbs, Body Parts, and Death
+gámo	arm bone	Nouns about Bones, Limbs, Body Parts, and Death
+kao	hand bone	Nouns about Bones, Limbs, Body Parts, and Death
+kili'o	ribcage	Nouns about Bones, Limbs, Body Parts, and Death
+ga'í'o	leg bone	Nouns about Bones, Limbs, Body Parts, and Death
+mbano	foot bone	Nouns about Bones, Limbs, Body Parts, and Death
+ábao	human remains	Nouns about Bones, Limbs, Body Parts, and Death
+ngi'angi'o	cannibal remains	Nouns about Bones, Limbs, Body Parts, and Death
+neneno	finger	Nouns about Bones, Limbs, Body Parts, and Death
+naoneno	finger bone	Nouns about Bones, Limbs, Body Parts, and Death
+nggawu'an	to chug/forcibly drink	Verbs
+tsuti'an	to stray away/get lost by wandering off	Verbs
+witsu'an	to search, to explore	Verbs
+fasu'i'an	to sniff	Verbs
+wisiwisi'an	to hide	Verbs
+getsilu'an	to smuggle	Verbs
+pelele'an	to study	Verbs
+yáni'an	to assume	Verbs
+nde'o'an	to scout/lookout	Verbs
+tiwi'an	to lift up	Verbs
+lowi'an	to drop	Verbs
+sene'an	to scream/yell	Verbs
+som'an	to give up (something)	Verbs
+bëm'an	to feel (an emotion you don't want to)	Verbs
+witsunde'o'an	to scour for food (or starve)	Verbs
+ngaowi'an	to fight back, jump/assault (something)	Verbs
+yíse'an	to fall in love	Verbs
+ima'an	to fall asleep (intr)	Verbs
+tapa'an	to press against	Verbs
+sana	to shoot (an arrow)	Verbs
+NODEF	sun	dont add
+a'a	moon	Nouns
+ngá'an	to manslaughter	Verbs
+né'an	to commit arson/light ablaze	Verbs
+napa'an	to devour/gobble down	Verbs
+kahalala	stick/twig	Nouns
+peleli'i	the knower, god of knowledge 	Religious Terms
+gola	fat, obese	Adjectives
+gola ngingi	large ngingi	Cannibals and Mutants
+vovi'nona/vona	man	Nouns
+nggawi'nona/nggona	woman	Nouns
+kasë ngawu	oil	Nouns
+á'á yepwá	midnight	Nouns
+apelelala ya/apeya	nice, good	Adjectives
+sepu	bad	Adjectives
+süm'an	to steal, to commit a crime	Verbs
+mem pele wisi	paper, scroll, text	Nouns
+wetsilu/tsutitiwi	to travel	Basic Verbs
+tsi'on	to kidnap, forcefully move	Verbs
+damo kahalala	effigy	Nouns
+sümtiwi	to hope/wish	Verbs
+ndawi'an	to forcibly run, flee	Verbs
+atita	many	Adjectives
+kalahala	polite "mbaba mboko"	Nouns
+hühä	exhaustion	Nouns
+ima'on	to knock unconscious (tr)	Verbs
+ngaowi'on	to defend (from attack)	Verbs
+mbigye	treasure/dearest (informally)	Nouns
+angtiwí'o	ridiculous	Adjectives
+ndálohí	to survive/prosper/pass (time)	Basic Verb
+ndálohí máfëtär	pass (the days) safely	Miscellaneous
+ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	"did you have to waste all the food by eating it when you weren't hungry?"	Miscellaneous
+ndálohí gima te	to be pulling an all nighter	dont add
+kehibó	mountain(s)	Nouns
+mbitsë	land/nation	Nouns
+NODEF	bay	dont add
+NODEF	bone marrow	dont add
+kini'an	to sell	Verbs
+tapwá	seashell	Nouns
+kono	bottle	Nouns
+wi'ia kono/ewu kono	medicine	Nouns
+sene tapi'i	metal god / plane	Religious Terms
+apelelala ya nona/tseho	friend	Nouns
+ka 'a eme apelelala-ya ken	how are you (informal) lit. "you have good sex?"	Phrases
+ka 'a ndálohí atita á'á	how are you (formal) lit. "you survive many night(s)?"	Phrases
+lengki ya	evil	Adjectives
+kili'o yá	gut, innards	Nouns about Bones, Limbs, Body Parts, and Death
+ken wisi kono/ken kono	alcohol	Nouns
+wawá	to fall	Basic Verbs
+nena	old	Adjectives
+kakala	to laugh	Basic Verbs
+nápa	to remember 	Basic Verbs
+mem	communication 	Nouns
+suntu	ocean/sea	Nouns
+kóme	shark	Nouns
+lowi'i	pit god	Religious Terms
+kehibi'i	mountain god	Religious Terms
+ká'ono	whole, all, entire	Adjectives
+máte	world, earth	Nouns
+sú'ufe	to cook	Basic Verbs
+yani	soup	Nouns
+mate	to return (somewhere)	Basic Verbs
+onta	to return (home, origin)	Basic Verbs
+mate'an	to retreat	Verbs
+onta'an	to defeat	Verbs
+pese/pefe	colorful, fragrant	Adjectives
+ek	where	dont add
+ngi	person	dont add
+u	lative	dont add
+wulë	hello	dont add
+em	to go	dont add
+witsundehohan ya	hungry	dont add
+ë	and	dont add
+bunse/buntse	strange creature	Nouns
+vovi	fire	dont add
+noni'i	human god, the first god	Religious Terms
+kaoki ken	peepnis	Nouns about Bones, Limbs, Body Parts, and Death
+galu ken yá	voogigna	Nouns about Bones, Limbs, Body Parts, and Death
+ábe	human	dont add
+kole	comitative	dont add
+u'u	animal	dont add

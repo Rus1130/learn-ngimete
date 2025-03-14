@@ -1,6 +1,6 @@
 import { Dictionary, Word } from "./lib.js";
 
-let dict = new Dictionary("Pronouns", "Basic Nouns", "Basic Verbs", "Tenses", "Grammar", "Numerals", "Adjectives", "Nouns", "Verbs", "Irregular Plural Nouns", "Nouns about Bones, Limbs, Body Parts, and Death", "Interjections and Miscellaneous", "Interrogatives", "Cannibals and Mutants", "Religious Terms", "Phrases");
+let dict = new Dictionary("Pronouns", "Basic Verbs", "Tenses", "Grammar", "Numerals", "Adjectives", "Nouns", "Verbs", "Irregular Plural Nouns", "Nouns about Bones, Limbs, Body Parts, and Death", "Interjections and Miscellaneous", "Interrogatives", "Cannibals and Mutants", "Religious Terms");
 
 Word.setDialects(["Standard", "A'atsilwi"])
 
@@ -25,17 +25,29 @@ dict.addWord("Pronouns",
     new Word("third person plural reflexive",         "oitem", "si")
 )
 
-dict.categories.forEach(async category => {
-    let url = `https://rus1130.github.io/learn-ngimete/dictionary/${encodeURI(category)}.txt`;
 
-    // console.log the response
-    try {
-        let response = await fetch(url);
-        if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
-        let data = await response.text();
-        dict.bulkAddWords(category, "\n", "#", "/", data);
-    } catch (error) {}
-})
+let url = `https://rus1130.github.io/learn-ngimete/words.txt`;
+
+// console.log the response
+try {
+    let response = await fetch(url);
+    if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
+    let data = await response.text()
+
+    data = data.split("\n")
+
+    data.forEach(entry => {
+        entry = entry.split("\t");
+
+        let category = entry[0].trim();
+        let word = entry[2].trim().split("/");
+        let definition = entry[1].trim();
+
+        if(["dont add", "Phrase"].includes(category)) dict.addWord(category, new Word(word[0], ...word.slice(1), definition));
+    })
+
+
+} catch (error) {}
 
 //dict.bulkAddWords("Basic Nouns", "\n", "#", "/", ``);
 
