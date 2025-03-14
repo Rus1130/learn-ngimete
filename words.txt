@@ -5,7 +5,7 @@ ka	question (QM) (if used alone, can be translated as "what?")	Grammar
 i	exclamatory, intensifier (EXCLAM, INTS)	Grammar
 o-	genitive (GEN)	Grammar
 -ya	adjectizer (ADJZ)	Grammar
-g(a)-	negative (NEG)	Grammar
+g(e)-	negative (NEG)	Grammar
 bo	lative (go towards) (LAT)	Grammar
 kole/ndwa	simultaneous comitative (COM.SIM)	Grammar
 ámdwa	sequential comitative (COM.SEQ)	Grammar

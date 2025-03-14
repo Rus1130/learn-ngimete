@@ -34,6 +34,10 @@ export class Dictionary {
         } catch (error) {}
     }
 
+    setPracticeOrder(args) {
+        this.practiceOrder = arguments;
+    }
+
     addWord(category, word) {
         for(let i = 1; i < arguments.length; i++){
             if(this.dict[category] === undefined){

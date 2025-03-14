@@ -30,6 +30,7 @@ let url = `https://rus1130.github.io/learn-ngimete/words.txt`;
 
 dict.addWordsFromGoogleSheetsCopiedText(url, "\n", "\t", "/");
 
-//dict.bulkAddWords("Basic Nouns", "\n", "#", "/", ``);
+dict.setPracticeOrder("Pronouns", "Basic Verbs", "Tenses", "Grammar", "Numerals", "Adjectives", "Nouns", "Verbs", "Irregular Plural Nouns", "Nouns about Bones, Limbs, Body Parts, and Death", "Interjections and Miscellaneous", "Interrogatives", "Cannibals and Mutants", "Religious Terms")
+
 
 export { dict }
