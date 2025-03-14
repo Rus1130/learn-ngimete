@@ -25,18 +25,19 @@ dict.addWord("Pronouns",
     new Word("third person plural reflexive",         "oitem", "si")
 )
 
-console.log()
+dict.categories.forEach(async category => {
+    let url = `https://rus1130.github.io/learn-ngimete/${encodeURI(category)}.txt`;
 
-dict.categories.forEach(category => {
-    console.log(category);
+    // console.log the response
+    try {
+        let response = await fetch(url);
+        if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
+        let data = await response.text();
+        console.log(`Data for ${category}:`, data);
+    } catch (error) {
+        console.error(`Error fetching ${category}:`, error);
+    }
 })
-
-    //  fetch("https://rus1130.github.io/learn-ngimete/")
-    // .then(response => response.text())
-    // .then(text => {
-    //     dict.bulkAddWords("Basic Nouns", "\n", "#", "/", text);
-    // })
-    // .catch(error => console.error('Error:', error));
 
 //dict.bulkAddWords("Basic Nouns", "\n", "#", "/", ``);
 
