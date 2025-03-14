@@ -26,17 +26,15 @@ dict.addWord("Pronouns",
 )
 
 dict.categories.forEach(async category => {
-    let url = `https://rus1130.github.io/learn-ngimete/${encodeURI(category)}.txt`;
+    let url = `https://rus1130.github.io/learn-ngimete/dictionary/${encodeURI(category)}.txt`;
 
     // console.log the response
     try {
         let response = await fetch(url);
         if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
         let data = await response.text();
-        console.log(`Data for ${category}:`, data);
-    } catch (error) {
-        console.error(`Error fetching ${category}:`, error);
-    }
+        dict.bulkAddWords(category, "\n", "#", "/", data);
+    } catch (error) {}
 })
 
 //dict.bulkAddWords("Basic Nouns", "\n", "#", "/", ``);
