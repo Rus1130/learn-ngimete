@@ -1,0 +1,95 @@
+Nouns	ngawu/nggawu	rain
+Nouns	tapu	turtle (shell)/hide
+Nouns	bawë/mbawë	bird(s)
+Cannibals and Mutants	ngingi	monkey(s)/cannibal(s)
+Nouns	né	fire
+Nouns	yam	foodstuff(s)
+Nouns	yepë	day
+Nouns	yepwá	midday/noon
+Nouns	á'á	night
+Nouns	kaha	wood/tree
+Nouns	kopa	house
+Nouns	mem pele	knowledge
+Nouns	më te	language/talk/tongue
+dont add	ngimëte	monkey talk
+Nouns	wisi	leaf(s)
+Nouns	mbaba	idiot
+Nouns	táne	beach/shore/path
+Religious Terms	so'o	north of the bonfire, down the hill
+Religious Terms	néna	south of the bonfire, off the cliff
+Religious Terms	sitwi	west of the bonfire, to the rolling hill
+Religious Terms	láma	east of the bonfire, to the beach
+Nouns	ngawu tapu	water collecter
+Nouns	yá	meat
+Nouns about Bones, Limbs, Body Parts, and Death	tapu yá	shell/skin
+Nouns	lu	thing/it/this
+Nouns	sepü	lake
+Nouns	us	rabbit
+Nouns about Bones, Limbs, Body Parts, and Death	us tapu yá	rabbit skin
+Nouns	kilikali	lizard
+Nouns about Bones, Limbs, Body Parts, and Death	kilikali tapu yá	lizard skin
+Nouns	ngawu te	drink
+Nouns	ken wisi	drug
+Nouns	kopa me	village/camp
+Cannibals and Mutants	noa ngingi	blue monkey(s)
+Nouns	gala	elk/deer
+Nouns	pula/närla	place
+Cannibals and Mutants	sene ngingi	shrieker monkey(s)
+Nouns	bawë/mbawë wisi	feather
+Nouns	tesi	pouch
+Nouns	fwí	arrow(s)
+Nouns	ngawu tesi	waterskin
+Nouns	fwí tesi	quiver
+Nouns	hiho	stamina
+Nouns	nggala	fish
+Nouns about Bones, Limbs, Body Parts, and Death	nggala tapu yá	fish scale(s)
+Nouns	tsi'i	berry(s)
+Nouns	noa tsi'i	poisonous berry(s)
+Nouns	ewu	health/blood
+Nouns	ná	hunger
+dont add	bawë/mbawë kopa	sky/air
+Nouns	kaha tsi'an te	wood mover
+Nouns about Bones, Limbs, Body Parts, and Death	gala tapu yá	deer skin
+x	NODEF	sap
+Cannibals and Mutants	nggusa	armsy
+Nouns	vin/ven	an annoying person
+Religious Terms	túwus	bonfire
+Cannibals and Mutants	pumpum	cowman
+Cannibals and Mutants	paena/haina	virginia
+Nouns	boyepë	tomorrow 
+Nouns	yua	father
+Nouns	alo'a/äwa	mother
+Nouns	iluyepë	today
+Nouns	ati yua	grandfather
+Nouns	ati alo'a/ati äwa	grandmother
+Nouns	yam pula/yam näla	drying rack
+Nouns	kaha pula/kaha näla	wood storage
+dont add	guda	a selfish person
+Religious Terms	nggawi'i	water god
+Religious Terms	vovi'i	fire god
+Nouns about Bones, Limbs, Body Parts, and Death	dom	head
+Nouns about Bones, Limbs, Body Parts, and Death	gám 	arm
+Nouns about Bones, Limbs, Body Parts, and Death	ke	hand
+Nouns about Bones, Limbs, Body Parts, and Death	kili	torso
+Nouns about Bones, Limbs, Body Parts, and Death	gí 	leg
+Nouns about Bones, Limbs, Body Parts, and Death	mban	foot
+Religious Terms	lengki	demon, foul-soul
+dont add	papap	sexual intercourse
+Nouns about Bones, Limbs, Body Parts, and Death	iela	back
+Nouns about Bones, Limbs, Body Parts, and Death	gyelu	waist
+Nouns	nona	human/person
+Nouns	tike	animal
+Nouns about Bones, Limbs, Body Parts, and Death	keleni	body
+Nouns	lata'a	part, piece
+Nouns about Bones, Limbs, Body Parts, and Death	kaoleni	skeleton
+Nouns about Bones, Limbs, Body Parts, and Death	kaoki	bone
+Nouns	sene tapu yá	metal/pot
+Nouns about Bones, Limbs, Body Parts, and Death	nditi	eye
+Nouns about Bones, Limbs, Body Parts, and Death	wá	mouth
+Nouns about Bones, Limbs, Body Parts, and Death	hihi	nose
+Nouns	payepë	yesterday
+Nouns	ilu	there/that/(it)
+Nouns	lulu'i	here
+Nouns about Bones, Limbs, Body Parts, and Death	ábe	breast(s) (chest)
+Nouns	fusa	plain/valley
+Nouns	gemëte	nonsense, unintelligible
