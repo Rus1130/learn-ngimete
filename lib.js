@@ -4,6 +4,8 @@ export class Dictionary {
         for(let i = 0; i < arguments.length; i++){
             this.dict[arguments[i]] = [];
         }
+
+        this.practiceOrder = Object.keys(this.dict)
     }
 
     async addWordsFromGoogleSheetsCopiedText(url, entryDelimiter, definitionDelimiter, dialectDelimiter) {
@@ -35,7 +37,10 @@ export class Dictionary {
     }
 
     setPracticeOrder(args) {
-        this.practiceOrder = arguments;
+        this.practiceOrder = [];
+        for(let i = 0; i < arguments.length; i++){
+            this.practiceOrder.push(arguments[i]);
+        }
     }
 
     addWord(category, word) {

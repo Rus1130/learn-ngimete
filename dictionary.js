@@ -1,6 +1,8 @@
 import { Dictionary, Word } from "./lib.js";
 
-let dict = new Dictionary("Pronouns", "Basic Verbs", "Tenses", "Grammar", "Numerals", "Adjectives", "Nouns", "Verbs", "Irregular Plural Nouns", "Nouns about Bones, Limbs, Body Parts, and Death", "Interjections and Miscellaneous", "Interrogatives", "Cannibals and Mutants", "Religious Terms");
+let setNames = ["Pronouns", "Basic Verbs", "Tenses", "Grammar", "Numerals", "Adjectives", "Nouns", "Verbs", "Irregular Plural Nouns", "Nouns about Bones, Limbs, Body Parts, and Death", "Interjections and Miscellaneous", "Interrogatives", "Cannibals and Mutants", "Religious Terms"];
+
+let dict = new Dictionary(...setNames);
 
 Word.setDialects(["Standard", "A'atsilwi"])
 
@@ -29,8 +31,5 @@ dict.addWord("Pronouns",
 let url = `https://rus1130.github.io/learn-ngimete/words.txt`;
 
 dict.addWordsFromGoogleSheetsCopiedText(url, "\n", "\t", "/");
-
-dict.setPracticeOrder("Pronouns", "Basic Verbs", "Tenses", "Grammar", "Numerals", "Adjectives", "Nouns", "Verbs", "Irregular Plural Nouns", "Nouns about Bones, Limbs, Body Parts, and Death", "Interjections and Miscellaneous", "Interrogatives", "Cannibals and Mutants", "Religious Terms")
-
 
 export { dict }
