@@ -1,5 +1,9 @@
 export class Dictionary {
     dict = {};
+
+    static dictLoadedFromLink = null;
+
+
     constructor(categories) {
         for(let i = 0; i < arguments.length; i++){
             this.dict[arguments[i]] = [];
@@ -8,8 +12,18 @@ export class Dictionary {
         this.practiceOrder = Object.keys(this.dict)
     }
 
-    async addWordsFromGoogleSheetsCopiedText(url, entryDelimiter, definitionDelimiter, dialectDelimiter) {
+    async waitForDictLoad() {
+        if(Dictionary.dictLoadedFromLink == null) return false;
+        while(Dictionary.dictLoadedFromLink != true) {
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+    }
+
+
+
+    async bulkAddFromUrl(url, entryDelimiter, definitionDelimiter, dialectDelimiter) {
         try {
+            Dictionary.dictLoadedFromLink = false;
             let response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
             let data = await response.text()
@@ -31,8 +45,7 @@ export class Dictionary {
                     this.addWord(category, new Word(english, ...other));
                 }
             })
-        
-        
+            Dictionary.dictLoadedFromLink = true;
         } catch (error) {}
     }
 
@@ -48,11 +61,7 @@ export class Dictionary {
             if(this.dict[category] === undefined){
                 this.dict[category] = [];
             }
-            if(word instanceof Word){
-                this.dict[category].push(word);
-            } else {
-                this.dict[category].push(arguments[i]);
-            }
+            this.dict[category].push(arguments[i]);
         }
     }
 
@@ -69,6 +78,81 @@ export class Dictionary {
         }
     }
 
+    /**
+     * 
+     * @param {string} searchTerm the english term to search by
+     * @param {Object} [options] an object that can have the following properties:
+     * @param {string} [options.dialect=undefined] the dialect to return the word in, if not specified, all dialects will return
+     * @param {string} [options.category=undefined] the category to search in, if not specified, all categories will be searched
+     * @param {boolean} [options.swap=false] if true, the term input should be in the language other than english
+     * @returns {WordSearchResult} an array of Word objects that match the search term, optionally filtered by category and dialect
+     * @example 
+     *  dict.waitForDictLoad().then(() => {
+     *      let wordSearchResult = dict.wordSearch("a", {
+     *          dialect: "Standard",
+     *          category: "Religious Terms"
+     *      })
+     *
+     *      console.log(wordSearchResult)
+     *  })
+     */
+    wordSearch(searchTerm, options) {
+        searchTerm = searchTerm.toLowerCase();
+
+        let category = options?.category || undefined;
+        let dialect = options?.dialect || undefined;
+        let swap = options?.swap || false;
+
+        let results = [];
+
+        if(swap == false){
+            if(category == undefined) {
+                for(let i = 0; i < this.practiceOrder.length; i++){
+                    let cat = this.practiceOrder[i];
+                    this.dict[cat].forEach(word => {
+                        if (word.key.includes(searchTerm)) {
+                            if (dialect == undefined) {
+                                results.push(word);
+                            } else {
+                                results.push(new Word(word.key, word.value[dialect], word.category));
+                            }
+                        }
+                    })
+                }
+            } else {
+                if(this.dict[category] == undefined) return new WordSearchResult(searchTerm, []);
+                this.dict[category].forEach(word => {
+                    if (word.key.includes(searchTerm)) {
+                        if (dialect == undefined) {
+                            results.push(word);
+                        } else {
+                            results.push(new Word(word.key, word.value[dialect], word.category));
+                        }
+                    }
+                })
+            }
+        } else {
+            if(category == undefined) {
+                for(let i = 0; i < this.practiceOrder.length; i++){
+                    let cat = this.practiceOrder[i];
+                    this.dict[cat].forEach(word => {
+                        if (word.value[dialect].includes(searchTerm)) {
+                            results.push(word);
+                        }
+                    })
+                }
+            } else {
+                this.dict[category].forEach(word => {
+                    if (word.value[dialect].includes(searchTerm)) {
+                        results.push(word);
+                    }
+                })
+            }
+        }
+
+        return new WordSearchResult(searchTerm, results);
+    }
+
     get categories() {
         return this.dict.map(x => x.name);
     }
@@ -79,9 +163,16 @@ export class Word {
         Word.dialects = dialects;
     }
     
-    constructor(key, value) {
+    constructor(key, value, category) {
         this.key = key;
         this.value = {};
+
+        if(category != undefined) this.category = category;
+
+        if(Word.dialects == undefined){
+            console.warn("Dialects not set. Defaulting to \"Standard\" dialect.")
+            Word.dialects = ["Standard"];
+        }
 
         if(arguments.length - 1 < Word.dialects.length){
             this.value[Word.dialects[0]] = value;
@@ -94,5 +185,20 @@ export class Word {
 
     toArray() {
         return [this.key, this.value];
+    }
+}
+
+export class WordSearchResult {
+    constructor(searchTerm, results) {
+        this._searchTerm = searchTerm;
+        this._results = results;
+    }
+
+    get searchTerm() {
+        return this._searchTerm;
+    }
+
+    get results() {
+        return this._results;
     }
 }

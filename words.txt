@@ -321,7 +321,7 @@ wawá	to fall	Basic Verbs
 nena	old	Adjectives
 kakala	to laugh	Basic Verbs
 nápa	to remember 	Basic Verbs
-mem	communication 	Nouns
+mem	communication	Nouns
 suntu	ocean/sea	Nouns
 kóme	shark	Nouns
 lowi'i	pit god	Religious Terms

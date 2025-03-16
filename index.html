@@ -10,5 +10,14 @@
 <script type="module">
     import { dict } from './dictionary.js';
 
-    console.log(dict)
+    dict.waitForDictLoad().then(() => {
+        let wordSearchResult = dict.wordSearch("mem", {
+            dialect: "Standard",
+            swap: true
+        })
+
+        console.log(wordSearchResult)
+    })
+
+
 </script>
