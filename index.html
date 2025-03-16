@@ -11,12 +11,13 @@
     import { dict } from './dictionary.js';
 
     dict.waitForDictLoad().then(() => {
-        let wordSearchResult = dict.wordSearch("mem", {
+        let wordSearchResult = dict.wordSearch("ne", {
             dialect: "Standard",
-            swap: true
         })
 
         console.log(wordSearchResult)
+
+        dict.openDictionary("this")
     })
 
 

@@ -1,7 +1,7 @@
 export class Dictionary {
     dict = {};
 
-    static dictLoadedFromLink = null;
+    static dictLoadedFromLink = "not loaded";
 
 
     constructor(categories) {
@@ -13,8 +13,8 @@ export class Dictionary {
     }
 
     async waitForDictLoad() {
-        if(Dictionary.dictLoadedFromLink == null) return false;
-        while(Dictionary.dictLoadedFromLink != true) {
+        if(Dictionary.dictLoadedFromLink == "not loaded") return false;
+        while(Dictionary.dictLoadedFromLink != "loaded") {
             await new Promise(resolve => setTimeout(resolve, 100));
         }
     }
@@ -23,7 +23,7 @@ export class Dictionary {
 
     async bulkAddFromUrl(url, entryDelimiter, definitionDelimiter, dialectDelimiter) {
         try {
-            Dictionary.dictLoadedFromLink = false;
+            Dictionary.dictLoadedFromLink = "loading";
             let response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
             let data = await response.text()
@@ -34,18 +34,18 @@ export class Dictionary {
                 entry = entry.split(definitionDelimiter);
         
 
-                let other = entry[0].split(dialectDelimiter)
-                let english = entry[1];
-                let category = entry[2];
+                let other = entry[0].split(dialectDelimiter);
+                let english = entry[1].trim();
+                let category = entry[2].trim();
         
                 if(!(category == "dont add" || category == "Phrases")){
                     if(!(category == "Grammar" || category == "Tenses")){
-                        other = other.map(x => x.replaceAll(" ", "-"))
+                        other = other.map(x => x.replaceAll(" ", "-").trim())
                     }
                     this.addWord(category, new Word(english, ...other));
                 }
             })
-            Dictionary.dictLoadedFromLink = true;
+            Dictionary.dictLoadedFromLink = "loaded";
         } catch (error) {}
     }
 
@@ -90,7 +90,8 @@ export class Dictionary {
      *  dict.waitForDictLoad().then(() => {
      *      let wordSearchResult = dict.wordSearch("a", {
      *          dialect: "Standard",
-     *          category: "Religious Terms"
+     *          category: "Religious Terms",
+     *          swap: false
      *      })
      *
      *      console.log(wordSearchResult)
@@ -103,6 +104,8 @@ export class Dictionary {
         let dialect = options?.dialect || undefined;
         let swap = options?.swap || false;
 
+        if(["not loaded", "loading"].includes(Dictionary.dictLoadedFromLink)) throw new Error("Dictionary not loaded yet. Please wait for the dictionary to load before searching.");
+
         let results = [];
 
         if(swap == false){
@@ -111,11 +114,9 @@ export class Dictionary {
                     let cat = this.practiceOrder[i];
                     this.dict[cat].forEach(word => {
                         if (word.key.includes(searchTerm)) {
-                            if (dialect == undefined) {
-                                results.push(word);
-                            } else {
-                                results.push(new Word(word.key, word.value[dialect], word.category));
-                            }
+                            let word_ = new Word(word.key, ...Object.values(word.value));
+                            word_.category = cat;
+                            results.push(word_);
                         }
                     })
                 }
@@ -123,34 +124,74 @@ export class Dictionary {
                 if(this.dict[category] == undefined) return new WordSearchResult(searchTerm, []);
                 this.dict[category].forEach(word => {
                     if (word.key.includes(searchTerm)) {
-                        if (dialect == undefined) {
-                            results.push(word);
-                        } else {
-                            results.push(new Word(word.key, word.value[dialect], word.category));
-                        }
+                        let word_ = new Word(word.key, ...Object.values(word.value))
+                        word_.category = category;
+                        results.push(word_);
                     }
                 })
             }
         } else {
-            if(category == undefined) {
-                for(let i = 0; i < this.practiceOrder.length; i++){
+            if (!category) {
+                for (let i = 0; i < this.practiceOrder.length; i++) {
                     let cat = this.practiceOrder[i];
                     this.dict[cat].forEach(word => {
-                        if (word.value[dialect].includes(searchTerm)) {
-                            results.push(word);
+                        if (Object.values(word.value).some(value => 
+                            value.toLowerCase().includes(searchTerm))) {
+                            let word_ = new Word(word.key, ...Object.values(word.value));
+                            word_.category = cat;
+                            results.push(word_);
                         }
-                    })
+                    });
                 }
             } else {
+                if (!this.dict[category]) return new WordSearchResult(searchTerm, []);
                 this.dict[category].forEach(word => {
-                    if (word.value[dialect].includes(searchTerm)) {
-                        results.push(word);
+                    if (Object.values(word.value).some(value => 
+                        value.toLowerCase().includes(searchTerm))) {
+                        let word_ = new Word(word.key, ...Object.values(word.value));
+                        word_.category = category;
+                        results.push(word_);
                     }
-                })
+                });
+            }
+        }
+
+        if(dialect != undefined){
+            for(let i = 0; i < results.length; i++){
+                let term = results[i];
+                for(let j = 0; j < Object.keys(term.value).length; j++){
+                    if(Object.keys(term.value)[j] != dialect){
+                        delete term.value[Object.keys(term.value)[j]];
+                    }
+                }
             }
         }
 
         return new WordSearchResult(searchTerm, results);
+    }
+
+    openDictionary(location) {
+        // set local storage
+        localStorage.setItem("ngimëte_dictionary", JSON.stringify(this));
+        switch(location) {
+            case "tab":
+                window.open("./dictionary.html", "_blank");
+            break;
+            case "window":
+                window.open("./dictionary.html", "_blank", "width=800,height=600");
+            break;
+            case "this":
+                window.location.href = "./dictionary.html";
+            break;
+            default:
+                console.warn("Invalid location specified. Defaulting to opening in a new tab.");
+                window.open("./dictionary.html", "_blank");
+            break;
+        }
+    }
+
+    loadFromJSON(json) {
+        this.dict = JSON.parse(json);
     }
 
     get categories() {
@@ -163,11 +204,10 @@ export class Word {
         Word.dialects = dialects;
     }
     
-    constructor(key, value, category) {
+    constructor(key, value) {
         this.key = key;
         this.value = {};
-
-        if(category != undefined) this.category = category;
+        this.category = undefined;
 
         if(Word.dialects == undefined){
             console.warn("Dialects not set. Defaulting to \"Standard\" dialect.")
@@ -190,15 +230,7 @@ export class Word {
 
 export class WordSearchResult {
     constructor(searchTerm, results) {
-        this._searchTerm = searchTerm;
-        this._results = results;
-    }
-
-    get searchTerm() {
-        return this._searchTerm;
-    }
-
-    get results() {
-        return this._results;
+        this.searchTerm = searchTerm;
+        this.results = results;
     }
 }
