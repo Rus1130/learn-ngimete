@@ -1,7 +1,6 @@
 export class Dictionary {
     dict = {};
-
-    static dictLoadedFromLink = "not loaded";
+    dictLoadedFromLink = "not loaded";
 
 
     constructor(categories) {
@@ -13,17 +12,16 @@ export class Dictionary {
     }
 
     async waitForDictLoad() {
-        if(Dictionary.dictLoadedFromLink == "not loaded") return false;
-        while(Dictionary.dictLoadedFromLink != "loaded") {
+        if(this.dictLoadedFromLink == "not loaded") return false;
+        while(this.dictLoadedFromLink != "loaded") {
             await new Promise(resolve => setTimeout(resolve, 100));
         }
     }
 
 
-
     async bulkAddFromUrl(url, entryDelimiter, definitionDelimiter, dialectDelimiter) {
         try {
-            Dictionary.dictLoadedFromLink = "loading";
+            this.dictLoadedFromLink = "loading";
             let response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
             let data = await response.text()
@@ -45,7 +43,7 @@ export class Dictionary {
                     this.addWord(category, new Word(english, ...other));
                 }
             })
-            Dictionary.dictLoadedFromLink = "loaded";
+            this.dictLoadedFromLink = "loaded";
         } catch (error) {}
     }
 
@@ -64,19 +62,6 @@ export class Dictionary {
             }
             arguments[i].category = category;
             this.dict[category].push(arguments[i]);
-        }
-    }
-
-    bulkAddWords(category, entryDelimiter, definitionDelimiter, dialectDelimiter, string) {
-        let words = string.split(entryDelimiter);
-        for(let i = 0; i < words.length; i++){
-            let word = words[i];
-            let definition = word.split(definitionDelimiter);
-
-            let englishWord = definition[1];
-            let dialectSeparatedDefinition = definition[0].split(dialectDelimiter);
-
-            this.addWord(category, new Word(englishWord, ...dialectSeparatedDefinition));
         }
     }
 
@@ -109,7 +94,7 @@ export class Dictionary {
         let swap = options?.swap || false;
         let excludeCategories = options?.excludeCategories || [];
 
-        if(["not loaded", "loading"].includes(Dictionary.dictLoadedFromLink)) throw new Error("Dictionary not loaded yet. Please wait for the dictionary to load before searching.");
+        if(["not loaded", "loading"].includes(this.dictLoadedFromLink)) throw new Error("Dictionary not loaded yet. Please wait for the dictionary to load before searching.");
 
         let results = [];
 
