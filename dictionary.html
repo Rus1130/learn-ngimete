@@ -42,7 +42,6 @@
                 <span>Search:</span>
                 <textarea id="input"></textarea>
             </div>
-
         </div>
         <div>
             Dialect:
@@ -52,9 +51,7 @@
             <label for="swap">swap:</label>
             <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)">
         </div>
-        
     </div>
-
     <div id="container">
         <table id="output"></table>
     </div>
@@ -115,10 +112,14 @@
     })
 
     button.addEventListener("click", () => {
+        // close this tab
+        window.close()
         dict.openDictionary("window")
     })
+
+    // check if the url parameter "button" is set to "false"
     
-    new URLSearchParams(window.location.search).get("a") == "a" ? button.style.display = "none" : "" ;
+    new URLSearchParams(window.location.search).get("a") == "a" ? button.style.display = "none" : "";
 
     updateDictionary()
 </script>
