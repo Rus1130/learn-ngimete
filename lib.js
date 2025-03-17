@@ -58,9 +58,11 @@ export class Dictionary {
 
     addWord(category, word) {
         for(let i = 1; i < arguments.length; i++){
+            if(!arguments[i] instanceof Word) throw new Error("All arguments must be of type Word");
             if(this.dict[category] === undefined){
                 this.dict[category] = [];
             }
+            arguments[i].category = category;
             this.dict[category].push(arguments[i]);
         }
     }
@@ -168,30 +170,6 @@ export class Dictionary {
         }
 
         return new WordSearchResult(searchTerm, results);
-    }
-
-    openDictionary(location) {
-        // set local storage
-        localStorage.setItem("ngimëte_dictionary", JSON.stringify(this));
-        switch(location) {
-            case "tab":
-                window.open("./dictionary.html", "_blank");
-            break;
-            case "window":
-                window.open("./dictionary.html", "_blank", "width=800,height=600");
-            break;
-            case "this":
-                window.location.href = "./dictionary.html";
-            break;
-            default:
-                console.warn("Invalid location specified. Defaulting to opening in a new tab.");
-                window.open("./dictionary.html", "_blank");
-            break;
-        }
-    }
-
-    loadFromJSON(json) {
-        this.dict = JSON.parse(json);
     }
 
     get categories() {
