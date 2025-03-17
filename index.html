@@ -11,12 +11,11 @@
     import { dict } from './dictionary.js';
 
     dict.waitForDictLoad().then(() => {
-        let wordSearchResult = dict.wordSearch("ne", {
+        let wordSearchResult = dict.wordSearch("", {
             dialect: "Standard",
+            excludeCategories: ["Cannibals and Mutants", "Grammar"]
         })
 
         console.log(wordSearchResult)
     })
-
-
 </script>

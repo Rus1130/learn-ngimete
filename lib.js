@@ -87,13 +87,15 @@ export class Dictionary {
      * @param {string} [options.dialect=undefined] the dialect to return the word in, if not specified, all dialects will return
      * @param {string} [options.category=undefined] the category to search in, if not specified, all categories will be searched
      * @param {boolean} [options.swap=false] if true, the term input should be in the language other than english
+     * @param {Object} [options.excludeCategories=[]] an array of categories to exclude from the search
      * @returns {WordSearchResult} an array of Word objects that match the search term, optionally filtered by category and dialect
      * @example 
      *  dict.waitForDictLoad().then(() => {
      *      let wordSearchResult = dict.wordSearch("a", {
      *          dialect: "Standard",
      *          category: "Religious Terms",
-     *          swap: false
+     *          swap: false,
+     *          excludeCategories: ["Cannibals and Mutants"]
      *      })
      *
      *      console.log(wordSearchResult)
@@ -105,6 +107,7 @@ export class Dictionary {
         let category = options?.category || undefined;
         let dialect = options?.dialect || undefined;
         let swap = options?.swap || false;
+        let excludeCategories = options?.excludeCategories || [];
 
         if(["not loaded", "loading"].includes(Dictionary.dictLoadedFromLink)) throw new Error("Dictionary not loaded yet. Please wait for the dictionary to load before searching.");
 
@@ -169,7 +172,9 @@ export class Dictionary {
             }
         }
 
-        return new WordSearchResult(searchTerm, results);
+        results = results.filter(x => !excludeCategories.includes(x.category));
+
+        return new WordSearchResult(searchTerm, results, excludeCategories);
     }
 
     get categories() {
@@ -207,8 +212,9 @@ export class Word {
 }
 
 export class WordSearchResult {
-    constructor(searchTerm, results) {
+    constructor(searchTerm, results, excludedCategories) {
         this.searchTerm = searchTerm;
         this.results = results;
+        this.excludedCategories = excludedCategories;
     }
 }

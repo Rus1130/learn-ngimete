@@ -11,7 +11,7 @@ kaha	wood/tree	Nouns
 kopa	house	Nouns
 mem pele	knowledge	Nouns
 më te	language/talk/tongue	Nouns
-ngimëte	monkey talk	dont add
+ngimëte	ngimëte	Nouns
 wisi	leaf(s)	Irregular Plural Nouns
 mbaba	idiot	Nouns
 táne	beach/shore/path	Nouns
@@ -20,7 +20,7 @@ néna	south of the bonfire, off the cliff	Religious Terms
 sitwi	west of the bonfire, to the rolling hill	Religious Terms
 láma	east of the bonfire, to the beach	Religious Terms
 ngawu tapu	water collecter	Nouns
-yá	meat	Nouns
+yá	meat, face (by extension)	Nouns
 tapu yá	shell/skin	Nouns
 lu	thing/it/this	Nouns
 sepü	lake	Nouns
@@ -38,7 +38,7 @@ sene ngingi	shrieker monkey(s)	Cannibals and Mutants
 bawë wisi/mbawë wisi	feather	Nouns
 tesi	pouch	Nouns
 fwí	arrow(s)	Irregular Plural Nouns
-ngawu tesi	waterskin	Nouns
+ngawu tesi/nggawu tesi	waterskin	Nouns
 fwí tesi	quiver	Nouns
 hiho	stamina	Nouns
 nggala	fish	Nouns
@@ -47,7 +47,7 @@ tsi'i	berry(s)	Irregular Plural Nouns
 noa tsi'i	poisonous berry(s)	Irregular Plural Nouns
 ewu	health/blood	Nouns
 ná	hunger	Nouns
-bawë kopa/alu	sky/air	dont add
+alu	sky/air	Nouns
 kaha tsi'an te	wood mover	Nouns
 gala tapu yá	deer skin	Nouns about Bones, Limbs, Body Parts, and Death
 NODEF	sap	dont add
@@ -74,7 +74,7 @@ kili	torso	Nouns about Bones, Limbs, Body Parts, and Death
 gí 	leg	Nouns about Bones, Limbs, Body Parts, and Death
 mban	foot	Nouns about Bones, Limbs, Body Parts, and Death
 lengki	demon, foul-soul	Religious Terms
-papap	sexual intercourse	dont add
+papap	sexual intercourse	Nouns
 iela	back	Nouns about Bones, Limbs, Body Parts, and Death
 gyelu	waist	Nouns about Bones, Limbs, Body Parts, and Death
 nona	human/person	Nouns
@@ -83,6 +83,7 @@ keleni	body	Nouns about Bones, Limbs, Body Parts, and Death
 lata'a	part, piece	Nouns
 kaoleni	skeleton	Nouns about Bones, Limbs, Body Parts, and Death
 kaoki	bone	Nouns about Bones, Limbs, Body Parts, and Death
+bingi	tooth	Nouns about Bones, Limbs, Body Parts, and Death
 sene tapu yá	metal/pot	Nouns
 nditi	eye	Nouns about Bones, Limbs, Body Parts, and Death
 wá	mouth	Nouns about Bones, Limbs, Body Parts, and Death
@@ -150,11 +151,11 @@ silsetsalo	beautiful	Adjectives
 wána ngingi/wángingina	ugly	Adjectives
 wi'ia	healthy/healing	Adjectives
 tembe/tembbe	hungry	Adjectives
-sindda	hot	dont add
-sepi	warm	dont add
-/ärlu	cold	dont add
-e'omo	bloody	dont add
-ngeka	dry	dont add
+ndeki	hot	Adjectives
+sepi	warm	Adjectives
+ärlu	cold	Adjectives
+e'omo	bloody	Adjectives
+ngeka	dry	Adjectives
 wána/wá>N<na	akin to/same	Adjectives
 no'i	cowardly, scared	Adjectives
 kasë	black	Adjectives
@@ -195,36 +196,36 @@ langki	cremation ash	Nouns about Bones, Limbs, Body Parts, and Death
 galu	hip bone	Nouns about Bones, Limbs, Body Parts, and Death
 ilolo	spinal cord	Nouns about Bones, Limbs, Body Parts, and Death
 damo	skull	Nouns about Bones, Limbs, Body Parts, and Death
-gámo	arm bone	Nouns about Bones, Limbs, Body Parts, and Death
-kao	hand bone	Nouns about Bones, Limbs, Body Parts, and Death
+gámo	all arm bones	Nouns about Bones, Limbs, Body Parts, and Death
+ka'e'o	hand bone	Nouns about Bones, Limbs, Body Parts, and Death
 kili'o	ribcage	Nouns about Bones, Limbs, Body Parts, and Death
-ga'í'o	leg bone	Nouns about Bones, Limbs, Body Parts, and Death
-mbano	foot bone	Nouns about Bones, Limbs, Body Parts, and Death
+ga'í'o	all leg bones	Nouns about Bones, Limbs, Body Parts, and Death
+mbano	all foot bones	Nouns about Bones, Limbs, Body Parts, and Death
 ábao	human remains	Nouns about Bones, Limbs, Body Parts, and Death
 ngi'angi'o	cannibal remains	Nouns about Bones, Limbs, Body Parts, and Death
 neneno	finger	Nouns about Bones, Limbs, Body Parts, and Death
 naoneno	finger bone	Nouns about Bones, Limbs, Body Parts, and Death
-nggawu'an	to chug/forcibly drink	Verbs
-tsuti'an	to stray away/get lost by wandering off	Verbs
-witsu'an	to search, to explore	Verbs
-fasu'i'an	to sniff	Verbs
-wisiwisi'an	to hide	Verbs
-getsilu'an	to smuggle	Verbs
-pelele'an	to study	Verbs
-yáni'an	to assume	Verbs
-nde'o'an	to scout/lookout	Verbs
-tiwi'an	to lift up	Verbs
-lowi'an	to drop	Verbs
-sene'an	to scream/yell	Verbs
-som'an	to give up (something)	Verbs
-bëm'an	to feel (an emotion you don't want to)	Verbs
-witsunde'o'an	to scour for food (or starve)	Verbs
-ngaowi'an	to fight back, jump/assault (something)	Verbs
-yíse'an	to fall in love	Verbs
-ima'an	to fall asleep (intr)	Verbs
-tapa'an	to press against	Verbs
-sana	to shoot (an arrow)	Verbs
-yana	sun	dont add
+nggawu'an	to chug/forcibly drink	'An Verbs
+tsuti'an	to stray away/get lost by wandering off	'An Verbs
+witsu'an	to search, to explore	'An Verbs
+fasu'i'an	to sniff	'An Verbs
+wisiwisi'an	to hide	'An Verbs
+getsilu'an	to smuggle	'An Verbs
+pelele'an	to study	'An Verbs
+yáni'an	to assume	'An Verbs
+nde'o'an	to scout/lookout	'An Verbs
+tiwi'an	to lift up	'An Verbs
+lowi'an	to drop	'An Verbs
+sene'an	to scream/yell	'An Verbs
+som'an	to give up (something)	'An Verbs
+bëm'an	to feel (an emotion you don't want to)	'An Verbs
+witsunde'o'an	to scour for food (or starve)	'An Verbs
+ngaowi'an	to fight back, jump/assault (something)	'An Verbs
+yíse'an	to fall in love	'An Verbs
+ima'an	to fall asleep (intr)	'An Verbs
+tapa'an	to press against	'An Verbs
+sána	to shoot (an arrow)	Verbs
+yana	sun	Nouns
 a'a	moon	Nouns
 ngá'an	to manslaughter	Verbs
 né'an	to commit arson/light ablaze	Verbs
@@ -239,9 +240,9 @@ kasë ngawu	oil	Nouns
 á'á yepwá	midnight	Nouns
 apelelala ya/apeya	nice, good	Adjectives
 sepu	bad	Adjectives
-süm'an	to steal, to commit a crime	Verbs
+süm'on	to steal, to commit a crime	Verbs
 mem pele wisi	paper, scroll, text	Nouns
-wetsilu/tsutitiwi	to travel	Basic Verbs
+wetsilu/tsutitiwi	to travel	Verbs
 tsi'on	to kidnap, forcefully move	Verbs
 damo kahalala	effigy	Nouns
 sümtiwi	to hope/wish	Verbs
@@ -253,12 +254,12 @@ ima'on	to knock unconscious (tr)	Verbs
 ngaowi'on	to defend (from attack)	Verbs
 mbigye	treasure/dearest (informally)	Nouns
 angtiwí'o	ridiculous	Adjectives
-ndálohí	to survive/prosper/pass (time)	Basic Verbs
+ndálohí	to survive/prosper/pass (time)	Verbs
 ndálohí máfëtär	pass (the days) safely	Phrases
 ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	"did you have to waste all the food by eating it when you weren't hungry?"	Phrases
-ndálohí gima te	to be pulling an all nighter	dont add
+ndálohí kama	to pull an all nighter	dont add
 kehibó	mountain(s)	Irregular Plural Nouns
-mbitsë	land/nation	Nouns
+mbitsë	land	Nouns
 NODEF	bay	dont add
 NODEF	bone marrow	dont add
 kini'an	to sell	Verbs
@@ -272,21 +273,21 @@ ka 'a ndálohí atita á'á	how are you (formal) lit. "you survive many night(s)
 lengki ya	evil	Adjectives
 kili'o yá	gut, innards	Nouns about Bones, Limbs, Body Parts, and Death
 ken wisi kono/ken kono	alcohol	Nouns
-wawá	to fall	Basic Verbs
+wawá	to fall	Verbs
 nena	old	Adjectives
-kakala	to laugh	Basic Verbs
-nápa	to remember 	Basic Verbs
-mem	communication	Nouns
+kakala	to laugh	Verbs
+nápa	to remember 	Verbs
+mem	communication 	Nouns
 suntu	ocean/sea	Nouns
 kóme	shark	Nouns
 lowi'i	pit god	Religious Terms
 kehibi'i	mountain god	Religious Terms
 ká'ono	whole, all, entire	Adjectives
 máte	world, earth	Nouns
-sú'ufe	to cook	Basic Verbs
+sú'ufe	to cook	Verbs
 yani	soup	Nouns
-mate	to return (somewhere)	Basic Verbs
-onta	to return (home, origin)	Basic Verbs
+mate	to return (somewhere)	Verbs
+onta	to return (home, origin)	Verbs
 mate'an	to retreat	Verbs
 onta'an	to defeat	Verbs
 pese/pefe	colorful, fragrant	Adjectives
@@ -297,7 +298,7 @@ wulë	hello	dont add
 em	to go	dont add
 witsundehohan ya	hungry	dont add
 ë	and	dont add
-buntse	strange creature	Nouns
+buntse	strange (creature)	Nouns
 vovi	fire	dont add
 noni'i	human god, the first god	Religious Terms
 kaoki ken	peepnis	Nouns about Bones, Limbs, Body Parts, and Death
@@ -307,3 +308,45 @@ kole	comitative	dont add
 u'u	animal	dont add
 keloyani	lower body	Nouns about Bones, Limbs, Body Parts, and Death
 ketiyani	upper body	Nouns about Bones, Limbs, Body Parts, and Death
+kaoloyani	upper skeleton	Nouns about Bones, Limbs, Body Parts, and Death
+kaotiyani	lower skeleton	Nouns about Bones, Limbs, Body Parts, and Death
+ke'aki'o	skeletal limbs	Nouns about Bones, Limbs, Body Parts, and Death
+kili'olili	rib(s)	Nouns about Bones, Limbs, Body Parts, and Death
+tsena	chest	Nouns about Bones, Limbs, Body Parts, and Death
+tane	shoulder	Nouns about Bones, Limbs, Body Parts, and Death
+táne'o	shoulder bone	Nouns about Bones, Limbs, Body Parts, and Death
+mbaonano	toe bones	Nouns about Bones, Limbs, Body Parts, and Death
+mbanano	toe	Nouns about Bones, Limbs, Body Parts, and Death
+hihwá	nostril(s)	Nouns about Bones, Limbs, Body Parts, and Death
+lebo	ear	Nouns about Bones, Limbs, Body Parts, and Death
+goma	crotch/groin	Nouns about Bones, Limbs, Body Parts, and Death
+mafu	stomach, belly	Nouns about Bones, Limbs, Body Parts, and Death
+ka kome tiwi	why put up a fight when you know theres no point?/why try so hard?	Phrases
+káma	nation, realm	Nouns
+kama	shuteye	Nouns
+sana	door	Nouns
+nasobe'o	decoration	Nouns
+káli	heart	Nouns
+samo	bed	Nouns
+wase	animal track(s)	Nouns
+sindda	to play	Verbs
+mafo	to resemble	Verbs
+kene	to be inside of	Verbs
+ndasi	to shine	Verbs
+som'on	to sacrifice (something), to give again	Verbs
+ndenti	blessing	Nouns
+i'i	god	Nouns
+si/siloa	to fly	Verbs
+kola/besi	rock, stone	Nouns
+sen/sam	but	Interjections and Miscellaneous
+lohí ámdwa X	still X	Phrases
+lohí	time	Nouns
+ka lohí kini yë X	can I have X time	Phrases
+sálohí	to rewind, to reminisce	Verbs
+süm'an	to require	'An Verbs
+giya 	building 	Nouns
+welebing	misunderstanding, mistranslation, mishap	Nouns
+lohi	to change	Verbs
+na witsunde'oso besi	"go forage yourself rocks" (leave me alone)	Phrases
+náha	to be called	Verbs
+naha	to put on, to adorn	Nouns
