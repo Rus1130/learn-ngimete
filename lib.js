@@ -177,6 +177,35 @@ export class Dictionary {
         return new WordSearchResult(searchTerm, results, excludeCategories);
     }
 
+    /**
+     * 
+     * @param {string} location the location to open the dictionary to. 
+     * ```txt
+     * "element": Opens dictionary as an i-frame. 2nd argument is the element to open the dictionary in.
+     * "tab": Opens dictionary in a new tab. This is the default.
+     * "window": Opens dictionary in a new window.
+     * ```
+     */
+    openDictionary(location) {
+        switch(location) {
+            case "element":
+                let element = arguments[1];
+                let iframe = document.createElement("iframe");
+                iframe.src = "https://rus1130.github.io/learn-ngimete/dictionary.html";
+                element.appendChild(iframe);
+            break;
+            case "window":
+                // open it in a new window
+                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html", "_blank", "height=850,width=950");
+            break;
+            default:
+            case "tab":
+                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html");
+            break;
+
+        }
+    }
+
     get categories() {
         return this.dict.map(x => x.name);
     }
