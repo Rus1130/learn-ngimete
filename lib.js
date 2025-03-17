@@ -204,10 +204,19 @@ export class Word {
                 this.value[Word.dialects[i-1]] = arguments[i];
             }
         }
+
+        // for each dialect that isnt the standard one
+        Word.dialects.forEach(dialect => {
+            if(dialect != "Standard"){
+                if((this.value[dialect] == undefined)){
+                    this.value[dialect] = this.value["Standard"];
+                }
+            }
+        });
     }
 
     toArray() {
-        return [this.key, this.value];
+        return [this.key, this.value, this.category];
     }
 }
 

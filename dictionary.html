@@ -1,5 +1,12 @@
 <style>
 
+th {
+    text-align: left;
+}
+
+td {
+    width: 33.33%;
+}
 </style>
 <head>
     <script src="dictionary.js" type="module"></script>
@@ -13,7 +20,7 @@
         <input type="checkbox" id="dialect" name="dialect" value="Standard" checked> Standard
         <input type="checkbox" id="dialect" name="dialect" value="A'atsilwi" checked> A'atsilwi
         <br>
-        <label for="swap">Swap</label>
+        <label for="swap">Search ngimëte</label>
         <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, it searches word definitions for the inputted string, instead of word terms">
     </div>
     <table id="output"></table>
@@ -49,9 +56,13 @@
 
         dict.waitForDictLoad().then(() => {
             let wordSearchResult = dict.wordSearch(input.value, options);
-            let table = "<tr><th>Word</th><th>Definition</th></tr>"
+            let table = "<tr><th>Word</th><th id='definition_tableheader'>Definition</th><th>Category</th></tr>"
             wordSearchResult.results.forEach(result => {
-                table += `<tr><td>${result.key}</td><td>${result.definition}</td></tr>`
+                let term = result.key
+                let definition = Object.values(result.value).join(", ")
+                definition ? "" : definition = ""
+
+                table += `<tr><td>${result.key}</td><td>${[...new Set(Object.values(result.value))].join(", ")}</td><td>${result.category}</td></tr>`
             })
             output.innerHTML = table
         })
@@ -64,4 +75,11 @@
     })
 
     updateDictionary()
+
+    // dict.waitForDictLoad().then(() => {
+    //     let wordSearchResult = dict.wordSearch("", {
+    //         dialect: "A'atsilwi"
+    //     });
+    //     console.log(wordSearchResult)
+    // })
 </script>

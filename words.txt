@@ -140,7 +140,7 @@ bëm	to feel (an emotion)	Basic Verbs
 nde'o	to see	Basic Verbs
 wisiwisi	to cover	Basic Verbs
 getsilu	to keep away	Basic Verbs
-witsunde'o	to forage	Basic Verbs
+witsunde'o	to forage, to pluck	Basic Verbs
 míki	to hear	Basic Verbs
 noa	dead/poisonous/deadly	Adjectives
 mboko	stupid	Adjectives
@@ -349,4 +349,4 @@ welebing	misunderstanding, mistranslation, mishap	Nouns
 lohi	to change	Verbs
 na witsunde'oso besi	"go forage yourself rocks" (leave me alone)	Phrases
 náha	to be called	Verbs
-naha	to put on, to adorn	Nouns
+naha	to put on, to adorn	Verbs
