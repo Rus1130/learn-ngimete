@@ -196,7 +196,7 @@ export class Dictionary {
             break;
             case "window":
                 // open it in a new window
-                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html", "_blank", "height=850,width=950");
+                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html?a=a", "_blank", "height=850,width=950");
             break;
             default:
             case "tab":

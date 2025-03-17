@@ -7,6 +7,15 @@
         width: 33.33%;
     }
 
+    #input {
+        height: 14pt;
+    }
+
+    #input {
+        resize: none;
+        overflow-y: hidden;
+    }
+
     #output {
         max-height: 100%;
     }
@@ -15,14 +24,25 @@
         overflow: auto;
         max-height: calc(100vh - 100px);
     }
+
+    #popout {
+        position: absolute;
+        right: 7px;
+        top: 9px;
+    }
 </style>
 <head>
     <script src="dictionary.js" type="module"></script>
 </head>
 <body>
     <div id="nav">
+        <button id="popout">Popout Dictionary</button>
         <div>
-            Search Term: <textarea id="input"></textarea>
+            <div>
+                <span>Search:</span>
+                <textarea id="input"></textarea>
+            </div>
+
         </div>
         <div>
             Dialect:
@@ -32,6 +52,7 @@
             <label for="swap">swap:</label>
             <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)">
         </div>
+        
     </div>
 
     <div id="container">
@@ -48,6 +69,8 @@
     let output = document.getElementById("output")
 
     let dialectCheckboxes = document.querySelectorAll('input[name="dialect"]');
+
+    let button = document.getElementById("popout")
 
     dialectCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('change', () => {
@@ -71,6 +94,8 @@
         dict.waitForDictLoad().then(() => {
             let wordSearchResult = dict.wordSearch(input.value, options);
             let table = "<tr><th>Word</th><th id='definition_tableheader'>Definition</th><th>Category</th></tr>"
+
+            if(wordSearchResult.results.length == 0) table += "<tr><td colspan='3'>No results found</td></tr>"
             wordSearchResult.results.forEach(result => {
                 let term = result.key
                 let definition = Object.values(result.value).join(", ")
@@ -83,10 +108,17 @@
     }
 
     [...document.querySelectorAll('input[type="checkbox"]'), input].forEach(element => {
-        element.addEventListener("input", () => {
+        element.addEventListener("input", (e) => {
+            if(e.key == "Enter") e.preventDefault();
             updateDictionary()
         })
     })
+
+    button.addEventListener("click", () => {
+        dict.openDictionary("window")
+    })
+    
+    new URLSearchParams(window.location.search).get("a") == "a" ? button.style.display = "none" : "" ;
 
     updateDictionary()
 </script>
