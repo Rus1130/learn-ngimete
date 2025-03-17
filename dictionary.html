@@ -112,14 +112,12 @@
     })
 
     button.addEventListener("click", () => {
-        // close this tab
-        window.close()
         dict.openDictionary("window")
     })
 
     // check if the url parameter "button" is set to "false"
     
-    new URLSearchParams(window.location.search).get("a") == "a" ? button.style.display = "none" : "";
+    new URLSearchParams(window.location.search).get("b") == "false" ? button.style.display = "none" : "";
 
     updateDictionary()
 </script>

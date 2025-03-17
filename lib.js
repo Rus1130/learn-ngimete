@@ -175,13 +175,13 @@ export class Dictionary {
         switch(location) {
             case "element":
                 let element = arguments[1];
-                let iframe = document.createElement("iframe");
-                iframe.src = "https://rus1130.github.io/learn-ngimete/dictionary.html";
-                element.appendChild(iframe);
+                element.src = "https://rus1130.github.io/learn-ngimete/dictionary.html?b=false";
+                element.style.height = "850px";
+                element.style.width = "950px";
             break;
             case "window":
                 // open it in a new window
-                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html?a=a", "_blank", "height=850,width=950");
+                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html?b=false", "_blank", "height=850,width=950");
             break;
             default:
             case "tab":

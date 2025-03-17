@@ -5,10 +5,10 @@
     <script src="dictionary.js" type="module"></script>
 </head>
 <body>
-    
+    <iframe id="dict-iframe"></iframe>
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
 
-    dict.openDictionary()
+    dict.openDictionary("element", document.getElementById("dict-iframe"));
 </script>
