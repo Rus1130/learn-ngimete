@@ -27,8 +27,8 @@ dict.addWord("Pronouns",
     new Word("third person plural reflexive pronoun",         "oitem", "si")
 )
 
-dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/tenses-and-grammar.txt`, "\n", "\t", "/")
 dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/words.txt`, "\n", "\t", "/");
+dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/tenses-and-grammar.txt`, "\n", "\t", "/")
 
 function ortho(s){
     const V = ["a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú", "ä", "ë", "ü"]
@@ -93,9 +93,12 @@ dict.waitForDictLoad().then(() => {
         let cat = dict.practiceOrder[i];
         dict.dict[cat].forEach(word => {
             word.key = ortho(word.key)
-            for(let j = 0; j < Object.keys(word.value).length; j++){
-                word.value[Object.keys(word.value)[j]] = ortho(word.value[Object.keys(word.value)[j]])
+            if(!["Tenses", "Grammar"].includes(cat)){
+                for(let j = 0; j < Object.keys(word.value).length; j++){
+                    word.value[Object.keys(word.value)[j]] = ortho(word.value[Object.keys(word.value)[j]])
+                }
             }
+
         })
     }
 })

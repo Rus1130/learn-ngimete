@@ -6,26 +6,62 @@
 </head>
 <body>
     <div>
-        Dictionary: <textarea></textarea>
+        Dictionary: <textarea id="input"></textarea>
     </div>
     <div>
         <label for="dialect">Dialect:</label>
         <input type="checkbox" id="dialect" name="dialect" value="Standard" checked> Standard
-        <input type="checkbox" id="dialect" name="dialect" value="British" checked> A'atsilwi
+        <input type="checkbox" id="dialect" name="dialect" value="A'atsilwi" checked> A'atsilwi
         <br>
         <label for="swap">Swap</label>
         <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, it searches word definitions for the inputted string, instead of word terms">
     </div>
+    <table id="output"></table>
     
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
 
-    dict.waitForDictLoad().then(() => {
-        let wordSearchResult = dict.wordSearch("", {
-            dialect: "Standard",
-        })
+    
+    let input = document.getElementById("input")
+    let output = document.getElementById("output")
 
-        console.log(wordSearchResult)
+    let dialectCheckboxes = document.querySelectorAll('input[name="dialect"]');
+
+    dialectCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            let checkedCount = [...dialectCheckboxes].filter(cb => cb.checked).length;
+
+        if (checkedCount === 0) {
+            checkbox.checked = true;
+        }
+        });
+    });
+
+    function updateDictionary() {
+        let dialects = Array.from(document.getElementsByName("dialect")).map(d => d.checked ? d.value : null).filter(d => d)
+
+        let options = {};
+        if(dialects.length != 2) {
+            options.dialect = dialects[0]
+        }
+        options.swap = document.getElementById("swap").checked
+
+        dict.waitForDictLoad().then(() => {
+            let wordSearchResult = dict.wordSearch(input.value, options);
+            let table = "<tr><th>Word</th><th>Definition</th></tr>"
+            wordSearchResult.results.forEach(result => {
+                table += `<tr><td>${result.key}</td><td>${result.definition}</td></tr>`
+            })
+            output.innerHTML = table
+        })
+    }
+
+    [...document.querySelectorAll('input[type="checkbox"]'), input].forEach(element => {
+        element.addEventListener("input", () => {
+            updateDictionary()
+        })
     })
+
+    updateDictionary()
 </script>
