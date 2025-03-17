@@ -5,16 +5,9 @@
     <script src="dictionary.js" type="module"></script>
 </head>
 <body>
-
+    
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
 
-    dict.waitForDictLoad().then(() => {
-        let wordSearchResult = dict.wordSearch("", {
-            dialect: "Standard",
-        })
-
-        console.log(wordSearchResult)
-    })
 </script>

@@ -1,0 +1,31 @@
+<style>
+
+</style>
+<head>
+    <script src="dictionary.js" type="module"></script>
+</head>
+<body>
+    <div>
+        Dictionary: <textarea></textarea>
+    </div>
+    <div>
+        <label for="dialect">Dialect:</label>
+        <input type="checkbox" id="dialect" name="dialect" value="Standard" checked> Standard
+        <input type="checkbox" id="dialect" name="dialect" value="British" checked> A'atsilwi
+        <br>
+        <label for="swap">Swap</label>
+        <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, it searches word definitions for the inputted string, instead of word terms">
+    </div>
+    
+</body>
+<script type="module">
+    import { dict } from './dictionary.js';
+
+    dict.waitForDictLoad().then(() => {
+        let wordSearchResult = dict.wordSearch("", {
+            dialect: "Standard",
+        })
+
+        console.log(wordSearchResult)
+    })
+</script>

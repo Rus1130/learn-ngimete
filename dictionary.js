@@ -98,8 +98,6 @@ dict.waitForDictLoad().then(() => {
             }
         })
     }
-
-    console.log(dict.dict)
 })
 
 export { dict }
