@@ -13,7 +13,6 @@
     dict.waitForDictLoad().then(() => {
         let wordSearchResult = dict.wordSearch("", {
             dialect: "Standard",
-            excludeCategories: ["Cannibals and Mutants", "Grammar"]
         })
 
         console.log(wordSearchResult)
