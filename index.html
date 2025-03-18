@@ -136,7 +136,7 @@
 
             let url = `study.html?set=${encodeURIComponent(studySet)}&dialect=${encodeURIComponent(dialect)}&words=${wordsToStudy.map(x => encodeURIComponent(x.key)).join('$')}`;
             // make window fullscreen
-            window.open(url, '_blank') //,`width=${screen.width}, height=${screen.height}`);
+            window.open(url, '_blank', `width=650, height=${screen.height * 0.8}`);
             studyInProgress.style.display = 'flex';
             wordsList.style.display = 'none';
         }
