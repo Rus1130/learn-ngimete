@@ -26,6 +26,25 @@
     #dialect-radio {
         position: absolute;
     }
+    #in-progress {
+        height: 590px;
+        width: 820px;
+        border: 1px solid black;
+        position: absolute;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #in-progress button {
+        height: 50px;
+        width: 150px;
+        border: 1px solid black;
+        font-size: 15pt;
+        cursor: pointer;
+    }
 
     .choose-set-button {
         height: 30px;
@@ -49,9 +68,15 @@
         <input type="radio" id="dialect-aatsilwi" name="dialect" value="A'atsilwi">
         <label for="dialect-aatsilwi">A'atsilwi</label>
         <br>
-        press BACKSPACE to return to set selection
+        press BACKSPACE to return to set selection<br>
+        <div id="press-enter" style="display: none">press ENTER to study the selected set</div>
     </div>
     <div id="container">
+        <div id="in-progress" style="display: none;">
+            <div style="font-size: 25pt;">Study in progress...</div>
+            <br><br>
+            <button id="end-study">End Study</button>
+        </div>
         <div id="choose-sets-menu"></div>
         <div id="words-list" style="display: none;">
             <div id="back-button">< Back</div>
@@ -65,9 +90,13 @@
 
     const chooseSetsMenu = document.getElementById('choose-sets-menu');
     const wordsList = document.getElementById('words-list');
+    const pressEnterText = document.getElementById('press-enter');
+
+    const studyInProgress = document.getElementById('in-progress');
 
     // set the dialect to the dialect that is checked
     let dialect = 'Standard';
+    let studySet = null;
 
     document.querySelectorAll('input[name="dialect"]').forEach((radio) => {
         radio.addEventListener('change', () => {
@@ -81,7 +110,24 @@
         if (e.key === 'Backspace') {
             chooseSetsMenu.style.display = 'grid';
             wordsList.style.display = 'none';
+            pressEnterText.style.display = 'none';
+            studySet = null;
         }
+
+        if(e.key === "Enter" && studySet != null && studySet != "Interrogatives") {
+            // open a new window
+            let url = `study.html?set=${encodeURIComponent(studySet)}&dialect=${encodeURIComponent(dialect)}`;
+            // make window fullscreen
+            window.open(url, '_blank') //,`width=${screen.width}, height=${screen.height}`);
+            studyInProgress.style.display = 'flex';
+            wordsList.style.display = 'none';
+        }
+    });
+
+    document.getElementById('end-study').addEventListener('click', () => {
+        studyInProgress.style.display = 'none';
+        wordsList.style.display = 'block';
+        studySet = null;
     });
 
     function updateWords() {
@@ -106,6 +152,8 @@
                     chooseSetsMenu.style.display = 'none';
                     wordsList.style.display = 'block';
                     wordsList.innerHTML = '';
+                    
+                    studySet = set;
 
                     let table = "<table><tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th></tr>"
                     terms.forEach((term, i) => {
@@ -114,8 +162,9 @@
                         table += `<tr><td>${term}</td><td>${definitions[i]}</td></tr>`
                     })
                     table += "</table>"
-
+                    if(set != "Interrogatives") pressEnterText.style.display = 'block';
                     wordsList.innerHTML = table;
+
                 });
             });
         });

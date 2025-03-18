@@ -195,8 +195,7 @@ export class Dictionary {
                     `d=${dialect}`
                 ]
                 let elem = element;
-                elem.src = `./dictionary.html?${urlParams.join("&")}`;
-                //element.src = "https://rus1130.github.io/learn-ngimete/dictionary.html?b=false&e=" + exclude.join(",");
+                elem.src = `https://rus1130.github.io/learn-ngimete/dictionary.html?${urlParams.join("&")}`;
                 elem.style.height = height;
                 elem.style.width = width;
                 elem.style.border = "none";

@@ -1,0 +1,174 @@
+<style>
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    #prompt {
+        font-size: 24pt;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #row {
+        display: flex;
+        gap: 10px;
+    }
+    #options div {
+        height: 100px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18pt;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    #options button {
+        height: 100px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18pt;
+        background-color: white;
+    }
+
+    #options button:not(:disabled):hover {
+        cursor: pointer;
+    }
+
+    .option-button {
+        border: 1px solid black;
+    }
+</style>
+<head>
+
+</head>
+<body>
+    <div id="container">
+        <div id="prompt"></div>
+        <div id="options">
+            <div id="row">
+                <button id="option-0" class="option-button"></button>
+                <button id="option-1" class="option-button"></button>
+            </div>
+            <div id="row">
+                <button id="option-2" class="option-button"></button>
+                <button id="option-3" class="option-button"></button>
+            </div>
+            <div id="row">
+                <button id="next" style="border: 1px solid black;" disabled>NEXT</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module">
+    import { dict } from './dictionary.js';
+    let urlParams = new URLSearchParams(window.location.search);
+    let set = urlParams.get('set');
+    let dialect = urlParams.get('dialect');
+
+    const nextButton = document.getElementById('next');
+
+
+    dict.waitForDictLoad().then(() => {
+        let studySet = dict.dict[set];
+
+        let wordsToStudyEnglish = [];
+        let wordsToStudyNgimëte = [];
+
+        let studyOrder = [];
+
+
+        // push 4 words to wordsToStudy, no duplicates
+        while (wordsToStudyEnglish.length < 4) {
+            let randomIndex = Math.floor(Math.random() * studySet.length);
+            let randomWord = studySet[randomIndex];
+
+            if (!wordsToStudyEnglish.includes(randomWord.key)) {
+                wordsToStudyEnglish.push(randomWord.key);
+                wordsToStudyNgimëte.push(randomWord.value[dialect]);
+            }
+        }
+
+        for(let i = 0; i < 12; i++){
+            // get 3 random words from the set
+            let randomWords = [];
+            while (randomWords.length < 3) {
+                let randomIndex = Math.floor(Math.random() * studySet.length);
+                let randomWord = studySet[randomIndex];
+
+                if (!randomWords.includes(randomWord.value[dialect]) && !wordsToStudyNgimëte.includes(randomWord.value[dialect])) {
+                    randomWords.push(randomWord.value[dialect]);
+                }
+            }
+
+            let optionsArray = [wordsToStudyNgimëte[i % 4]].concat(randomWords);
+
+            // randomize the order of the optionsArray
+            optionsArray.sort(() => Math.random() - 0.5);
+
+
+            studyOrder.push({
+                prompt: wordsToStudyEnglish[i % 4],
+                correctAnswer: wordsToStudyNgimëte[i % 4],
+                options: optionsArray
+            });
+            studyOrder.sort(() => Math.random() - 0.5);
+        }
+
+        console.log(studyOrder)
+
+        function updatePrompt(i) {
+            // reset button colors
+            document.querySelectorAll('.option-button').forEach((button) => {
+                button.style.backgroundColor = 'white';
+            });
+            document.querySelectorAll('.option-button').forEach((button) => {
+                button.disabled = false;
+            });
+
+            nextButton.disabled = true;
+
+            document.getElementById('prompt').innerText = studyOrder[i].prompt;
+
+            for(let j = 0; j <= 3; j++){
+                document.getElementById(`option-${j}`).innerText = studyOrder[i].options[j];
+
+                // THE EVENT LISTENERS DONT GET REMOVED PROPERLY FIX
+                document.getElementById(`option-${j}`).addEventListener('click', function(e){
+                    if(studyOrder[i].options[j] === studyOrder[i].correctAnswer){
+                        document.getElementById(`option-${j}`).style.backgroundColor = 'green';
+                    } else {
+                        document.getElementById(`option-${j}`).style.backgroundColor = 'red';
+                        document.getElementById(`option-${studyOrder[i].options.indexOf(studyOrder[i].correctAnswer)}`).style.backgroundColor = 'green';
+                    }
+
+                    this.removeEventListener('click', arguments.callee, false);
+
+                    document.querySelectorAll('.option-button').forEach((button) => {
+                        button.disabled = true;
+                    });
+
+                    nextButton.disabled = false;
+                });
+            }
+
+            nextButton.addEventListener('click', () => {
+                if (i < studyOrder.length - 1) {
+                    updatePrompt(i + 1);
+                }
+            });
+        }
+
+        updatePrompt(0);
+    });
+</script>

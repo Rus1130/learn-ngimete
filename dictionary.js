@@ -1,6 +1,21 @@
 import { Dictionary, Word } from "./lib.js";
 
-let setNames = ["Pronouns", "Verbs", "Tenses", "Grammar", "Numerals", "Adjectives", "Nouns", "'An Verbs", "Irregular Plural Nouns", "Nouns about Bones, Limbs, Body Parts, and Death", "Interjections and Miscellaneous", "Interrogatives", "Cannibals and Mutants", "Religious Terms", "Phrases"];
+let setNames = [
+    "Pronouns",
+    "Tenses",
+    "Grammar", 
+    "Numerals",
+    "Nouns",
+    "Verbs",
+    "Adjectives",
+    "'An Verbs",
+    "Irregular Plural Nouns",
+    "Nouns about Bones, Limbs, Body Parts, and Death",
+    "Interjections and Miscellaneous",
+    "Interrogatives",
+    "Cannibals and Mutants",
+    "Religious Terms",
+    "Phrases"];
 
 let dict = new Dictionary(...setNames);
 
