@@ -36,7 +36,7 @@ export class Dictionary {
                 let english = entry[1].trim();
                 let category = entry[2].trim();
         
-                if(!(category == "dont add" || category == "Phrases")){
+                if(!(category == "dont add")){
                     if(!(category == "Grammar" || category == "Tenses")){
                         other = other.map(x => x.replaceAll(" ", "-").trim())
                     }

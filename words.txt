@@ -156,7 +156,7 @@ sepi	warm	Adjectives
 ärlu	cold	Adjectives
 e'omo	bloody	Adjectives
 ngeka	dry	Adjectives
-wána/wá>N<na	akin to/same	Adjectives
+wána/wá>NOUN<na	akin to/same	Adjectives
 no'i	cowardly, scared	Adjectives
 kasë	black	Adjectives
 ge	no	Interjections and Miscellaneous
@@ -262,7 +262,7 @@ kehibó	mountain(s)	Irregular Plural Nouns
 mbitsë	land	Nouns
 NODEF	bay	dont add
 NODEF	bone marrow	dont add
-kini'an	to sell	
+kini'an	to sell	'An Verbs
 tapwá	seashell	Nouns
 kono	bottle	Nouns
 wi'ia kono/ewu kono	medicine	Nouns
