@@ -16,10 +16,6 @@
         flex-direction: column;
         gap: 10px;
     }
-    #row {
-        display: flex;
-        gap: 10px;
-    }
     #options div {
         height: 100px;
         width: 400px;
@@ -30,7 +26,6 @@
         cursor: pointer;
         text-align: center;
     }
-
     #options button {
         height: 100px;
         width: 400px;
@@ -40,33 +35,75 @@
         font-size: 18pt;
         background-color: white;
     }
-
     #options button:not(:disabled):hover {
         cursor: pointer;
+    }
+    #scores {
+        position: absolute;
+        z-index: 10;
+        background-color: white;
+        height: 80%;
+        width: 500px;
+        border: 1px solid black;
+        padding-left: 10px;
     }
 
     .option-button {
         border: 1px solid black;
     }
+    .option-button:disabled {
+        color: black;
+    }
+    .row {
+        display: flex;
+        gap: 10px;
+    }
+    .modal {
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        border: 1px solid black;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-size: 24pt;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-remove-button {
+        font-size: 24pt;
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .modal-remove-button:hover {
+        background-color: lightgray;
+    }
+
 </style>
 <head>
 
 </head>
 <body>
     <div id="container">
+        <div id="modals" style="position: absolute;">
+            
+        </div>
         <div id="prompt"></div>
         <div id="options">
-            <div id="row">
-                <button id="option-0" class="option-button"></button>
-                <button id="option-1" class="option-button"></button>
-            </div>
-            <div id="row">
-                <button id="option-2" class="option-button"></button>
-                <button id="option-3" class="option-button"></button>
-            </div>
+            <div class="row" id="row-1"></div>
+            <div class="row" id="row-2"></div>
             <div id="row">
                 <button id="next" style="border: 1px solid black;" disabled>NEXT</button>
             </div>
+        </div>
+        <div id="scores" style="display: none;">
+            <h1>You scored a ##%!</h1>
         </div>
     </div>
 </body>
@@ -75,29 +112,21 @@
     let urlParams = new URLSearchParams(window.location.search);
     let set = urlParams.get('set');
     let dialect = urlParams.get('dialect');
+    let wordsToStudyEnglish = urlParams.get('words').split("$")
 
     const nextButton = document.getElementById('next');
-
 
     dict.waitForDictLoad().then(() => {
         let studySet = dict.dict[set];
 
-        let wordsToStudyEnglish = [];
         let wordsToStudyNgimëte = [];
 
         let studyOrder = [];
 
 
-        // push 4 words to wordsToStudy, no duplicates
-        while (wordsToStudyEnglish.length < 4) {
-            let randomIndex = Math.floor(Math.random() * studySet.length);
-            let randomWord = studySet[randomIndex];
-
-            if (!wordsToStudyEnglish.includes(randomWord.key)) {
-                wordsToStudyEnglish.push(randomWord.key);
-                wordsToStudyNgimëte.push(randomWord.value[dialect]);
-            }
-        }
+        wordsToStudyEnglish.forEach((word) => {
+            wordsToStudyNgimëte.push(dict.dict[set].find((entry) => entry.key === word).value[dialect]);
+        });
 
         for(let i = 0; i < 12; i++){
             // get 3 random words from the set
@@ -122,13 +151,18 @@
                 correctAnswer: wordsToStudyNgimëte[i % 4],
                 options: optionsArray
             });
-            studyOrder.sort(() => Math.random() - 0.5);
         }
 
-        console.log(studyOrder)
+        let first4 = studyOrder.slice(0, 4);
+        let last8 = studyOrder.slice(4, 12);
 
-        function updatePrompt(i) {
-            // reset button colors
+        last8 = last8.sort(() => Math.random() - 0.5);
+
+        studyOrder = first4.concat(last8);
+
+        let testScores = [];
+
+        function generate(i) {
             document.querySelectorAll('.option-button').forEach((button) => {
                 button.style.backgroundColor = 'white';
             });
@@ -136,39 +170,97 @@
                 button.disabled = false;
             });
 
+            // remove previous buttons
+            document.getElementById('row-1').innerHTML = '';
+            document.getElementById('row-2').innerHTML = '';
+
             nextButton.disabled = true;
 
             document.getElementById('prompt').innerText = studyOrder[i].prompt;
 
-            for(let j = 0; j <= 3; j++){
-                document.getElementById(`option-${j}`).innerText = studyOrder[i].options[j];
+            let buttons = [
+                document.createElement('button'),
+                document.createElement('button'),
+                document.createElement('button'),
+                document.createElement('button')
+            ]
 
-                // THE EVENT LISTENERS DONT GET REMOVED PROPERLY FIX
-                document.getElementById(`option-${j}`).addEventListener('click', function(e){
-                    if(studyOrder[i].options[j] === studyOrder[i].correctAnswer){
-                        document.getElementById(`option-${j}`).style.backgroundColor = 'green';
+            buttons.forEach((button, index) => {
+                button.classList.add('option-button');
+                button.innerText = studyOrder[i].options[index];
+
+                button.id = `option-${index}`;
+                document.getElementById(`row-${index % 2 + 1}`).appendChild(button);
+
+                function listener(){
+                    if (studyOrder[i].options[index] === studyOrder[i].correctAnswer) {
+                        button.style.backgroundColor = 'green';
+
+                        testScores.push({
+                            prompt: studyOrder[i].prompt,
+                            correctAnswer: studyOrder[i].correctAnswer,
+                            answer: studyOrder[i].options[index],
+                            correct: true
+                        })
                     } else {
-                        document.getElementById(`option-${j}`).style.backgroundColor = 'red';
+                        button.style.backgroundColor = 'red';
                         document.getElementById(`option-${studyOrder[i].options.indexOf(studyOrder[i].correctAnswer)}`).style.backgroundColor = 'green';
+
+                        testScores.push({
+                            prompt: studyOrder[i].prompt,
+                            correctAnswer: studyOrder[i].correctAnswer,
+                            answer: studyOrder[i].options[index],
+                            correct: false
+                        })
                     }
-
-                    this.removeEventListener('click', arguments.callee, false);
-
                     document.querySelectorAll('.option-button').forEach((button) => {
                         button.disabled = true;
                     });
-
                     nextButton.disabled = false;
-                });
-            }
 
-            nextButton.addEventListener('click', () => {
-                if (i < studyOrder.length - 1) {
-                    updatePrompt(i + 1);
+                    button.removeEventListener('click', listener);
                 }
+
+                button.addEventListener('click', listener);
+
+                
             });
         }
 
-        updatePrompt(0);
+        function makeModals(lower_i, upper_i){
+            for(let i = lower_i; i < upper_i; i++){
+                let modalHTML = `<div>${wordsToStudyEnglish[i]}</div>
+                <div>${wordsToStudyNgimëte[i]}</div>
+                <br>
+                <div class="modal-remove-button" onclick="document.getElementById('modal-${i}').remove()">Next</div>`
+
+                let modal = document.createElement('div');
+                modal.classList.add('modal');
+                modal.id = `modal-${i}`;
+                
+                document.getElementById('modals').appendChild(modal);
+
+                modal.innerHTML = modalHTML;
+            }
+        }
+
+        let generationIncrement = 0;
+
+        makeModals(0, 2);
+
+        nextButton.addEventListener('click', () => {
+            if (generationIncrement == 1){
+                makeModals(2, 4);
+            }
+            generationIncrement++;
+            if(generationIncrement >= studyOrder.length){
+                document.getElementById('scores').style.display = 'block';
+            } else {
+                generate(generationIncrement);
+            }
+            
+        });
+
+        generate(generationIncrement);
     });
 </script>
