@@ -102,46 +102,46 @@ e'e	where	Interrogatives
 ten/teng	when	Interrogatives
 tawu/tewu	how	Interrogatives
 mawu/mewu	who	Interrogatives
-süm	to need/get/want	Basic Verbs
-tsi	to go	Basic Verbs
-eme	to do	Basic Verbs
-meowi	to build/create/make	Basic Verbs
-ndawi	to run	Basic Verbs
-pele	to know	Basic Verbs
+süm	to need/get/want	Verbs
+tsi	to go	Verbs
+eme	to do	Verbs
+meowi	to build/create/make	Verbs
+ndawi	to run	Verbs
+pele	to know	Verbs
 pelepele	to understand	Verbs
-ken	to fuck	Basic Verbs
-ima	to sleep	Basic Verbs
-më	to speak	Basic Verbs
-ngale/nggale	to drink	Basic Verbs
-sene	to shriek/make noise	Basic Verbs
-owa le	to agree	Basic Verbs
-tsi'an	to move	Basic Verbs
-napa	to eat	Basic Verbs
-tiwi	to rise	Basic Verbs
-lowi	to lower	Basic Verbs
-ngaowi	to attack/fight	Basic Verbs
-nggala le	to fish	Basic Verbs
-pelele	to learn	Basic Verbs
+ken	to fuck	Verbs
+ima	to sleep	Verbs
+më	to speak	Verbs
+ngale/nggale	to drink	Verbs
+sene	to shriek/make noise	Verbs
+owa le	to agree	Verbs
+tsi'an	to move	'An Verbs
+napa	to eat	Verbs
+tiwi	to rise	Verbs
+lowi	to lower	Verbs
+ngaowi	to attack/fight	Verbs
+nggala le	to fish	Verbs
+pelele	to learn	Verbs
 mëmë	to translate	Verbs
-yáni	to think	Basic Verbs
+yáni	to think	Verbs
 ngálowi/ngärlowi	to mangle	dont add
 ngátiwi	to annihilate	dont add
-kúnu	to involve	Basic Verbs
-yíse	to love	Basic Verbs
-tsuti	to wander	Basic Verbs
-ngá	to kill	Basic Verbs
-né le	to light	Basic Verbs
-som	to give	Basic Verbs
-kini	to lend	Basic Verbs
-witsu	to find, to have (physically), to look out for (an emotion)	Basic Verbs
-tapa	to touch/feel (something)	Basic Verbs
-fasu'i	to smell	Basic Verbs
-bëm	to feel (an emotion)	Basic Verbs
-nde'o	to see	Basic Verbs
-wisiwisi	to cover	Basic Verbs
-getsilu	to keep away	Basic Verbs
-witsunde'o	to forage, to pluck	Basic Verbs
-míki	to hear	Basic Verbs
+kúnu	to involve	Verbs
+yíse	to love	Verbs
+tsuti	to wander	Verbs
+ngá	to kill	Verbs
+né le	to light	Verbs
+som	to give	Verbs
+kini	to lend	Verbs
+witsu	to find, to have (physically), to look out for (an emotion)	Verbs
+tapa	to touch/feel (something)	Verbs
+fasu'i	to smell	Verbs
+bëm	to feel (an emotion)	Verbs
+nde'o	to see	Verbs
+wisiwisi	to cover	Verbs
+getsilu	to keep away	Verbs
+witsunde'o	to forage, to pluck	Verbs
+míki	to hear	Verbs
 noa	dead/poisonous/deadly	Adjectives
 mboko	stupid	Adjectives
 géni/génti	rotten	Adjectives
@@ -227,9 +227,9 @@ tapa'an	to press against	'An Verbs
 sána	to shoot (an arrow)	Verbs
 yana	sun	Nouns
 a'a	moon	Nouns
-ngá'an	to manslaughter	Verbs
-né'an	to commit arson/light ablaze	Verbs
-napa'an	to devour/gobble down	Verbs
+ngá'an	to manslaughter	'An Verbs
+né'an	to commit arson/light ablaze	'An Verbs
+napa'an	to devour/gobble down	'An Verbs
 kahalala	stick/twig	Nouns
 peleli'i	the knower, god of knowledge 	Religious Terms
 gola	fat, obese	Adjectives
@@ -246,7 +246,7 @@ wetsilu/tsutitiwi	to travel	Verbs
 tsi'on	to kidnap, forcefully move	'An Verbs
 damo kahalala	effigy	Nouns
 sümtiwi	to hope/wish	Verbs
-ndawi'an	to forcibly run, flee	Verbs
+ndawi'an	to forcibly run, flee	'An Verbs
 atita	many	Adjectives
 kalahala	polite "mbaba mboko"	Nouns
 hühä	exhaustion	Nouns
@@ -262,7 +262,7 @@ kehibó	mountain(s)	Irregular Plural Nouns
 mbitsë	land	Nouns
 NODEF	bay	dont add
 NODEF	bone marrow	dont add
-kini'an	to sell	Verbs
+kini'an	to sell	
 tapwá	seashell	Nouns
 kono	bottle	Nouns
 wi'ia kono/ewu kono	medicine	Nouns
@@ -288,8 +288,8 @@ sú'ufe	to cook	Verbs
 yani	soup	Nouns
 mate	to return (somewhere)	Verbs
 onta	to return (home, origin)	Verbs
-mate'an	to retreat	Verbs
-onta'an	to defeat	Verbs
+mate'an	to retreat	'An Verbs
+onta'an	to defeat	'An Verbs
 pese/pefe	colorful, fragrant	Adjectives
 ek	where	dont add
 ngi	person	dont add

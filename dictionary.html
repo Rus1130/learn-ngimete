@@ -30,6 +30,11 @@
         right: 7px;
         top: 9px;
     }
+
+    input[type="checkbox"]:focus, #input:focus {
+        outline: none;
+    }
+
 </style>
 <head>
     <script src="dictionary.js" type="module"></script>
@@ -69,15 +74,6 @@
 
     let button = document.getElementById("popout")
 
-    dialectCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            let checkedCount = [...dialectCheckboxes].filter(cb => cb.checked).length;
-
-        if (checkedCount === 0) {
-            checkbox.checked = true;
-        }
-        });
-    });
 
     function updateDictionary() {
         let dialects = Array.from(document.getElementsByName("dialect")).map(d => d.checked ? d.value : null).filter(d => d)
