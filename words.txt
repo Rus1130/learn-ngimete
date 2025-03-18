@@ -95,7 +95,7 @@ lulu'i	here	Nouns
 fusa	plain/valley	Nouns
 gemëte	nonsense, unintelligible	Nouns
 giya	word(s)	Irregular Plural Nouns
-mbo	so	Interjections and Miscellaneous
+e	archaic causative	dont add
 kome	why	Interrogatives
 'e	what	Interrogatives
 e'e	where	Interrogatives
@@ -268,8 +268,8 @@ kono	bottle	Nouns
 wi'ia kono/ewu kono	medicine	Nouns
 sene tapi'i	metal god / plane	Religious Terms
 apelelala ya nona/tseho	friend	Nouns
-ka 'a eme apelelala-ya ken	how are you (informal) lit. "you have good sex?"	Phrases
-ka 'a ndálohí atita á'á	how are you (formal) lit. "you survive many night(s)?"	Phrases
+ka 'a eme apelelala-ya ken	how are you (informal)	Phrases
+ka 'a ndálohí atita á'á	how are you (formal)	Phrases
 lengki ya	evil	Adjectives
 kili'o yá	gut, innards	Nouns about Bones, Limbs, Body Parts, and Death
 ken wisi kono/ken kono	alcohol	Nouns
