@@ -56,8 +56,6 @@
     <div id="container">
         <table id="output"></table>
     </div>
-
-    
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
@@ -86,11 +84,7 @@
 
             if(wordSearchResult.results.length == 0) table += "<tr><td colspan='3'>No results found</td></tr>"
             wordSearchResult.results.forEach(result => {
-                let term = result.key
-                let definition = Object.values(result.value).join(", ")
-                definition ? "" : definition = ""
-
-                let value = [...new Set(Object.values(result.value))].join(", ");
+                let value = [...new Set(Object.values(result.value))].join(" / ");
                 value = value.replaceAll(">","&gt;").replaceAll("<","&lt;")
 
 
@@ -108,7 +102,7 @@
     })
 
     button.addEventListener("click", () => {
-        dict.openDictionary("window")
+        dict.openDictionary("window", 850, 950)
     })
 
     // check if the url parameter "button" is set to "false"

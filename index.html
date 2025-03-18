@@ -1,16 +1,137 @@
 <style>
+    th {
+        text-align: left;
+    }
+    table {
+        table-layout: fixed;
+        width: 100%;
+    }
 
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    #choose-sets-menu {
+        display: grid;
+        gap: 8px;
+    }
+    #words-list {
+        height: 580px;
+        width: 800px;
+        border: 1px solid black;
+        overflow-y: scroll;
+    }
+    #dialect-radio {
+        position: absolute;
+    }
+
+    .choose-set-button {
+        height: 30px;
+        width: 800px;
+        border: 1px solid black;
+        line-height: 30px;
+        padding-left: 8px;
+        cursor: pointer;
+    }
+    .choose-set-button:hover {
+        background-color: lightgray;
+    }
 </style>
 <head>
     <script src="dictionary.js" type="module"></script>
 </head>
 <body>
-    <div id="set-picker"></div>
+    <div id="dialect-radio">
+        <input type="radio" id="dialect-standard" name="dialect" value="Standard" checked>
+        <label for="dialect-standard">Standard</label>
+        <input type="radio" id="dialect-aatsilwi" name="dialect" value="A'atsilwi">
+        <label for="dialect-aatsilwi">A'atsilwi</label>
+        <br>
+        press BACKSPACE to return to set selection
+    </div>
+    <div id="container">
+        <div id="choose-sets-menu"></div>
+        <div id="words-list" style="display: none;">
+            <div id="back-button">< Back</div>
+        </div>
+    </div>
+    
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
+    import { Word } from './lib.js';
 
-    const setPicker = document.getElementById('set-picker');
+    const chooseSetsMenu = document.getElementById('choose-sets-menu');
+    const wordsList = document.getElementById('words-list');
 
-    console.log(dict)
+    // set the dialect to the dialect that is checked
+    let dialect = 'Standard';
+
+    document.querySelectorAll('input[name="dialect"]').forEach((radio) => {
+        radio.addEventListener('change', () => {
+            dialect = radio.value;
+            chooseSetsMenu.innerHTML = '';
+            updateWords();
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace') {
+            chooseSetsMenu.style.display = 'grid';
+            wordsList.style.display = 'none';
+        }
+    });
+
+    function updateWords() {
+        dict.waitForDictLoad().then(() => {
+            dict.practiceOrder.forEach((set, i) => {
+                let words = dict.dict[set];
+
+                let terms = [];
+                let definitions = [];
+
+                words.forEach((word) => {
+                    terms.push(word.key);
+                    definitions.push(word.value[dialect]);
+                })
+
+                let setDiv = document.createElement('div');
+                setDiv.classList.add('choose-set-button');
+                setDiv.innerText = `Set ${i + 1}: ${set}`;
+                chooseSetsMenu.appendChild(setDiv);
+
+                setDiv.addEventListener('click', () => {
+                    chooseSetsMenu.style.display = 'none';
+                    wordsList.style.display = 'block';
+                    wordsList.innerHTML = '';
+
+                    let backButton = document.createElement('div');
+                    backButton.id = 'back-button';
+                    backButton.innerText = '< Back';
+
+                    wordsList.appendChild(backButton);
+
+                    backButton.addEventListener('click', () => {
+                        chooseSetsMenu.style.display = 'grid';
+                        wordsList.style.display = 'none';
+                    })
+
+                    let table = "<table><tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th></tr>"
+                    terms.forEach((term, i) => {
+                        term = term.replaceAll(">","&gt;").replaceAll("<","&lt;")
+                        definitions[i] = definitions[i].replaceAll(">","&gt;").replaceAll("<","&lt;")
+                        table += `<tr><td>${term}</td><td>${definitions[i]}</td></tr>`
+                    })
+                    table += "</table>"
+
+                    wordsList.innerHTML = table;
+                });
+            });
+        });
+    }
+
+    updateWords();
+
 </script>

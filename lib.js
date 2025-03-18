@@ -164,23 +164,28 @@ export class Dictionary {
      * 
      * @param {string} location the location to open the dictionary to. 
      * ```txt
-     * "element": Opens dictionary as an i-frame. 2nd argument is the element to open the dictionary in.
+     * "element": Opens dictionary as an i-frame.
+     *     2nd argument: the element to open the dictionary in.
+     *     3rd argument: the height of the element.
+     *     4th argument: the width of the element.
+     *     5h argument: an array of categories to exclude from the dictionary.
      * "tab": Opens dictionary in a new tab. This is the default.
      * "window": Opens dictionary in a new window.
      * ```
      */
-    openDictionary(location) {
+    openDictionary(location, width, height, exclude) {
         switch(location) {
             case "element":
-                let element = arguments[1];
-                element.src = "https://rus1130.github.io/learn-ngimete/dictionary.html?b=false";
-                element.style.height = "850px";
-                element.style.width = "950px";
+                let element = location;
+                element.src = "./dictionary.html?b=false&e=" + exclude.join(",");
+                //element.src = "https://rus1130.github.io/learn-ngimete/dictionary.html?b=false&e=" + exclude.join(",");
+                element.style.height = width;
+                element.style.width = height;
                 element.style.border = "none";
             break;
             case "window":
                 // open it in a new window
-                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html?b=false", "_blank", "height=850,width=950");
+                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html?b=false", "_blank", `height=${width},width=${width}`);
             break;
             default:
             case "tab":
@@ -189,6 +194,8 @@ export class Dictionary {
 
         }
     }
+
+    // 850, 950
 
     get categories() {
         return this.dict.map(x => x.name);
