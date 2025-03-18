@@ -178,6 +178,7 @@ export class Dictionary {
                 element.src = "https://rus1130.github.io/learn-ngimete/dictionary.html?b=false";
                 element.style.height = "850px";
                 element.style.width = "950px";
+                element.style.border = "none";
             break;
             case "window":
                 // open it in a new window

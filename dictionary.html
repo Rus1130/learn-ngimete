@@ -2,29 +2,25 @@
     th {
         text-align: left;
     }
-
-    td {
-        width: 33.33%;
+    table {
+        table-layout: fixed;
+        width: 100%;
     }
 
     #input {
         height: 14pt;
     }
-
     #input {
         resize: none;
         overflow-y: hidden;
     }
-
     #output {
         max-height: 100%;
     }
-
     #container {
         overflow: auto;
-        max-height: calc(100vh - 100px);
+        max-height: calc(100vh - 80px);
     }
-
     #popout {
         position: absolute;
         right: 7px;
@@ -86,7 +82,7 @@
 
         dict.waitForDictLoad().then(() => {
             let wordSearchResult = dict.wordSearch(input.value, options);
-            let table = "<tr><th>Word</th><th id='definition_tableheader'>Definition</th><th>Category</th></tr>"
+            let table = "<tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th><th>Category</th></tr>"
 
             if(wordSearchResult.results.length == 0) table += "<tr><td colspan='3'>No results found</td></tr>"
             wordSearchResult.results.forEach(result => {
@@ -94,7 +90,11 @@
                 let definition = Object.values(result.value).join(", ")
                 definition ? "" : definition = ""
 
-                table += `<tr><td>${result.key}</td><td>${[...new Set(Object.values(result.value))].join(", ")}</td><td>${result.category}</td></tr>`
+                let value = [...new Set(Object.values(result.value))].join(", ");
+                value = value.replaceAll(">","&gt;").replaceAll("<","&lt;")
+
+
+                table += `<tr><td>${result.key}</td><td>${value}</td><td>${result.category}</td></tr>`
             })
             output.innerHTML = table
         })
