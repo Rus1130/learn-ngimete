@@ -15,7 +15,7 @@ _pa	ablative (motion away) (ABL)	Grammar
 -(o)lili	augmentive (AUG)	Grammar
 í	vocative (VOC)	Grammar
 ma	dative (DAT) (directed at/for)	Grammar
-e	causative (CAUS)	Grammar
+mbo	causative (CAUS)	Grammar
 mana'a	human far past (H.FPST)	Tenses
 mana	human near past (H.NPST)	Tenses
 na	human near future (H.NFUT)	Tenses
@@ -43,3 +43,4 @@ lu'u'u	zoic gnomic (ZO.GNO)	Tenses
 _gya	imperfective (IPFV)	Grammar
 (noun) wa	locative (LOC)	Grammar
 wa (noun)	copula (COP)	Grammar
+kene_	inessive	Grammar
