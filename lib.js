@@ -36,12 +36,10 @@ export class Dictionary {
                 let english = entry[1].trim();
                 let category = entry[2].trim();
         
-                if(!(category == "dont add")){
-                    if(!(category == "Grammar" || category == "Tenses")){
-                        other = other.map(x => x.replaceAll(" ", "-").trim())
-                    }
-                    this.addWord(category, new Word(english, ...other));
+                if(!(category == "Grammar" || category == "Tenses" || category == "Phrases")){
+                    other = other.map(x => x.replaceAll(" ", "-").trim())
                 }
+                this.addWord(category, new Word(english, ...other));
             })
             this.dictLoadedFromLink = "loaded";
         } catch (error) {}
