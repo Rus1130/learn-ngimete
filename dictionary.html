@@ -45,9 +45,9 @@
             </div>
         </div>
         <div>
-            Dialect:
-            <input type="checkbox" id="dialect-standard" name="dialect" value="Standard" checked> Standard
-            <input type="checkbox" id="dialect-aatsilwi" name="dialect" value="A'atsilwi" checked> A'atsilwi
+            <span class="dialect-span">Dialect:</span>
+            <input type="checkbox" id="dialect-standard" name="dialect" value="Standard" checked> <span class="dialect-span">Standard</span>
+            <input type="checkbox" id="dialect-aatsilwi" name="dialect" value="A'atsilwi" checked> <span class="dialect-span">A'atsilwi</span>
             <br>
             <label for="swap">swap:</label>
             <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)">
@@ -60,35 +60,65 @@
 <script type="module">
     import { dict } from './dictionary.js';
 
+
     
     let input = document.getElementById("input")
     let output = document.getElementById("output")
 
     let dialectCheckboxes = document.querySelectorAll('input[name="dialect"]');
-
     let button = document.getElementById("popout")
+
+    let excludedCategories = null;
+    let removeNav = null;
+    let removeCategoryColumn = null;
+    let dialectOverride = null;
+
+    let params = new URLSearchParams(window.location.search)
+    // button
+    params.get("b") == "false" ? button.style.display = "none" : "";
+    // excluded categories
+    params.get("e") != null ? excludedCategories = params.get("e") : null;
+    // remove nav
+    removeNav = Boolean(params.get("n"));
+    // remove category column
+    removeCategoryColumn = params.get("c") === "true";
+    // dialect override
+    dialectOverride = params.get("d");
+
+    if(removeNav) {
+        document.getElementById("nav").style.display = "none"
+    }
 
 
     function updateDictionary() {
         let dialects = Array.from(document.getElementsByName("dialect")).map(d => d.checked ? d.value : null).filter(d => d)
 
+        if(dialectOverride) {
+            dialects = [dialectOverride]
+        }
+
         let options = {};
         if(dialects.length != 2) {
             options.dialect = dialects[0]
         }
+
         options.swap = document.getElementById("swap").checked
+        if(excludedCategories != null) options.excludeCategories = excludedCategories
 
         dict.waitForDictLoad().then(() => {
             let wordSearchResult = dict.wordSearch(input.value, options);
-            let table = "<tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th><th>Category</th></tr>"
+            let table = `<tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th>${removeCategoryColumn ? "" : "<th>Category</th>"}</tr>`
 
-            if(wordSearchResult.results.length == 0) table += "<tr><td colspan='3'>No results found</td></tr>"
+            let colspan = removeCategoryColumn ? 2 : 3;
+
+            if(wordSearchResult.results.length == 0) table += `<tr><td colspan='${colspan}'>No results found</td></tr>`
             wordSearchResult.results.forEach(result => {
                 let value = [...new Set(Object.values(result.value))].join(" / ");
                 value = value.replaceAll(">","&gt;").replaceAll("<","&lt;")
 
+                let category = removeCategoryColumn ? "" : `<td>${result.category}</td>`
 
-                table += `<tr><td>${result.key}</td><td>${value}</td><td>${result.category}</td></tr>`
+                table += `<tr><td>${result.key}</td><td>${value}</td>${category}</tr>`
             })
             output.innerHTML = table
         })
@@ -101,13 +131,10 @@
         })
     })
 
+
     button.addEventListener("click", () => {
         dict.openDictionary("window", 850, 950)
     })
-
-    // check if the url parameter "button" is set to "false"
-    
-    new URLSearchParams(window.location.search).get("b") == "false" ? button.style.display = "none" : "";
 
     updateDictionary()
 </script>

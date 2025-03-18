@@ -107,17 +107,6 @@
                     wordsList.style.display = 'block';
                     wordsList.innerHTML = '';
 
-                    let backButton = document.createElement('div');
-                    backButton.id = 'back-button';
-                    backButton.innerText = '< Back';
-
-                    wordsList.appendChild(backButton);
-
-                    backButton.addEventListener('click', () => {
-                        chooseSetsMenu.style.display = 'grid';
-                        wordsList.style.display = 'none';
-                    })
-
                     let table = "<table><tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th></tr>"
                     terms.forEach((term, i) => {
                         term = term.replaceAll(">","&gt;").replaceAll("<","&lt;")

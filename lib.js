@@ -157,35 +157,53 @@ export class Dictionary {
 
         results = results.filter(x => !excludeCategories.includes(x.category));
 
+        console.log(results)
+
         return new WordSearchResult(searchTerm, results, excludeCategories);
     }
 
     /**
      * 
      * @param {string} location the location to open the dictionary to. 
-     * ```txt
-     * "element": Opens dictionary as an i-frame.
-     *     2nd argument: the element to open the dictionary in.
-     *     3rd argument: the height of the element.
-     *     4th argument: the width of the element.
-     *     5h argument: an array of categories to exclude from the dictionary.
-     * "tab": Opens dictionary in a new tab. This is the default.
-     * "window": Opens dictionary in a new window.
-     * ```
+     * @param {Object} [options] an object that can have the following properties:
+     * @param {number} [options.width=850] the width of the dictionary window (element, window)
+     * @param {number} [options.height=950] the height of the dictionary window (element, window)
+     * @param {HTMLElement} [options.element=undefined] the element to open the dictionary in (element)
+     * @param {string[]} [options.exclude=[]] an array of categories to exclude from the dictionary (element, window, tab)
+     * @param {string} [options.removeNav=false] remove search, dialect changing, swap (element, window, tab)
+     * @param {string} [options.removeCategoryColumn=false] remove the category column (element, window, tab)
+     * @param {string} [options.dialect=undefined] the dialect to open the dictionary in (element, window, tab)
      */
-    openDictionary(location, width, height, exclude) {
-        switch(location) {
+
+    //width, height, element, exclude
+    openDictionary(type, options) {
+        let width = options?.width || 850;
+        let height = options?.height || 950;
+        let element = options?.element || undefined;
+        let exclude = options?.exclude || [];
+        let removeNav = options?.removeNav || false;
+        let removeCategoryColumn = options?.removeCategoryColumn || false;
+        let dialect = options?.dialect || undefined;
+
+        switch(type) {
             case "element":
-                let element = location;
-                element.src = "./dictionary.html?b=false&e=" + exclude.join(",");
+                let urlParams = [
+                    "b=false",
+                    `e=${exclude.join("$")}`,
+                    `n=${removeNav}`,
+                    `c=${removeCategoryColumn}`,
+                    `d=${dialect}`
+                ]
+                let elem = element;
+                elem.src = `./dictionary.html?${urlParams.join("&")}`;
                 //element.src = "https://rus1130.github.io/learn-ngimete/dictionary.html?b=false&e=" + exclude.join(",");
-                element.style.height = width;
-                element.style.width = height;
-                element.style.border = "none";
+                elem.style.height = height;
+                elem.style.width = width;
+                elem.style.border = "none";
             break;
             case "window":
                 // open it in a new window
-                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html?b=false", "_blank", `height=${width},width=${width}`);
+                window.open(`https://rus1130.github.io/learn-ngimete/dictionary.html?b=false&e=${exclude.join(",")}`, "_blank", `height=${width},width=${width}`);
             break;
             default:
             case "tab":
