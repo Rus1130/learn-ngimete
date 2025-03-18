@@ -94,7 +94,7 @@ lulu'i	here	Nouns
 ábe	breast(s) (chest)	Irregular Plural Nouns
 fusa	plain/valley	Nouns
 gemëte	nonsense, unintelligible	Nouns
-giya	word	Nouns
+giya	word(s)	Irregular Plural Nouns
 mbo	so	Interjections and Miscellaneous
 kome	why	Interrogatives
 'e	what	Interrogatives
@@ -126,7 +126,7 @@ mëmë	to translate	Verbs
 yáni	to think	Verbs
 ngálowi/ngärlowi	to mangle	dont add
 ngátiwi	to annihilate	dont add
-kúnu	to involve	Verbs
+kúnu	to involve, to gather (around)	Verbs
 yíse	to love	Verbs
 tsuti	to wander	Verbs
 ngá	to kill	Verbs
@@ -140,8 +140,8 @@ bëm	to feel (an emotion)	Verbs
 nde'o	to see	Verbs
 wisiwisi	to cover	Verbs
 getsilu	to keep away	Verbs
-witsunde'o	to forage, to pluck	Verbs
-míki	to hear	Verbs
+witsunde'o/witsundde'o	to forage, to pluck	Verbs
+míki	to hear, to listen	Verbs
 noa	dead/poisonous/deadly	Adjectives
 mboko	stupid	Adjectives
 géni/génti	rotten	Adjectives
@@ -150,11 +150,11 @@ gati	less, small	Adjectives
 silsetsalo	beautiful	Adjectives
 wána ngingi/wángingina	ugly	Adjectives
 wi'ia	healthy/healing	Adjectives
-tembe/tembbe	hungry	Adjectives
+tembbe	hungry	Adjectives
 ndeki	hot	Adjectives
 sepi	warm	Adjectives
 ärlu	cold	Adjectives
-e'omo	bloody	Adjectives
+engomo	bloody	Adjectives
 ngeka	dry	Adjectives
 wána/wá>NOUN<na	akin to/same	Adjectives
 no'i	cowardly, scared	Adjectives
@@ -347,6 +347,10 @@ süm'an	to require	'An Verbs
 giya 	building 	Nouns
 welebing	misunderstanding, mistranslation, mishap	Nouns
 lohi	to change	Verbs
-na witsunde'oso besi	"go forage yourself rocks" (leave me alone)	Phrases
+o'a witsunde'o kola/na witsunde'oso besi	"go forage yourself rocks" (leave me alone)	Phrases
 náha	to be called	Verbs
 naha	to put on, to adorn	Verbs
+miwa	to be able to	Verbs
+müta	to stop, to halt	Verbs
+ngolo	to follow	Verbs
+nggave	to teardown, to deconstruct, to demolish	Verbs
