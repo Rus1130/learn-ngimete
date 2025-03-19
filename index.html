@@ -98,6 +98,8 @@
     let dialect = 'Standard';
     let studySet = null;
 
+    let ableToStudy = false;
+
     dict.studied = {};
 
     document.querySelectorAll('input[name="dialect"]').forEach((radio) => {
@@ -109,14 +111,14 @@
     });
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Backspace') {
+        if (e.key === 'Backspace' && ableToStudy) {
             chooseSetsMenu.style.display = 'grid';
             wordsList.style.display = 'none';
             pressEnterText.style.display = 'none';
-            studySet = null;
+            ableToStudy = false;
         }
 
-        if(e.key === "Enter" && studySet != null && studySet != "Interrogatives") {
+        if(e.key === "Enter" && ableToStudy && studySet != "Interrogatives") {
 
             // generate 4 random words from the study set, make sure they do not occur in dict.studied
             let wordsToStudy = [];
@@ -136,16 +138,17 @@
 
             let url = `study.html?set=${encodeURIComponent(studySet)}&dialect=${encodeURIComponent(dialect)}&words=${wordsToStudy.map(x => encodeURIComponent(x.key)).join('$')}`;
             // make window fullscreen
-            window.open(url, '_blank', `width=650, height=${screen.height * 0.8}`);
+            window.open(url, '_blank',`width=650, height=${screen.height * 0.8}`);
             studyInProgress.style.display = 'flex';
             wordsList.style.display = 'none';
+            ableToStudy = false;
         }
     });
 
     document.getElementById('end-study').addEventListener('click', () => {
         studyInProgress.style.display = 'none';
         wordsList.style.display = 'block';
-        studySet = null;
+        ableToStudy = true;
     });
 
     function updateWords() {
@@ -172,6 +175,7 @@
                     wordsList.innerHTML = '';
                     
                     studySet = set;
+                    ableToStudy = true;
 
                     let table = "<table><tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th></tr>"
                     terms.forEach((term, i) => {

@@ -45,7 +45,8 @@
         height: 80%;
         width: 500px;
         border: 1px solid black;
-        padding-left: 10px;
+        padding: 10px;
+        overflow-y: scroll;
     }
 
     .option-button {
@@ -86,6 +87,16 @@
         background-color: lightgray;
     }
 
+    .score-div {
+        margin-bottom: 10px;
+        border: 1px solid black;
+        padding-left: 4px;
+    }
+
+    #close-test-button {
+    }
+
+
 </style>
 <head>
 
@@ -104,7 +115,7 @@
             </div>
         </div>
         <div id="scores" style="display: none;">
-            <h1>You scored a ##%!</h1>
+            <h1 id="score">You scored a ##%!</h1>
         </div>
     </div>
 </body>
@@ -255,6 +266,30 @@
             }
             generationIncrement++;
             if(generationIncrement >= studyOrder.length){
+                console.log(testScores);
+
+                let scorePercentElement = document.getElementById('score');
+                let score = Math.round(testScores.filter((score) => score.correct).length / testScores.length * 100);
+                scorePercentElement.innerText = `You scored a ${score}%!`;
+
+                let scoresElement = document.getElementById('scores');
+
+                testScores.forEach((score) => {
+                    let scoreElement = document.createElement('div');
+                    scoreElement.classList.add('score-div');
+                    scoreElement.innerHTML = `${score.prompt} - ${score.correct ? 'CORRECT' : 'INCORRCT'}<br>Correct Answer: ${score.correctAnswer}`;
+                    if(!score.correct){
+                        let answerTranslation = dict.dict[set].find((entry) => entry.value[dialect] === score.answer).key;
+                        scoreElement.innerHTML += `<br>Your Answer: ${score.answer} (${answerTranslation})`;
+                    }
+                    scoresElement.appendChild(scoreElement);
+                });
+
+                let endTestButton = document.createElement('button');
+                endTestButton.innerText = 'Close Test';
+                endTestButton.id = 'close-test-button';
+
+                scoresElement.appendChild(endTestButton);
                 document.getElementById('scores').style.display = 'block';
             } else {
                 generate(generationIncrement);
