@@ -13,8 +13,13 @@ export class BarChart_ {
 
         let yCenter = Chart.measureLines.yCenterLine;
 
+        yLine.attr('x1', 50)
+        yLine.attr('x2', 50)
+
+        xLine.hide();
+
         // X Axis Label
-        draw.text(xAxisLabel).font({ family: 'Helvetica', size: 16 })
+        let xLabel = draw.text(xAxisLabel).font({ family: 'Helvetica', size: 16 })
         .cx(xLine.attr('x1') + (xLine.attr('x2') - xLine.attr('x1')) / 2)
         .cy(Chart.options.height - (Chart.options.height - xLine.attr('y1')) / 2)
 

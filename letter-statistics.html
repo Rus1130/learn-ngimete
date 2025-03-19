@@ -1,19 +1,15 @@
 <style>
     div {
         height: 500px;
-        width: 500px;
+        width: 1200px;
         display: inline-block;
         border: 1px solid black;
     }
 </style>
 <script src="https://rus1130.github.io/another-chart-library/main.js" type="module"></script>
 <body>
-    <div id="standard-1"></div>
-    <div id="standard-2"></div>
-    <div id="standard-3"></div><br>
-    <div id="aatsilwi-1"></div>
-    <div id="aatsilwi-2"></div>
-    <div id="aatsilwi-3"></div>
+    <div id="standard"></div><br>
+    <div id="aatsilwi"></div>
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
@@ -85,35 +81,17 @@
             }
         }
 
+        new BarChart(`#standard`,{width:1200,height:500})
+        .setData("Standard Letter Distribution","Letter","Frequency",100,4,standardKeys, standardValues);
 
-        let distributionStandardKeysGrouped = [];
-        let distributionStandardValuesGrouped = [];
+        new BarChart("#aatsilwi", {width:1200, height:500})
+        .setData("A'atsilwi Letter Distribution","Letter","Frequency",100,4,aatsilwiKeys, aatsilwiValues);
 
-        let distributionAatsilwiKeysGrouped = [];
-        let distributionAatsilwiValuesGrouped = [];
-
-        for(let i = 0; i < standardKeys.length; i += 13){
-            distributionStandardKeysGrouped.push(standardKeys.slice(i, i + 13));
-            distributionStandardValuesGrouped.push(standardValues.slice(i, i + 13));
-        }
-
-        for(let i = 0; i < aatsilwiKeys.length; i += 13){
-            distributionAatsilwiKeysGrouped.push(aatsilwiKeys.slice(i, i + 13));
-            distributionAatsilwiValuesGrouped.push(aatsilwiValues.slice(i, i + 13));
-        }
-
-        new BarChart(`#standard-1`,{width:500,height:500})
-        .setData("Standard Letter Distribution","Letter","Frequency",100,4,distributionStandardKeysGrouped[0], distributionStandardValuesGrouped[0]);
-        new BarChart(`#standard-2`,{width:500,height:500})
-        .setData("Standard Letter Distribution","Letter","Frequency",40,4,distributionStandardKeysGrouped[1], distributionStandardValuesGrouped[1]);
-        new BarChart(`#standard-3`,{width:500,height:500})
-        .setData("Standard Letter Distribution","Letter","Frequency",10,4,distributionStandardKeysGrouped[2], distributionStandardValuesGrouped[2]);
-
-        new BarChart(`#aatsilwi-1`,{width:500,height:500})
-        .setData("A'atsilwi Letter Distribution","Letter","Frequency",100,4,distributionAatsilwiKeysGrouped[0], distributionAatsilwiValuesGrouped[0]);
-        new BarChart(`#aatsilwi-2`,{width:500,height:500})
-        .setData("A'atsilwi Letter Distribution","Letter","Frequency",40,4,distributionAatsilwiKeysGrouped[1], distributionAatsilwiValuesGrouped[1]);
-        new BarChart(`#aatsilwi-3`,{width:500,height:500})
-        .setData("A'atsilwi Letter Distribution","Letter","Frequency",2,1,distributionAatsilwiKeysGrouped[2], distributionAatsilwiValuesGrouped[2]);
+        // new BarChart(`#aatsilwi-1`,{width:500,height:500})
+        // .setData("A'atsilwi Letter Distribution","Letter","Frequency",100,4,distributionAatsilwiKeysGrouped[0], distributionAatsilwiValuesGrouped[0]);
+        // new BarChart(`#aatsilwi-2`,{width:500,height:500})
+        // .setData("A'atsilwi Letter Distribution","Letter","Frequency",40,4,distributionAatsilwiKeysGrouped[1], distributionAatsilwiValuesGrouped[1]);
+        // new BarChart(`#aatsilwi-3`,{width:500,height:500})
+        // .setData("A'atsilwi Letter Distribution","Letter","Frequency",2,1,distributionAatsilwiKeysGrouped[2], distributionAatsilwiValuesGrouped[2]);
     });
 </script>
