@@ -1,27 +1,38 @@
 <style>
     div {
-        height: 500px;
-        width: 1200px;
         display: inline-block;
         border: 1px solid black;
     }
+    .bar {
+        height: 500px;
+        width: 1200px;
+    }
+
+    .pie {
+        height: 500px;
+        width: 500px;
+    }
 </style>
-<script src="https://rus1130.github.io/another-chart-library/main.js" type="module"></script>
 <body>
-    <div id="standard"></div><br>
-    <div id="aatsilwi"></div>
+    <div class="pie" id="categories"></div>
+    <div class="bar" id="standard-letter-distrib"></div><br>
+    <div class="bar" id="aatsilwi-letter-distrib"></div>
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
-    import { BarChart } from '/another-chart-library/main.js';
+    import { PieChart, BarChart } from '/another-chart-library/main.js';
 
     const distributionStandard = {};
     const distributionAatsilwi = {};
+    const categoriesDistribution = {};
 
     dict.waitForDictLoad().then(() => {
         dict.practiceOrder.forEach((set) => {
             if(!["dont add", "Phrases", "Grammar"].includes(set)){
                 dict.dict[set].forEach((word) => {
+                    if(categoriesDistribution[set]) categoriesDistribution[set]++;
+                    else categoriesDistribution[set] = 1;
+                    
                     let def = word.value["Standard"];
                     def.split("").forEach((letter) => {
                         if(distributionStandard[letter]){
@@ -81,17 +92,27 @@
             }
         }
 
-        new BarChart(`#standard`,{width:1200,height:500})
-        .setData("Standard Letter Distribution","Letter","Frequency",100,4,standardKeys, standardValues);
+        new BarChart(`#standard-letter-distrib`,{width:1200,height:500})
+        .setData("Standard Dialect Letter Distribution","Letter","Frequency",100,4,standardKeys, standardValues);
 
-        new BarChart("#aatsilwi", {width:1200, height:500})
-        .setData("A'atsilwi Letter Distribution","Letter","Frequency",100,4,aatsilwiKeys, aatsilwiValues);
+        new BarChart("#aatsilwi-letter-distrib", {width:1200, height:500})
+        .setData("A'atsilwi Dialect Letter Distribution","Letter","Frequency",100,4,aatsilwiKeys, aatsilwiValues);
 
-        // new BarChart(`#aatsilwi-1`,{width:500,height:500})
-        // .setData("A'atsilwi Letter Distribution","Letter","Frequency",100,4,distributionAatsilwiKeysGrouped[0], distributionAatsilwiValuesGrouped[0]);
-        // new BarChart(`#aatsilwi-2`,{width:500,height:500})
-        // .setData("A'atsilwi Letter Distribution","Letter","Frequency",40,4,distributionAatsilwiKeysGrouped[1], distributionAatsilwiValuesGrouped[1]);
-        // new BarChart(`#aatsilwi-3`,{width:500,height:500})
-        // .setData("A'atsilwi Letter Distribution","Letter","Frequency",2,1,distributionAatsilwiKeysGrouped[2], distributionAatsilwiValuesGrouped[2]);
+
+
+        let pieData = PieChart.objectToPieData(categoriesDistribution);
+
+        console.log(pieData);
+
+        let pie = new PieChart("#categories", {
+            width: 500,
+            height: 500
+        }).setData("Categories", PieChart.objectToPieData(categoriesDistribution), {
+            popAmount: 4,
+            showPercentages: true,
+            donut: true,
+            sliceOutlineWidth: 1,
+            sliceOutlineColor: 'white'
+        })
     });
 </script>

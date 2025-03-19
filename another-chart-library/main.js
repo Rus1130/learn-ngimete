@@ -154,6 +154,48 @@ export class Chart {
 
 export class PieChart extends Chart {
     /**
+     * @param {object} obj the object to convert to pie data
+     * @returns {object[]} the data for the pie chart
+     * @example
+     * let data = Chart.objectToPieData({
+     *    "Blue": 42,
+     *    "Green": 14,
+     *    "Purple": 14,
+     *    "Red": 8,
+     *    "Black": 7,
+     *    "Orange": 5,
+     *    "Other": 10
+     * })
+     * // data = [
+     * //    { arc: 42, color: '#ff0000', label: 'Blue' },
+     * //    { arc: 14, color: '#ff0000', label: 'Green' },
+     * //    { arc: 14, color: '#ff0000', label: 'Purple' },
+     * //    { arc: 8, color: '#ff0000', label: 'Red' },
+     * //    { arc: 8, color: '#ff0000', label: 'Red' },
+     * //    { arc: 7, color: '#ff0000', label: 'Black' },
+     * //    { arc: 5, color: '#ff0000', label: 'Orange' },
+     * //    { arc: 10, color: '#ff0000', label: 'Other' }
+     * // ]
+     */
+    static objectToPieData(obj){
+        let max = 0;
+        let objKeys = Object.keys(obj);
+        objKeys.forEach(key => {
+            max += obj[key];
+        })
+
+        let data = [];
+        objKeys.forEach(key => {
+            data.push({
+                arc: obj[key] / max * 100,
+                color: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+                label: key
+            })
+        })
+
+        return data;
+    }
+    /**
      * @param {string} element        element to append the chart to
      * @param {object} options        options for the chart
      * @param {number} options.width  width of the chart
