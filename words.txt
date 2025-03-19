@@ -68,10 +68,10 @@ guda	a selfish person	dont add
 nggawi'i	water god	Religious Terms
 vovi'i	fire god	Religious Terms
 dom	head	Nouns about Bones, Limbs, Body Parts, and Death
-gám 	arm	Nouns about Bones, Limbs, Body Parts, and Death
+gám	arm	Nouns about Bones, Limbs, Body Parts, and Death
 ke	hand	Nouns about Bones, Limbs, Body Parts, and Death
 kili	torso	Nouns about Bones, Limbs, Body Parts, and Death
-gí 	leg	Nouns about Bones, Limbs, Body Parts, and Death
+gí	leg	Nouns about Bones, Limbs, Body Parts, and Death
 mban	foot	Nouns about Bones, Limbs, Body Parts, and Death
 lengki	demon, foul-soul	Religious Terms
 papap	sexual intercourse	Nouns
@@ -196,10 +196,10 @@ langki	cremation ash	Nouns about Bones, Limbs, Body Parts, and Death
 galu	hip bone	Nouns about Bones, Limbs, Body Parts, and Death
 ilolo	spinal cord	Nouns about Bones, Limbs, Body Parts, and Death
 damo	skull	Nouns about Bones, Limbs, Body Parts, and Death
-gámo	all arm bones	Nouns about Bones, Limbs, Body Parts, and Death
+gámo	all arm bones	Nouns about Bones, Limbs, Body Parts, and Death
 ka'e'o	hand bone	Nouns about Bones, Limbs, Body Parts, and Death
 kili'o	ribcage	Nouns about Bones, Limbs, Body Parts, and Death
-ga'í'o	all leg bones	Nouns about Bones, Limbs, Body Parts, and Death
+ga'í'o	all leg bones	Nouns about Bones, Limbs, Body Parts, and Death
 mbano	all foot bones	Nouns about Bones, Limbs, Body Parts, and Death
 ábao	human remains	Nouns about Bones, Limbs, Body Parts, and Death
 ngi'angi'o	cannibal remains	Nouns about Bones, Limbs, Body Parts, and Death

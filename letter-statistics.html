@@ -1,0 +1,97 @@
+<style>
+    div {
+        height: 500px;
+        width: 500px;
+        display: inline-block;
+        border: 1px solid black;
+    }
+</style>
+<script src="https://rus1130.github.io/another-chart-library/main.js" type="module"></script>
+<body>
+    <div id="standard-1"></div>
+    <div id="standard-2"></div>
+    <div id="standard-3"></div><br>
+    <div id="atsilwi-1"></div>
+    <div id="a'atsilwi-2"></div>
+    <div id="a'atsilwi-3"></div>
+</body>
+<script type="module">
+    import { dict } from './dictionary.js';
+    import { BarChart } from '/another-chart-library/main.js';
+
+    const distributionStandard = {};
+    const distributionAatsilwi = {};
+
+    dict.waitForDictLoad().then(() => {
+        dict.practiceOrder.forEach((set) => {
+            if(!["dont add", "Phrases", "Grammar"].includes(set)){
+                dict.dict[set].forEach((word) => {
+                    let def = word.value["Standard"];
+                    def.split("").forEach((letter) => {
+                        if(distributionStandard[letter]){
+                            distributionStandard[letter]++;
+                        } else {
+                            distributionStandard[letter] = 1;
+                        }
+                    })
+
+                    def = word.value["A'atsilwi"];
+                    def.split("").forEach((letter) => {
+                        if(distributionAatsilwi[letter]){
+                            distributionAatsilwi[letter]++;
+                        } else {
+                            distributionAatsilwi[letter] = 1;
+                        }
+                    })
+                })
+            }
+        })  
+
+        let standardKeys = Object.keys(distributionStandard);
+        let standardValues = Object.values(distributionStandard);
+
+        // short standardKeys and standardValues from greatest to least
+        for(let i = 0; i < standardKeys.length; i++){
+            for(let j = i + 1; j < standardKeys.length; j++){
+                if(standardValues[i] < standardValues[j]){
+                    let temp = standardValues[i];
+                    standardValues[i] = standardValues[j];
+                    standardValues[j] = temp;
+
+                    temp = standardKeys[i];
+                    standardKeys[i] = standardKeys[j];
+                    standardKeys[j] = temp;
+                }
+            }
+        }
+
+
+        let distributionStandardKeysGrouped = [];
+        let distributionStandardValuesGrouped = [];
+
+        let distributionAatsilwiKeysGrouped = [];
+        let distributionAatsilwiValuesGrouped = [];
+
+        for(let i = 0; i < standardKeys.length; i += 13){
+            distributionStandardKeysGrouped.push(standardKeys.slice(i, i + 13));
+            distributionStandardValuesGrouped.push(standardValues.slice(i, i + 13));
+        }
+
+        for(let i = 0; i < Object.keys(distributionAatsilwi).length; i += 13){
+            distributionAatsilwiKeysGrouped.push(Object.keys(distributionAatsilwi).slice(i, i + 13));
+            distributionAatsilwiValuesGrouped.push(Object.values(distributionAatsilwi).slice(i, i + 13));
+        }
+
+        console.log(distributionAatsilwiKeysGrouped);
+
+        new BarChart(`#standard-1`,{width:500,height:500})
+        .setData("Standard Letter Distribution","Letter","Frequency",100,4,distributionStandardKeysGrouped[0], distributionStandardValuesGrouped[0]);
+        new BarChart(`#standard-2`,{width:500,height:500})
+        .setData("Standard Letter Distribution","Letter","Frequency",100,4,distributionStandardKeysGrouped[1], distributionStandardValuesGrouped[1]);
+        new BarChart(`#standard-3`,{width:500,height:500})
+        .setData("Standard Letter Distribution","Letter","Frequency",20,4,distributionStandardKeysGrouped[2], distributionStandardValuesGrouped[2]);
+
+        new BarChart(`#atsilwi-1`,{width:500,height:500})
+        .setData("A'atsilwi Letter Distribution","Letter","Frequency",100,4,distributionAatsilwiKeysGrouped[0], distributionAatsilwiValuesGrouped[0]);
+    });
+</script>
