@@ -24,7 +24,7 @@ Word.setDialects(["Standard", "A'atsilwi"])
 dict.addWord("Pronouns", 
     new Word("first person singular non-possesive pronoun",   "yë"),
     new Word("first person singular possesive pronoun",       "yo"),
-    new Word("first person singular reflexive pronoun",       "oyë",   "he"),
+    new Word("first person singular reflexive pronoun",       "oyë",   "mo"),
     new Word("first person plural non-possesive pronoun",     "vë"),
     new Word("first person plural possesive pronoun",         "vo"),
     new Word("first person plural reflexive pronoun",         "ovë",   "ve"),
