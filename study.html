@@ -78,9 +78,9 @@
         font-size: 24pt;
         cursor: pointer;
         border: 1px solid black;
-        padding: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .modal-remove-button:hover {
@@ -91,9 +91,22 @@
         margin-bottom: 10px;
         border: 1px solid black;
         padding-left: 4px;
+        padding-right: 4px;
     }
 
     #close-test-button {
+    }
+
+    .answer-correct {
+        border-left: 4px solid green;
+        /* outline: 2px solid green;
+        border: none; */
+    }
+
+    .answer-incorrect {
+        border-left: 4px solid red;
+        /* outline: 2px solid red;
+        border: none; */
     }
 
 
@@ -266,8 +279,6 @@
             }
             generationIncrement++;
             if(generationIncrement >= studyOrder.length){
-                console.log(testScores);
-
                 let scorePercentElement = document.getElementById('score');
                 let score = Math.round(testScores.filter((score) => score.correct).length / testScores.length * 100);
                 scorePercentElement.innerText = `You scored a ${score}%!`;
@@ -277,7 +288,9 @@
                 testScores.forEach((score) => {
                     let scoreElement = document.createElement('div');
                     scoreElement.classList.add('score-div');
-                    scoreElement.innerHTML = `${score.prompt} - ${score.correct ? 'CORRECT' : 'INCORRCT'}<br>Correct Answer: ${score.correctAnswer}`;
+                    let answerBool = score.correct ? 'CORRECT' : 'INCORRECT'
+                    scoreElement.innerHTML = `${score.prompt} - ${answerBool}<br>Correct Answer: ${score.correctAnswer}`;
+                    scoreElement.classList.add(`answer-${answerBool.toLowerCase()}`);
                     if(!score.correct){
                         let answerTranslation = dict.dict[set].find((entry) => entry.value[dialect] === score.answer).key;
                         scoreElement.innerHTML += `<br>Your Answer: ${score.answer} (${answerTranslation})`;
