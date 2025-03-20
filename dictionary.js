@@ -11,7 +11,7 @@ let setNames = [
     "'An Verbs",
     "Irregular Plural Nouns",
     "Nouns about Bones, Limbs, Body Parts, and Death",
-    "Interjections and Miscellaneous",
+    "Miscellaneous",
     "Interrogatives",
     "Cannibals and Mutants",
     "Religious Terms",

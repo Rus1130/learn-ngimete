@@ -159,17 +159,17 @@ ngeka	dry	Adjectives
 wána/wá>NOUN<na	akin to/same	Adjectives
 no'i	cowardly, scared	Adjectives
 kasë	black	Adjectives
-ge	no	Interjections and Miscellaneous
-gege	definite no	Interjections and Miscellaneous
-owaowa	definite yes	Interjections and Miscellaneous
-owa	yes	Interjections and Miscellaneous
-giwa 	maybe	Interjections and Miscellaneous
-mi	ok/neutral yes	Interjections and Miscellaneous
-gogowa	wrong	Interjections and Miscellaneous
-owilowa	correct	Interjections and Miscellaneous
+ge	no	Miscellaneous
+gege	definite no	Miscellaneous
+owaowa	definite yes	Miscellaneous
+owa	yes	Miscellaneous
+giwa 	maybe	Miscellaneous
+mi	ok/neutral yes	Miscellaneous
+gogowa	wrong	Miscellaneous
+owilowa	correct	Miscellaneous
 NODEF	hello/hi	dont add
-ilo/ano	this/that	Interjections and Miscellaneous
-sülu/sëlu	got it (killed/caught something)	Interjections and Miscellaneous
+ilo/ano	this/that	Miscellaneous
+sülu/sëlu	got it (killed/caught something)	Miscellaneous
 gegela	zero/nothing	Numerals
 gela	one, any number except 2	Numerals
 la	two	Numerals
@@ -182,12 +182,12 @@ wé	seven	Numerals
 ana	eight	Numerals
 miki	nine	Numerals
 kó	ten	Numerals
-nam	and	Interjections and Miscellaneous
-yëpütu	forever	Interjections and Miscellaneous
-na'ë	too	Interjections and Miscellaneous
+nam	and	Miscellaneous
+yëpütu	forever	Miscellaneous
+na'ë	too	Miscellaneous
 apelelala	to plead	Verbs
-ute	or	Interjections and Miscellaneous
-úte	very, so	Interjections and Miscellaneous
+ute	or	Miscellaneous
+úte	very, so	Miscellaneous
 e'aya	procedure	Nouns
 mbaba mboko	a really big idiot	Nouns
 keki	limb	Nouns about Bones, Limbs, Body Parts, and Death
@@ -338,8 +338,8 @@ ndenti	blessing	Nouns
 i'i	god	Nouns
 si/siloa	to fly	Verbs
 kola/besi	rock, stone	Nouns
-sen/sam	but	Interjections and Miscellaneous
-lohíyam	still	Interjections and Miscellaneous
+sen/sam	but	Miscellaneous
+lohíyam	still	Miscellaneous
 lohí	time	Nouns
 ka lohí kini yë X	can I have X time	Phrases
 sálohí	to miss (someone), to reminince (about something)	Verbs
