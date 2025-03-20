@@ -267,7 +267,7 @@ tapwá	seashell	Nouns
 kono	bottle	Nouns
 wi'ia kono/ewu kono	medicine	Nouns
 sene tapi'i	metal god / plane	Religious Terms
-apelelala ya nona/tseho	friend	Nouns
+tseho	friend, acquaintance (formal)	Nouns
 ka 'a eme apelelala-ya ken	how are you (informal)	Phrases
 ka 'a ndálohí atita á'á	how are you (formal)	Phrases
 lengki ya	evil	Adjectives
@@ -360,8 +360,9 @@ asipi'an	to speak in a possessed manner	'An Verbs
 asipi'on	to make excuses	'An Verbs
 (number); lo	ordinal (1st, 2nd, etc) expression	Phrase
 u'i'i'a'i'u'i'i'i'i'a'i	to crash out	dont add
-vese	to work	Verbs
+vese/vefe	to work	Verbs
 ndafo	to forget	Verbs
 panta	task, quest	Nouns
 üná	profession, trade	Nouns
-ani	friend, bro	Nouns
+ngána	river	Nouns
+ani	friend, bro (informal)	Nouns
