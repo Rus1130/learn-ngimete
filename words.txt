@@ -64,7 +64,7 @@ ati yua	grandfather	Nouns
 ati alo'a/ati äwa	grandmother	Nouns
 yam pula/yam närla	drying rack	Nouns
 kaha pula/kaha näla	wood storage	Nouns
-guda	a selfish person	dont add
+zeve	a selfish person	Nouns
 nggawi'i	water god	Religious Terms
 vovi'i	fire god	Religious Terms
 dom	head	Nouns about Bones, Limbs, Body Parts, and Death
