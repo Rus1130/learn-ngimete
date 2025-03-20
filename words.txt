@@ -342,15 +342,20 @@ sen/sam	but	Interjections and Miscellaneous
 lohí ámdwa X	still X	Phrases
 lohí	time	Nouns
 ka lohí kini yë X	can I have X time	Phrases
-sálohí	to rewind, to reminisce	Verbs
+sálohí	to rewind, to reminisce, to miss (tr)	Verbs
 süm'an	to require	'An Verbs
 giya 	building 	Nouns
 welebing	misunderstanding, mistranslation, mishap	Nouns
 lohi	to change	Verbs
 o'a witsunde'o kola/na witsunde'oso besi	"go forage yourself rocks" (leave me alone)	Phrases
-náha	to be called	Verbs
+náha	to be called, for (specific thing)	Verbs
 naha	to put on, to adorn	Verbs
 miwa	to be able to	Verbs
 müta	to stop, to halt	Verbs
 ngolo	to follow	Verbs
 nggave	to teardown, to deconstruct, to demolish	Verbs
+a'i'o	shit	Nouns
+asipi	to ramble	Verbs
+asipi'an	to yap	'An Verbs
+asipi'on	to make excuses	'An Verbs
+(number); lo	ordinal (1st, 2nd, etc) expression	Phrase
