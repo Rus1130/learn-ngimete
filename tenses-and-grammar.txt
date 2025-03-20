@@ -7,8 +7,9 @@ o-	genitive (GEN)	Grammar
 -ya	adjectizer (ADJZ)	Grammar
 g(e)-	negative (NEG)	Grammar
 bo	lative (go towards) (LAT)	Grammar
-kole/ndwa	simultaneous comitative (COM.SIM)	Grammar
-ámdwa	sequential comitative (COM.SEQ)	Grammar
+kole/ndwa	simultaneously (SIMUL); ite yá tsi'i kole "he eats the berries and meat (at the same time)"	Grammar
+lo	sequentially (SEQ); ite yá tsi'i lo "he eats the berries and then the meat"	Grammar
+ámdwa	comitative (COM)	Grammar
 -to	Instrumental (INSTR)	Grammar
 -(a)lala	diminutive (DIM)	Grammar
 _pa	ablative (motion away) (ABL)	Grammar
@@ -39,8 +40,8 @@ na'u'u	zoic far future (ZO.FFUT)	Tenses
 lu'u'u	zoic gnomic (ZO.GNO)	Tenses
 'üpayepë	zoic hesternial (ZO.HEST)	Tenses
 'üboyepë	zoic hodiernal (ZO.HOD)	Tenses
--'an	marks AGENTS action as being forced or out of their control (VOL)	Grammar
-_gya	imperfective (IPFV)	Grammar
+-'an	abstracts a verb as an involuntary/forced action	Grammar
+-'on	further abstraction of an -'an verb	Grammar
+_gya	imperfective (IPFV) (incomplete action)	Grammar
 (noun) wa	locative (LOC)	Grammar
 wa (noun)	copula (COP)	Grammar
-kene_	inessive	Grammar
