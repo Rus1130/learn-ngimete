@@ -157,8 +157,6 @@ export class Dictionary {
 
         results = results.filter(x => !excludeCategories.includes(x.category));
 
-        console.log(results)
-
         return new WordSearchResult(searchTerm, results, excludeCategories);
     }
 
