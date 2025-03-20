@@ -7,9 +7,10 @@ o-	genitive (GEN)	Grammar
 -ya	adjectizer (ADJZ)	Grammar
 g(e)-	negative (NEG)	Grammar
 bo	lative (go towards) (LAT)	Grammar
-kole/ndwa	simultaneously (SIMUL); ite yá tsi'i kole "he eats the berries and meat (at the same time)"	Grammar
-lo	sequentially (SEQ); ite yá tsi'i lo "he eats the berries and then the meat"	Grammar
-ámdwa	comitative (COM)	Grammar
+mó	simultaneously (SIMUL.N); ite napa yá tsi'i mó "he eats the meat and berries (at the same time)", yë fá napa fá witsunde'o "I eat while I forage"	Grammar
+fá	simultaneously (SIMUL.V); ite fá napa fá witsunde'o "he eats and forages (at the same time)"	Grammar
+lo	sequentially (SEQ); ite yá tsi'i lo "he eats the meat, then the berries"	Grammar
+kole/ndwa	comitative (COM)	Grammar
 -to	Instrumental (INSTR)	Grammar
 -(a)lala	diminutive (DIM)	Grammar
 _pa	ablative (motion away) (ABL)	Grammar
