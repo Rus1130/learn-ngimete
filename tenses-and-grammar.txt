@@ -45,3 +45,4 @@ lu'u'u	zoic gnomic (ZO.GNO)	Tenses
 _gya	imperfective (IPFV) (incomplete action)	Grammar
 (noun) wa	locative (LOC)	Grammar
 wa (noun)	copula (COP)	Grammar
+_náha	focus (FOC)	Grammar

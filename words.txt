@@ -133,18 +133,18 @@ ngá	to kill	Verbs
 né le	to light	Verbs
 som	to give	Verbs
 kini	to lend	Verbs
-witsu	to find, to have (physically), to look out for (an emotion)	Verbs
+witsu	to find, to have (reflexive)	Verbs
 tapa	to touch/feel (something)	Verbs
 fasu'i	to smell	Verbs
 bëm	to feel (an emotion)	Verbs
 nde'o	to see	Verbs
 wisiwisi	to cover	Verbs
 getsilu	to keep away	Verbs
-witsunde'o/witsundde'o	to forage, to pluck	Verbs
+witsunde'o/witsundde'o	to forage	Verbs
 míki	to hear, to listen	Verbs
 noa	dead/poisonous/deadly	Adjectives
 mboko	stupid	Adjectives
-géni/génti	rotten	Adjectives
+génti	rotten	Adjectives
 ati	more, big	Adjectives
 gati	less, small	Adjectives
 silsetsalo	beautiful	Adjectives
@@ -222,7 +222,7 @@ bëm'an	to feel (an emotion you don't want to)	'An Verbs
 witsunde'o'an	to scour for food (or starve)	'An Verbs
 ngaowi'an	to fight back, jump/assault (something)	'An Verbs
 yíse'an	to fall in love	'An Verbs
-ima'an	to fall asleep (intr)	'An Verbs
+ima'an	to fall asleep	'An Verbs
 tapa'an	to press against	'An Verbs
 sána	to shoot (an arrow)	Verbs
 yana	sun	Nouns
@@ -250,7 +250,7 @@ ndawi'an	to forcibly run, flee	'An Verbs
 atita	many	Adjectives
 kalahala	polite "mbaba mboko"	Nouns
 hühä	exhaustion	Nouns
-ima'on	to knock unconscious (tr)	'An Verbs
+ima'on	to knock (someone) unconscious 	'An Verbs
 ngaowi'on	to defend (from attack)	'An Verbs
 mbigye	treasure/dearest (informally)	Nouns
 angtiwí'o	ridiculous	Adjectives
@@ -339,23 +339,29 @@ i'i	god	Nouns
 si/siloa	to fly	Verbs
 kola/besi	rock, stone	Nouns
 sen/sam	but	Interjections and Miscellaneous
-lohí ámdwa X	still X	Phrases
+lohíyam	still	Interjections and Miscellaneous
 lohí	time	Nouns
 ka lohí kini yë X	can I have X time	Phrases
-sálohí	to rewind, to reminisce, to miss (tr)	Verbs
+sálohí	to miss (someone), to reminince (about something)	Verbs
 süm'an	to require	'An Verbs
 giya 	building 	Nouns
 welebing	misunderstanding, mistranslation, mishap	Nouns
 lohi	to change	Verbs
 o'a witsunde'o kola/na witsunde'oso besi	"go forage yourself rocks" (leave me alone)	Phrases
-náha	to be called, for (specific thing)	Verbs
+nahá	to retrieve	Verbs
 naha	to put on, to adorn	Verbs
 miwa	to be able to	Verbs
 müta	to stop, to halt	Verbs
 ngolo	to follow	Verbs
 nggave	to teardown, to deconstruct, to demolish	Verbs
 a'i'o	shit	Nouns
-asipi	to ramble	Verbs
-asipi'an	to yap	'An Verbs
+asipi	to talk nonsensically	Verbs
+asipi'an	to speak in a possessed manner	'An Verbs
 asipi'on	to make excuses	'An Verbs
 (number); lo	ordinal (1st, 2nd, etc) expression	Phrase
+u'i'i'a'i'u'i'i'i'i'a'i	to crash out	dont add
+vese	to work	Verbs
+ndafo	to forget	Verbs
+panta	task, quest	Nouns
+üná	profession, trade	Nouns
+ani	friend, bro	Nouns
