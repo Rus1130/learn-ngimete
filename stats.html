@@ -98,7 +98,7 @@
         new BarChart("#aatsilwi-letter-distrib", {width:1200, height:500})
         .setData("A'atsilwi Dialect Letter Distribution","Letter","Frequency",100,4,aatsilwiKeys, aatsilwiValues);
 
-        new PieChart("#categories", {
+        let pieChart = new PieChart("#categories", {
             width: 500,
             height: 500
         }).setData("Categories", PieChart.objectToPieData(categoriesDistribution), {
