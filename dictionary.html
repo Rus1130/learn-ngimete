@@ -19,7 +19,7 @@
     }
     #container {
         overflow: auto;
-        max-height: calc(100vh - 80px);
+        max-height: calc(100% - 80px);
     }
     #popout {
         position: absolute;
@@ -65,8 +65,6 @@
 <script type="module">
     import { dict } from './dictionary.js';
 
-
-    
     let input = document.getElementById("input")
     let output = document.getElementById("output")
 
@@ -92,8 +90,8 @@
 
     if(removeNav) {
         document.getElementById("nav").style.display = "none"
+        document.getElementById("container").style.maxHeight = "100%"
     }
-
 
     function updateDictionary() {
         let dialects = Array.from(document.getElementsByName("dialect")).map(d => d.checked ? d.value : null).filter(d => d)
@@ -108,7 +106,9 @@
         }
 
         options.swap = document.getElementById("swap").checked
-        if(excludedCategories != null) options.excludeCategories = excludedCategories
+        if(excludedCategories != null) {
+            options.excludedCategories = excludedCategories.split(",").map(c => dict.practiceOrder[Number(c)])
+        }
 
         dict.waitForDictLoad().then(() => {
             let wordSearchResult = dict.wordSearch(input.value, options);
@@ -140,7 +140,7 @@
 
 
     button.addEventListener("click", () => {
-        dict.openDictionary("window", 850, 950)
+        dict.openDictionary("window")
     })
 
     updateDictionary()

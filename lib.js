@@ -70,7 +70,7 @@ export class Dictionary {
      * @param {string} [options.dialect=undefined] the dialect to return the word in, if not specified, all dialects will return
      * @param {string} [options.category=undefined] the category to search in, if not specified, all categories will be searched
      * @param {boolean} [options.swap=false] if true, the term input should be in the language other than english
-     * @param {Object} [options.excludeCategories=[]] an array of categories to exclude from the search
+     * @param {Object} [options.excludedCategories=[]] an array of categories to exclude from the search
      * @returns {WordSearchResult} an array of Word objects that match the search term, optionally filtered by category and dialect
      * @example 
      *  dict.waitForDictLoad().then(() => {
@@ -78,7 +78,7 @@ export class Dictionary {
      *          dialect: "Standard",
      *          category: "Religious Terms",
      *          swap: false,
-     *          excludeCategories: ["Cannibals and Mutants"]
+     *          excludedCategories: ["Cannibals and Mutants"]
      *      })
      *
      *      console.log(wordSearchResult)
@@ -90,7 +90,7 @@ export class Dictionary {
         let category = options?.category || undefined;
         let dialect = options?.dialect || undefined;
         let swap = options?.swap || false;
-        let excludeCategories = options?.excludeCategories || [];
+        let excludedCategories = options?.excludedCategories || [];
 
         if(["not loaded", "loading"].includes(this.dictLoadedFromLink)) throw new Error("Dictionary not loaded yet. Please wait for the dictionary to load before searching.");
 
@@ -155,9 +155,9 @@ export class Dictionary {
             }
         }
 
-        results = results.filter(x => !excludeCategories.includes(x.category));
+        results = results.filter(x => !excludedCategories.includes(x.category));
 
-        return new WordSearchResult(searchTerm, results, excludeCategories);
+        return new WordSearchResult(searchTerm, results, excludedCategories);
     }
 
     /**
@@ -167,7 +167,7 @@ export class Dictionary {
      * @param {number} [options.width=850] the width of the dictionary window (element, window)
      * @param {number} [options.height=950] the height of the dictionary window (element, window)
      * @param {HTMLElement} [options.element=undefined] the element to open the dictionary in (element)
-     * @param {string[]} [options.exclude=[]] an array of categories to exclude from the dictionary (element, window, tab)
+     * @param {string[]} [options.exclude=[]] an array of categories to exclude from the dictionary. The categories will be the index they are in the this.practiceOrder array (element, window, tab)
      * @param {string} [options.removeNav=false] remove search, dialect changing, swap (element, window, tab)
      * @param {string} [options.removeCategoryColumn=false] remove the category column (element, window, tab)
      * @param {string} [options.dialect=undefined] the dialect to open the dictionary in (element, window, tab)
@@ -187,7 +187,7 @@ export class Dictionary {
             case "element":
                 let urlParams = [
                     "b=false",
-                    `e=${exclude.join("$")}`,
+                    `e=${exclude.join(",")}`,
                     `n=${removeNav}`,
                     `c=${removeCategoryColumn}`,
                     `d=${dialect}`
@@ -200,7 +200,7 @@ export class Dictionary {
             break;
             case "window":
                 // open it in a new window
-                window.open(`https://rus1130.github.io/learn-ngimete/dictionary.html?b=false&e=${exclude.join(",")}`, "_blank", `height=${width},width=${width}`);
+                window.open(`https://rus1130.github.io/learn-ngimete/dictionary.html?b=false`, "_blank", `height=${width},width=${width}`);
             break;
             default:
             case "tab":

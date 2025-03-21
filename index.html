@@ -137,11 +137,20 @@
 
             if (!dict.studied[randomWord.key] && !wordsToStudy.includes(randomWord)) {
                 wordsToStudy.push(randomWord);
-                //dict.studied[randomWord.key] = true;
             }
         }
 
-        let url = `study.html?set=${encodeURIComponent(studySet)}&dialect=${encodeURIComponent(dialect)}&words=${wordsToStudy.map(x => encodeURIComponent(x.key)).join('$')}`;
+        let wordIndexes = wordsToStudy.map((word) => {
+            return dict.dict[studySet].indexOf(word);
+        });
+
+        let urlArray = [
+            "s=" + encodeURIComponent(dict.practiceOrder.indexOf(studySet)),
+            "d=" + encodeURIComponent(Word.dialects.indexOf(dialect)),
+            "w=" + wordIndexes.join(',')
+        ]
+
+        let url = `study.html?${urlArray.join('&')}`;
 
         return url
     }

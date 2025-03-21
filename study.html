@@ -134,14 +134,18 @@
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
+    import { Word } from "./lib.js";
+
     let urlParams = new URLSearchParams(window.location.search);
-    let set = urlParams.get('set');
-    let dialect = urlParams.get('dialect');
-    let wordsToStudyEnglish = urlParams.get('words').split("$")
+    let set = dict.practiceOrder[urlParams.get('s')];
+    let dialect = Word.dialects[urlParams.get('d')];
 
     const nextButton = document.getElementById('next');
 
     dict.waitForDictLoad().then(() => {
+        let wordsToStudyEnglish = urlParams.get('w').split(",").map((index) => dict.dict[set][index].key);
+
+
         let studySet = dict.dict[set];
 
         let wordsToStudyNgimëte = [];
