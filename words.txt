@@ -20,7 +20,7 @@ néna	south of the bonfire, off the cliff	Religious Terms
 sitwi	west of the bonfire, to the rolling hill	Religious Terms
 láma	east of the bonfire, to the beach	Religious Terms
 ngawu tapu	water collecter	Nouns
-yá	meat, face (by extension)	Nouns
+yá	meat	Nouns
 tapu yá	shell/skin	Nouns
 lu	thing/it/this	Nouns
 sepü	lake	Nouns
@@ -369,3 +369,11 @@ ani	friend, bro (informal)	Nouns
 ndasi ya	white	Adjectives
 simbbärnta	journey, adventure	Nouns
 kyesi	above	Miscellaneous
+saha	breath	Nouns
+íne	birth	Nouns
+peye	face	Nouns
+ëwaya	another	Miscellaneous
+kuni	to send	Verbs
+yu'úla	to grieve	Verbs
+kuni mem te	messenger	Nouns
+fóse	absence	Nouns
