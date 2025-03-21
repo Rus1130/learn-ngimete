@@ -297,7 +297,7 @@
                     scoreElement.classList.add(`answer-${answerBool.toLowerCase()}`);
                     if(!score.correct){
                         let answerTranslation = dict.dict[set].find((entry) => entry.value[dialect] === score.answer).key;
-                        scoreElement.innerHTML += `<br>Your Answer: ${score.answer} (${answerTranslation})`;
+                        scoreElement.innerHTML += `<br>Your Answer: ${score.answer} - "${answerTranslation}"`;
                     }
                     scoresElement.appendChild(scoreElement);
                 });
