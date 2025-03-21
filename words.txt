@@ -11,7 +11,7 @@ kaha	wood/tree	Nouns
 kopa	house	Nouns
 mem pele	knowledge	Nouns
 më te	language/talk/tongue	Nouns
-ngimëte	ngimëte	Nouns
+ngimëte	human language	Nouns
 wisi	leaf(s)	Irregular Plural Nouns
 mbaba	idiot	Nouns
 táne	beach/shore/path	Nouns
@@ -231,7 +231,7 @@ ngá'an	to manslaughter	'An Verbs
 né'an	to commit arson/light ablaze	'An Verbs
 napa'an	to devour/gobble down	'An Verbs
 kahalala	stick/twig	Nouns
-peleli'i	the knower, god of knowledge 	Religious Terms
+peleli'i	god of knowledge 	Religious Terms
 gola	fat, obese	Adjectives
 gola ngingi	large ngingi	Cannibals and Mutants
 vovi'nona/vona	man	Nouns
@@ -298,7 +298,7 @@ wulë	hello	dont add
 em	to go	dont add
 witsundehohan ya	hungry	dont add
 ë	and	dont add
-buntse	strange (creature)	Nouns
+buntse/mbuntse	strange	Adjective
 vovi	fire	dont add
 noni'i	human god, the first god	Religious Terms
 kaoki ken	peepnis	Nouns about Bones, Limbs, Body Parts, and Death
@@ -366,3 +366,6 @@ panta	task, quest	Nouns
 üná	profession, trade	Nouns
 ngána	river	Nouns
 ani	friend, bro (informal)	Nouns
+ndasi ya	white	Adjectives
+simbbärnta	journey, adventure	Nouns
+kyesi	above	Miscellaneous
