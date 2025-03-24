@@ -105,7 +105,7 @@ mawu/mewu	who	Interrogatives
 süm	to need/get/want	Verbs
 tsi	to go	Verbs
 eme	to do	Verbs
-meowi	to build/create/make	Verbs
+meowi	to make	Verbs
 ndawi	to run	Verbs
 pele	to know	Verbs
 pelepele	to understand	Verbs
@@ -167,7 +167,7 @@ giwa 	maybe	Miscellaneous
 mi	ok/neutral yes	Miscellaneous
 gogowa	wrong	Miscellaneous
 owilowa	correct	Miscellaneous
-NODEF	hello/hi	dont add
+tálo	hello/hi	Miscellaneous
 ilo/ano	this/that	Miscellaneous
 sülu/sëlu	got it (killed/caught something)	Miscellaneous
 gegela	zero/nothing	Numerals
@@ -256,7 +256,7 @@ mbigye	treasure/dearest (informally)	Nouns
 angtiwí'o	ridiculous	Adjectives
 ndálohí	to survive/prosper/pass (time)	Verbs
 ndálohí máfëtär	pass (the days) safely	Phrases
-ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	"did you have to waste all the food by eating it when you weren't hungry?"	Phrases
+ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	did you have to waste all the food by eating it when you weren't hungry?"	Phrases
 ndálohí kama	to pull an all nighter	dont add
 kehibó	mountain(s)	Irregular Plural Nouns
 mbitsë	land	Nouns
@@ -265,7 +265,7 @@ NODEF	bone marrow	dont add
 kini'an	to sell	'An Verbs
 tapwá	seashell	Nouns
 kono	bottle	Nouns
-wi'ia kono/ewu kono	medicine	Nouns
+wi'ia kono/ewu ya kono	medicine	Nouns
 sene tapi'i	metal god / plane	Religious Terms
 tseho	friend, acquaintance (formal)	Nouns
 ka 'a eme apelelala-ya ken	how are you (informal)	Phrases
@@ -303,7 +303,7 @@ vovi	fire	dont add
 noni'i	human god, the first god	Religious Terms
 kaoki ken	peepnis	Nouns about Bones, Limbs, Body Parts, and Death
 galu ken yá	voogigna	Nouns about Bones, Limbs, Body Parts, and Death
-ábe	human	dont add
+ábe	human(s)	dont add
 kole	comitative	dont add
 u'u	animal	dont add
 keloyani	lower body	Nouns about Bones, Limbs, Body Parts, and Death
@@ -347,18 +347,18 @@ süm'an	to require	'An Verbs
 giya 	building 	Nouns
 welebing	misunderstanding, mistranslation, mishap	Nouns
 lohi	to change	Verbs
-o'a witsunde'o kola/na witsunde'oso besi	"go forage yourself rocks" (leave me alone)	Phrases
+o'a witsunde'o kola/na witsunde'oso besi	go forage yourself rocks" (leave me alone)	Phrases
 nahá	to retrieve	Verbs
 naha	to put on, to adorn	Verbs
 miwa	to be able to	Verbs
 müta	to stop, to halt	Verbs
 ngolo	to follow	Verbs
-nggave	to teardown, to deconstruct, to demolish	Verbs
+nggave	to teardown, to deconstruct, to demolish, to remove	Verbs
 a'i'o	shit	Nouns
 asipi	to talk nonsensically	Verbs
 asipi'an	to speak in a possessed manner	'An Verbs
 asipi'on	to make excuses	'An Verbs
-(number); lo	ordinal (1st, 2nd, etc) expression	Phrase
+-lo	ordinal (1st, 2nd, etc) expression	Phrase
 u'i'i'a'i'u'i'i'i'i'a'i	to crash out	dont add
 vese/vefe	to work	Verbs
 ndafo	to forget	Verbs
@@ -377,3 +377,15 @@ kuni	to send	Verbs
 yu'úla	to grieve	Verbs
 kuni mem te	messenger	Nouns
 fóse	absence	Nouns
+kálakü	nose-spitter (insult towards A'atsilwi speakers)	Nouns
+fógäpühaä	grunt-screecher (insult towards Standard speakers)	Nouns
+népi	sun	dont add
+ápwa	moon	dont add
+hana	to enjoy, to like	Verbs
+mogü	to hate, to despise	Verbs
+miba	below	Miscellaneous
+gabu	frog	Nouns
+kekyene	iteration, version, edition	Nouns
+fe'úa	to help	Verbs
+nenta	to write	Verbs
+'ata	direction, way, trail	Nouns
