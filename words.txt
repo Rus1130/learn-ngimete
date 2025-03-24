@@ -386,6 +386,10 @@ mogü	to hate, to despise	Verbs
 miba	below	Miscellaneous
 gabu	frog	Nouns
 kekyene	iteration, version, edition	Nouns
-fe'úa	to help	Verbs
+fesúa	to help	Verbs
 nenta	to write	Verbs
 'ata	direction, way, trail	Nouns
+tine	few	Adjectives
+hatsamwa	simple, basic	Adjectives
+wa	to exist	Verbs
+tama	name	Nouns
