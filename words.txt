@@ -167,7 +167,7 @@ giwa 	maybe	Miscellaneous
 mi	ok/neutral yes	Miscellaneous
 gogowa	wrong	Miscellaneous
 owilowa	correct	Miscellaneous
-tálo	hello/hi	Miscellaneous
+katálo	hello/hi	Miscellaneous
 ilo/ano	this/that	Miscellaneous
 sülu/sëlu	got it (killed/caught something)	Miscellaneous
 gegela	zero/nothing	Numerals
@@ -334,7 +334,7 @@ mafo	to resemble	Verbs
 kene	to be inside of	Verbs
 ndasi	to shine	Verbs
 som'on	to sacrifice (something), to give again	'An Verbs
-ndenti	blessing	Nouns
+ndenti	blessing, favor	Nouns
 i'i	god	Nouns
 si/siloa	to fly	Verbs
 kola/besi	rock, stone	Nouns
@@ -383,13 +383,20 @@ népi	sun	dont add
 ápwa	moon	dont add
 hana	to enjoy, to like	Verbs
 mogü	to hate, to despise	Verbs
-miba	below	Miscellaneous
+niba	below	Miscellaneous
 gabu	frog	Nouns
 kekyene	iteration, version, edition	Nouns
 fesúa	to help	Verbs
 nenta	to write	Verbs
-'ata	direction, way, trail	Nouns
+'ata	direction	Nouns
 tine	few	Adjectives
 hatsamwa	simple, basic	Adjectives
-wa	to exist	Verbs
-tama	name	Nouns
+tsefese	to exist, to suffer (reflexive)	Verbs
+tama	name, label	Nouns
+pala	extra, leftover	Adjective
+mbayu	sorry	Miscellaneous
+bambba	noise, sound	Nouns
+lafeowigye	melody, tune, song	Nouns
+säna	hollow, empty	Adjectives
+tuha	result	Nouns
+mbeno	to create	Verbs
