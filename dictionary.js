@@ -24,22 +24,22 @@ Word.setDialects(["Standard", "A'atsilwi"])
 dict.addWord("Pronouns", 
     new Word("first person singular non-possesive pronoun",   "yë"),
     new Word("first person singular possesive pronoun",       "yo"),
-    new Word("first person singular reflexive pronoun",       "oyë",   "mo"),
+    new Word("first person singular reflexive pronoun",       "mo"),
     new Word("first person plural non-possesive pronoun",     "vë"),
     new Word("first person plural possesive pronoun",         "vo"),
-    new Word("first person plural reflexive pronoun",         "ovë",   "ve"),
+    new Word("first person plural reflexive pronoun",         "ve"),
     new Word("second person singular non-possesive pronoun",  "'a"),
-    new Word("second person singular possesive pronoun",      "ao"),
-    new Word("second person singular reflexive pronoun",      "o'a",   "na"),
-    new Word("second person plural non-possesive pronoun",    "am",    "nga"),
-    new Word("second person plural possesive pronoun",        "amo",   "ngo"),
-    new Word("second person plural reflexive pronoun",        "o'am",  "nge"),
+    new Word("second person singular possesive pronoun",      "ao", "'ao"),
+    new Word("second person singular reflexive pronoun",      "na"),
+    new Word("second person plural non-possesive pronoun",    "'ama",    "nga"),
+    new Word("second person plural possesive pronoun",        "'ame",   "ngo"),
+    new Word("second person plural reflexive pronoun",        "nge"),
     new Word("third person singular non-possesive pronoun",   "ite",   "iti"),
     new Word("third person singular possesive pronoun",       "ito",   "ikyo"),
-    new Word("third person singular reflexive pronoun",       "oite",  "ni"),
-    new Word("third person plural non-possesive pronoun",     "item",  "ki"),
-    new Word("third person plural possesive pronoun",         "itom",  "gyo"),
-    new Word("third person plural reflexive pronoun",         "oitem", "si")
+    new Word("third person singular reflexive pronoun",       "ni"),
+    new Word("third person plural non-possesive pronoun",     "ikyi",  "ki"),
+    new Word("third person plural possesive pronoun",         "igyo",  "gyo"),
+    new Word("third person plural reflexive pronoun",         "si")
 )
 
 dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/tenses-and-grammar.txt`, "\n", "\t", "/")
