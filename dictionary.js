@@ -3,6 +3,7 @@ import { Dictionary, Word } from "./lib.js";
 let setNames = [
     "Consonant Sounds",
     "Vowel Sounds",
+    "Connecting Letters",
     "Pronouns",
     "Tenses",
     "Grammar", 
@@ -65,7 +66,19 @@ dict.addWord("Vowel Sounds",
     new Word("ä", "/ɑ/"),
     new Word("är", "/ɑː/"),
 )
-    // new Word("ā", "/ɑː/"),
+
+dict.addWord("Connecting Letters",
+    new Word("letter group V", "a, e, i, o, u, á, é, í, ó, ú, ä, ë, ü"),
+    new Word("letter group C", "b, d, f, g, h, k, l, m, n, p, s, t, v, w, y, r"),
+    new Word("letter group C1", "m, n, s, v, w, r"),
+    new Word("letter group A", "b, d, f, h, k, l, t"),
+    new Word("letter group D", "g, p, y"),
+    new Word("letter group P", "o, i, u"),
+    new Word("ā", "break between the letter <a> and group C"),
+    new Word("ə", "break between groups P, C and group C"),
+    new Word("c", "break between group V and groups V, D"),
+    new Word("z", "break between group V and groups C1, A"),
+)
 
 dict.addWord("Pronouns", 
     new Word("first person singular non-possesive pronoun",   "yë"),
