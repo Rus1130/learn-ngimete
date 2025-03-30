@@ -425,7 +425,7 @@ ndo	to open	Verbs
 veseyo/vefeyo	to exert/strain one's self	yo/so Verbs
 wawáso	to trip, to miswalk	yo/so Verbs
 imaso	to collapse into sleep, to faint	yo/so Verbs
-eme'an	to be obliged to (perform an action)	yo/so Verbs
+eme'an	to be obliged to (perform an action)	'An Verbs
 emeso	to take charge, to assume leadership	yo/so Verbs
 ndawiso	to exercise/workout	yo/so Verbs
 timbba	to clean, to wash	Verbs
