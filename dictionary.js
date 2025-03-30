@@ -1,6 +1,8 @@
 import { Dictionary, Word } from "./lib.js";
 
 let setNames = [
+    "Consonant Sounds",
+    "Vowel Sounds",
     "Pronouns",
     "Tenses",
     "Grammar", 
@@ -21,6 +23,49 @@ let setNames = [
 let dict = new Dictionary(...setNames);
 
 Word.setDialects(["Standard", "A'atsilwi"])
+
+dict.addWord("Consonant Sounds", 
+    new Word("p", "/p/"),
+    new Word("b", "/b/"),
+    new Word("t", "/t/"),
+    new Word("d", "/d/"),
+    new Word("gy or ky", "/c/"),
+    new Word("k", "/k/"),
+    new Word("g", "/ɡ/"),
+    new Word("'", "/ʔ/"),
+    new Word("mb", "/ᵐb/"),
+    new Word("nd", "/ⁿd/"),
+    new Word("ngg", "/ᵑɡ/"),
+    new Word("m", "/m/"),
+    new Word("n", "/n̪/"),
+    new Word("ng", "/ŋ/"),
+    new Word("f", "/f/"),
+    new Word("v", "/v/"),
+    new Word("s", "/s/"),
+    new Word("h", "/h~x~χ/"),
+    new Word("ts", "/t͡s/"),
+    new Word("w", "/w/"),
+    new Word("y", "/j/"),
+    new Word("l", "/l/"),
+)
+
+dict.addWord("Vowel Sounds",
+    new Word("i", "/i/"),
+    new Word("ü", "/y~ʏ~ɤ~ʌ/"),
+    new Word("í", "/iː/"),
+    new Word("u", "/u/"),
+    new Word("ú", "/uː/"),
+    new Word("e", "/ɛ~e/"),
+    new Word("é", "/ɛː~eː/"),
+    new Word("ë", "/ə~ɘ̹/"),
+    new Word("o", "/ɔ~o/"),
+    new Word("ó", "/ɔː~oː/"),
+    new Word("a", "/a/"),
+    new Word("á", "/aː/"),
+    new Word("ä", "/ɑ/"),
+    new Word("är", "/ɑː/"),
+)
+    // new Word("ā", "/ɑː/"),
 
 dict.addWord("Pronouns", 
     new Word("first person singular non-possesive pronoun",   "yë"),
