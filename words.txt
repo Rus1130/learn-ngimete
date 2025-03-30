@@ -22,7 +22,7 @@ láma	east of the bonfire, to the beach	Religious Terms
 ngawu tapu	water collecter	Nouns
 yá	meat	Nouns
 tapu yá	shell/skin	Nouns
-lu	thing/it/this	Nouns
+lu	this/it/thing	Nouns
 sepü	lake	Nouns
 us	rabbit	Nouns
 us tapu yá	rabbit skin	Nouns
@@ -89,7 +89,7 @@ nditi	eye	Nouns about Bones, Limbs, Body Parts, and Death
 wá	mouth	Nouns about Bones, Limbs, Body Parts, and Death
 hihi	nose	Nouns about Bones, Limbs, Body Parts, and Death
 payepë	yesterday	Nouns
-ilu	there/that/(it)	Nouns
+ilu	there	Nouns
 lulu'i	here	Nouns
 ábe	breast(s) (chest)	Irregular Plural Nouns
 fusa	plain/valley	Nouns
@@ -133,7 +133,7 @@ ngá	to kill	Verbs
 né le	to light	Verbs
 som	to give	Verbs
 kini	to lend	Verbs
-witsu	to find, to have (reflexive)	Verbs
+witsu	to find	Verbs
 tapa	to touch/feel (something)	Verbs
 fasu'i	to smell	Verbs
 bëm	to feel (an emotion)	Verbs
@@ -168,8 +168,8 @@ mi	ok/neutral yes	Miscellaneous
 gogowa	wrong	Miscellaneous
 owilowa	correct	Miscellaneous
 katálo	hello/hi	Miscellaneous
-ilo/ano	this/that	Miscellaneous
-sülu/sëlu	got it (killed/caught something)	Miscellaneous
+ilo/ano	that	Miscellaneous
+sülu/sëlu	(i) got it! (killed/caught something)	Miscellaneous
 gegela	zero/nothing	Numerals
 gela	one, any number except 2	Numerals
 la	two	Numerals
@@ -220,7 +220,7 @@ sene'an	to scream/yell	'An Verbs
 som'an	to give up (something)	'An Verbs
 bëm'an	to feel (an emotion you don't want to)	'An Verbs
 witsunde'o'an	to scour for food (or starve)	'An Verbs
-ngaowi'an	to fight back, jump/assault (something)	'An Verbs
+ngaowi'an	to fight back, assautl (something)	'An Verbs
 yíse'an	to fall in love	'An Verbs
 ima'an	to fall asleep	'An Verbs
 tapa'an	to press against	'An Verbs
@@ -277,7 +277,7 @@ wawá	to fall	Verbs
 nena	old	Adjectives
 kakala	to laugh	Verbs
 nápa	to remember 	Verbs
-mem	communication 	Nouns
+mem	communication, message	Nouns
 suntu	ocean/sea	Nouns
 kóme	shark	Nouns
 lowi'i	pit god	Religious Terms
@@ -298,7 +298,7 @@ wulë	hello	dont add
 em	to go	dont add
 witsundehohan ya	hungry	dont add
 ë	and	dont add
-buntse/mbuntse	strange	Adjective
+buntse/mbuntse	strange	Adjectives
 vovi	fire	dont add
 noni'i	human god, the first god	Religious Terms
 kaoki ken	peepnis	Nouns about Bones, Limbs, Body Parts, and Death
@@ -347,13 +347,13 @@ süm'an	to require	'An Verbs
 giya 	building 	Nouns
 welebing	misunderstanding, mistranslation, mishap	Nouns
 lohi	to change	Verbs
-o'a witsunde'o kola/na witsunde'oso besi	go forage yourself rocks" (leave me alone)	Phrases
+na witsunde'o kola/na witsundde'oso besi	go forage yourself rocks" (leave me alone)	Phrases
 nahá	to retrieve	Verbs
 naha	to put on, to adorn	Verbs
 miwa	to be able to	Verbs
 müta	to stop, to halt	Verbs
 ngolo	to follow	Verbs
-nggave	to teardown, to deconstruct, to demolish, to remove	Verbs
+nggave	to deconstruct, to deassemble	Verbs
 a'i'o	shit	Nouns
 asipi	to talk nonsensically	Verbs
 asipi'an	to speak in a possessed manner	'An Verbs
@@ -378,7 +378,7 @@ yu'úla	to grieve	Verbs
 kuni mem te	messenger	Nouns
 fóse	absence	Nouns
 kálakü	nose-spitter (insult towards A'atsilwi speakers)	Nouns
-fógäpühaä	grunt-screecher (insult towards Standard speakers)	Nouns
+fógaäpüha	grunt-screecher (insult towards Standard speakers)	Nouns
 népi	sun	dont add
 ápwa	moon	dont add
 hana	to enjoy, to like	Verbs
@@ -391,12 +391,45 @@ nenta	to write	Verbs
 'ata	direction	Nouns
 tine	few	Adjectives
 hatsamwa	simple, basic	Adjectives
-tsefese	to exist, to suffer (reflexive)	Verbs
+tsefese	to exist	Verbs
 tama	name, label	Nouns
-pala	extra, leftover	Adjective
+pala	extra, leftover, remaining	Adjectives
 mbayu	sorry	Miscellaneous
 bambba	noise, sound	Nouns
 lafeowigye	melody, tune, song	Nouns
 säna	hollow, empty	Adjectives
 tuha	result	Nouns
 mbeno	to create	Verbs
+bátsi	to enter	Verbs
+naya	to demand	Verbs
+bátsi'an	to intrude	'An Verbs
+malá	remainder, leftover	Nouns
+tanggan/handda	to build	Verbs
+gayana	between	Miscellaneous
+sebesikya	rule	Nouns
+kekéne	long	Adjectives
+sawasa	short	Adjectives
+witsuyo	to have	y/so Verbs
+tsefeseyo	to suffer	y/so Verbs
+witsunde'oso/witsundde'oso	to tidy one's appearance	y/so Verbs
+kuniyo	to embark	y/so Verbs
+bátsiyo	to welcome	y/so Verbs
+kyelu	script, writing	Nouns
+seyaya	to list	Verbs
+nagyu	to fetch, to grab	Verbs
+seyayaso	to register one's self, to sign up	y/so Verbs
+ndoba	basement, cellar	Verbs
+báli	porch, foyer	Verbs
+igyensa	to start, to begin	Verbs
+ndo	to open	Verbs
+veseyo/vefeyo	to exert/strain one's self	y/so Verbs
+wawáso	to trip, to miswalk	y/so Verbs
+imaso	to collapse into sleep, to faint	y/so Verbs
+eme'an	to be obliged to (perform an action)	y/so Verbs
+emeso	to take charge, to assume leadership	y/so Verbs
+ndawiso	to exercise/workout	y/so Verbs
+timbba	to clean, to wash	Verbs
+timbbaso	to wash one's self	y/so Verbs
+ndafoyo	to act different than usual	y/so Verbs
+fesúaso	to self reflect, to think deeply	y/so Verbs
+igyensayo	to awaken (after a long/deep sleep)	y/so Verbs
