@@ -5,6 +5,16 @@
     table {
         table-layout: fixed;
         width: 100%;
+        border-collapse: collapse;
+    }
+    tr {
+        border-bottom-style: dashed;
+        border-bottom-width: 1px;
+        border-bottom-color: #ccc;
+    }
+
+    td {
+        padding: 5px;
     }
 
     #input {
@@ -30,12 +40,6 @@
     input[type="checkbox"]:focus, #input:focus {
         outline: none;
     }
-
-    hr {
-        margin-top: 6px;
-        margin-bottom: 6px;
-    }
-
 </style>
 <head>
     <script src="dictionary.js" type="module"></script>
@@ -120,7 +124,6 @@
                 let category = removeCategoryColumn ? "" : `<td>${result.category}</td>`
 
                 table += `<tr><td>${result.key}</td><td>${value}</td>${category}</tr>`
-                table += `<tr><td><hr style="width: 101%;"></td><td><hr style="width: 101%;"></td><td><hr></td></tr>`
 
             })
             output.innerHTML = table
