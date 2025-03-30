@@ -9,7 +9,7 @@ let setNames = [
     "Verbs",
     "Adjectives",
     "'An Verbs",
-    "y/so Verbs",
+    "yo/so Verbs",
     "Irregular Plural Nouns",
     "Nouns about Bones, Limbs, Body Parts, and Death",
     "Miscellaneous",

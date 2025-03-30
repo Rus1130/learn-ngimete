@@ -409,27 +409,27 @@ gayana	between	Miscellaneous
 sebesikya	rule	Nouns
 kekéne	long	Adjectives
 sawasa	short	Adjectives
-witsuyo	to have	y/so Verbs
-tsefeseyo	to suffer	y/so Verbs
-witsunde'oso/witsundde'oso	to tidy one's appearance	y/so Verbs
-kuniyo	to embark	y/so Verbs
-bátsiyo	to welcome	y/so Verbs
+witsuyo	to have	yo/so Verbs
+tsefeseyo	to suffer	yo/so Verbs
+witsunde'oso/witsundde'oso	to tidy one's appearance	yo/so Verbs
+kuniyo	to embark	yo/so Verbs
+bátsiyo	to welcome	yo/so Verbs
 kyelu	script, writing	Nouns
 seyaya	to list	Verbs
 nagyu	to fetch, to grab	Verbs
-seyayaso	to register one's self, to sign up	y/so Verbs
+seyayaso	to register one's self, to sign up	yo/so Verbs
 ndoba	basement, cellar	Verbs
 báli	porch, foyer	Verbs
 igyensa	to start, to begin	Verbs
 ndo	to open	Verbs
-veseyo/vefeyo	to exert/strain one's self	y/so Verbs
-wawáso	to trip, to miswalk	y/so Verbs
-imaso	to collapse into sleep, to faint	y/so Verbs
-eme'an	to be obliged to (perform an action)	y/so Verbs
-emeso	to take charge, to assume leadership	y/so Verbs
-ndawiso	to exercise/workout	y/so Verbs
+veseyo/vefeyo	to exert/strain one's self	yo/so Verbs
+wawáso	to trip, to miswalk	yo/so Verbs
+imaso	to collapse into sleep, to faint	yo/so Verbs
+eme'an	to be obliged to (perform an action)	yo/so Verbs
+emeso	to take charge, to assume leadership	yo/so Verbs
+ndawiso	to exercise/workout	yo/so Verbs
 timbba	to clean, to wash	Verbs
-timbbaso	to wash one's self	y/so Verbs
-ndafoyo	to act different than usual	y/so Verbs
-fesúaso	to self reflect, to think deeply	y/so Verbs
-igyensayo	to awaken (after a long/deep sleep)	y/so Verbs
+timbbaso	to wash one's self	yo/so Verbs
+ndafoyo	to act different than usual	yo/so Verbs
+fesúaso	to self reflect, to think deeply	yo/so Verbs
+igyensayo	to awaken (after a long/deep sleep)	yo/so Verbs
