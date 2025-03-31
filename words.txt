@@ -105,7 +105,7 @@ mawu/mewu	who	Interrogatives
 süm	to need/get/want	Verbs
 tsi	to go	Verbs
 eme	to do	Verbs
-meowi	to make	Verbs
+meowi	to build	Verbs
 ndawi	to run	Verbs
 pele	to know	Verbs
 pelepele	to understand	Verbs
@@ -360,7 +360,7 @@ asipi'an	to speak in a possessed manner	'An Verbs
 asipi'on	to make excuses	'An Verbs
 -lo	ordinal (1st, 2nd, etc) expression	Phrase
 u'i'i'a'i'u'i'i'i'i'a'i	to crash out	dont add
-vese/vefe	to work	Verbs
+vese/vefe	to work (a job, labor)	Verbs
 ndafo	to forget	Verbs
 panta	task, quest	Nouns
 üná	profession, trade	Nouns
@@ -404,7 +404,7 @@ bátsi	to enter	Verbs
 naya	to demand	Verbs
 bátsi'an	to intrude	'An Verbs
 malá	remainder, leftover	Nouns
-tanggan/handda	to build	Verbs
+meowi	to build, to construct	Verbs
 gayana	between	Miscellaneous
 sebesikya	rule	Nouns
 kekéne	long	Adjectives
@@ -433,3 +433,6 @@ timbbaso	to wash one's self	yo/so Verbs
 ndafoyo	to act different than usual	yo/so Verbs
 fesúaso	to self reflect, to think deeply	yo/so Verbs
 igyensayo	to awaken (after a long/deep sleep)	yo/so Verbs
+fene	to work (properly)	Verbs
+mayani	to make	Verbs
+sana	new	Adjectives

@@ -41,9 +41,10 @@ na'u'u	zoic far future (ZO.FFUT)	Tenses
 lu'u'u	zoic gnomic (ZO.GNO)	Tenses
 'üpayepë	zoic hesternial (ZO.HEST)	Tenses
 'üboyepë	zoic hodiernal (ZO.HOD)	Tenses
--'an	abstracts a verb as an involuntary/forced action	Grammar
+-'an	abstracts a verb as an involuntary/forced action (nonviolitional, NVOL)	Grammar
 -'on	further abstraction of an -'an verb	Grammar
 _gya	imperfective (IPFV) (incomplete action)	Grammar
 (noun) wa	locative (LOC)	Grammar
 wa (noun)	copula (COP)	Grammar
 _náha	focus (FOC)	Grammar
+kana	potential mood (POT); starts sentences	Grammar
