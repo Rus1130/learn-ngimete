@@ -1,5 +1,4 @@
 ngawu/nggawu	rain	Nouns
-tapu	turtle (shell)/hide	Nouns
 bawë/mbawë	bird(s)	Nouns
 ngingi	monkey(s)/cannibal(s)	Cannibals and Mutants
 né	fire	Nouns
@@ -48,6 +47,7 @@ noa tsi'i	poisonous berry(s)	Irregular Plural Nouns
 ewu	health/blood	Nouns
 ná	hunger	Nouns
 alu	sky/air	Nouns
+tapu	turtle (shell)/hide	Nouns
 kaha tsi'an te	wood mover	Nouns
 gala tapu yá	deer skin	Nouns about Bones, Limbs, Body Parts, and Death
 NODEF	sap	dont add
@@ -274,7 +274,6 @@ lengki ya	evil	Adjectives
 kili'o yá	gut, innards	Nouns about Bones, Limbs, Body Parts, and Death
 ken wisi kono/ken kono	alcohol	Nouns
 wawá	to fall	Verbs
-nena	old	Adjectives
 kakala	to laugh	Verbs
 nápa	to remember 	Verbs
 mem	communication, message	Nouns
@@ -404,7 +403,6 @@ bátsi	to enter	Verbs
 naya	to demand	Verbs
 bátsi'an	to intrude	'An Verbs
 malá	remainder, leftover	Nouns
-meowi	to build, to construct	Verbs
 gayana	between	Miscellaneous
 sebesikya	rule	Nouns
 kekéne	long	Adjectives
@@ -435,4 +433,4 @@ fesúaso	to self reflect, to think deeply	yo/so Verbs
 igyensayo	to awaken (after a long/deep sleep)	yo/so Verbs
 fene	to work (properly)	Verbs
 mayani	to make	Verbs
-sana	new	Adjectives
+sana	new (inanimate objects)	Adjectives
