@@ -58,8 +58,10 @@
             <input type="checkbox" id="dialect-standard" name="dialect" value="Standard" checked> <span class="dialect-span">Standard</span>
             <input type="checkbox" id="dialect-aatsilwi" name="dialect" value="A'atsilwi" checked> <span class="dialect-span">A'atsilwi</span>
             <br>
-            <label for="swap">swap:</label>
-            <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)">
+            <label for="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)">swap:</label>
+            <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)"><br>
+            <label for="letter" title="when checked, include consonant/vowel IPA and connecting characters">C/V IPA & Connecting Chars</label>
+            <input type="checkbox" id="letter" name="letter" value="letter" title="when checked, include consonant/vowel IPA and connecting characters">
         </div>
     </div>
     <div id="container">
@@ -98,6 +100,10 @@
     }
 
     function updateDictionary() {
+        let swapValue = document.getElementById("swap").checked;
+        let letterValue = document.getElementById("letter").checked;
+
+
         let dialects = Array.from(document.getElementsByName("dialect")).map(d => d.checked ? d.value : null).filter(d => d)
 
         if(dialectOverride) {
@@ -109,14 +115,16 @@
             options.dialect = dialects[0]
         }
 
-        options.swap = document.getElementById("swap").checked
+        options.excludedCategories = [];
+
+        options.swap = swapValue
+        if(letterValue == false && removeNav != true) options.excludedCategories.push("Vowel Sounds", "Consonant Sounds", "Connecting Letters");
         if(excludedCategories != null) {
-            options.excludedCategories = excludedCategories.split("$");
+            options.excludedCategories.push(...excludedCategories.split("$"));
         }
 
         dict.waitForDictLoad().then(() => {
             let wordSearchResult = dict.wordSearch(input.value, options);
-            console.log(wordSearchResult)
             let table = `<tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th>${removeCategoryColumn ? "" : "<th>Category</th>"}</tr>`
 
             let colspan = removeCategoryColumn ? 2 : 3;
