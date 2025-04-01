@@ -48,6 +48,8 @@ dict.addWord("Consonant Sounds",
     new Word("w", "/w/"),
     new Word("y", "/j/"),
     new Word("l", "/l/"),
+    new Word("mbb", "/m.b/"),
+    new Word("ndd", "/n.d/"),
 )
 
 dict.addWord("Vowel Sounds",

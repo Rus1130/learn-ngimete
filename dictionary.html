@@ -111,11 +111,12 @@
 
         options.swap = document.getElementById("swap").checked
         if(excludedCategories != null) {
-            options.excludedCategories = excludedCategories.split(",").map(c => dict.practiceOrder[Number(c)])
+            options.excludedCategories = excludedCategories.split("$");
         }
 
         dict.waitForDictLoad().then(() => {
             let wordSearchResult = dict.wordSearch(input.value, options);
+            console.log(wordSearchResult)
             let table = `<tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th>${removeCategoryColumn ? "" : "<th>Category</th>"}</tr>`
 
             let colspan = removeCategoryColumn ? 2 : 3;
