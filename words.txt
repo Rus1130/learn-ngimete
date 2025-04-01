@@ -49,7 +49,7 @@ ná	hunger	Nouns
 alu	sky/air	Nouns
 tapu	turtle (shell)/hide	Nouns
 kaha tsi'an te	wood mover	Nouns
-gala tapu yá	deer skin	Nouns about Bones, Limbs, Body Parts, and Death
+gala tapu yá	deer skin	Nouns
 NODEF	sap	dont add
 nggusa	armsy	Cannibals and Mutants
 vin/ven	an annoying person	Nouns
@@ -64,7 +64,7 @@ ati yua	grandfather	Nouns
 ati alo'a/ati äwa	grandmother	Nouns
 yam pula/yam närla	drying rack	Nouns
 kaha pula/kaha näla	wood storage	Nouns
-zeve	a selfish person	Nouns
+seve	a selfish person	Nouns
 nggawi'i	water god	Religious Terms
 vovi'i	fire god	Religious Terms
 dom	head	Nouns about Bones, Limbs, Body Parts, and Death
@@ -357,7 +357,7 @@ a'i'o	shit	Nouns
 asipi	to talk nonsensically	Verbs
 asipi'an	to speak in a possessed manner	'An Verbs
 asipi'on	to make excuses	'An Verbs
--lo	ordinal (1st, 2nd, etc) expression	Phrase
+-lo	ordinal (1st, 2nd, etc) expression	Phrases
 u'i'i'a'i'u'i'i'i'i'a'i	to crash out	dont add
 vese/vefe	to work (a job, labor)	Verbs
 ndafo	to forget	Verbs
