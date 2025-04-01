@@ -28,7 +28,7 @@
 
     dict.waitForDictLoad().then(() => {
         dict.practiceOrder.forEach((set) => {
-            if(!["dont add", "Phrases", "Grammar"].includes(set)){
+            if(!["dont add", "Phrases", "Grammar", "Vowel Sounds", "Consonant Sounds", "Connecting Letters"].includes(set)){
                 dict.dict[set].forEach((word) => {
                     if(categoriesDistribution[set]) categoriesDistribution[set]++;
                     else categoriesDistribution[set] = 1;
@@ -43,7 +43,7 @@
                     })
 
                     def = word.value["A'atsilwi"];
-                    def.split("").forEach((letter) => {
+                    def.split("").forEach((letter, i) => {
                         if(!["N", ">", "<", "O", "U"].includes(letter)){
                             if(distributionAatsilwi[letter]){
                                 distributionAatsilwi[letter]++;
@@ -54,7 +54,7 @@
                     })
                 })
             }
-        })  
+        })
 
         let standardKeys = Object.keys(distributionStandard);
         let standardValues = Object.values(distributionStandard);
