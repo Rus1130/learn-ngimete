@@ -61,7 +61,9 @@
             <label for="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)">swap:</label>
             <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)"><br>
             <label for="letter" title="when checked, include consonant/vowel IPA and connecting characters">C/V IPA & Connecting Chars</label>
-            <input type="checkbox" id="letter" name="letter" value="letter" title="when checked, include consonant/vowel IPA and connecting characters">
+            <input type="checkbox" id="letter" name="letter" value="letter" title="when checked, include consonant/vowel IPA and connecting characters"><br>
+            <label for="regex-search">Regex Search</label>
+            <input type="checkbox" id="regex-search" name="regex-search" value="regex-search">
         </div>
     </div>
     <div id="container">
@@ -102,6 +104,7 @@
     function updateDictionary() {
         let swapValue = document.getElementById("swap").checked;
         let letterValue = document.getElementById("letter").checked;
+        let regexSearch = document.getElementById("regex-search").checked;
 
 
         let dialects = Array.from(document.getElementsByName("dialect")).map(d => d.checked ? d.value : null).filter(d => d)
@@ -116,6 +119,10 @@
         }
 
         options.excludedCategories = [];
+
+        if(regexSearch) {
+            options.regexSearch = true;
+        }
 
         options.swap = swapValue
         if(letterValue == false && removeNav != true) options.excludedCategories.push("Vowel Sounds", "Consonant Sounds", "Connecting Letters");

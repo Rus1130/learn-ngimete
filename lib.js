@@ -91,6 +91,7 @@ export class Dictionary {
         let dialect = options?.dialect || undefined;
         let swap = options?.swap || false;
         let excludedCategories = options?.excludedCategories || [];
+        let regexSearch = options?.regexSearch || false;
 
         if(["not loaded", "loading"].includes(this.dictLoadedFromLink)) throw new Error("Dictionary not loaded yet. Please wait for the dictionary to load before searching.");
 
@@ -101,7 +102,7 @@ export class Dictionary {
                 for(let i = 0; i < this.practiceOrder.length; i++){
                     let cat = this.practiceOrder[i];
                     this.dict[cat].forEach(word => {
-                        if (word.key.includes(searchTerm)) {
+                        if (regexSearch ? new RegExp(searchTerm, "g").test(word.key) : word.key.includes(searchTerm)) {
                             let word_ = new Word(word.key, ...Object.values(word.value));
                             word_.category = cat;
                             results.push(word_);
@@ -111,7 +112,7 @@ export class Dictionary {
             } else {
                 if(this.dict[category] == undefined) return new WordSearchResult(searchTerm, []);
                 this.dict[category].forEach(word => {
-                    if (word.key.includes(searchTerm)) {
+                    if (regexSearch ? new RegExp(searchTerm, "g").test(word.key) : word.key.includes(searchTerm)) {
                         let word_ = new Word(word.key, ...Object.values(word.value))
                         word_.category = category;
                         results.push(word_);
