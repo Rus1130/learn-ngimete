@@ -124,8 +124,14 @@ export class Dictionary {
                 for (let i = 0; i < this.practiceOrder.length; i++) {
                     let cat = this.practiceOrder[i];
                     this.dict[cat].forEach(word => {
-                        // if dialect is undefined, search all dialects, otherwise search the specified dialect
-                        if (dialect == undefined ? Object.values(word.value).some(value => value.toLowerCase().includes(searchTerm)) : word.value[dialect].toLowerCase().includes(searchTerm)) {
+                        if (dialect == undefined 
+                            ? regexSearch 
+                                ? Object.values(word.value).some(value => new RegExp(searchTerm, "g").test(value)) 
+                                : Object.values(word.value).some(value => value.includes(searchTerm)) 
+                            : regexSearch
+                                ? new RegExp(searchTerm, "g").test(word.value[dialect])
+                                : word.value[dialect].includes(searchTerm)
+                        ) {
                             let word_ = new Word(word.key, ...Object.values(word.value));
                             word_.category = cat;
                             results.push(word_);
@@ -135,8 +141,14 @@ export class Dictionary {
             } else {
                 if (!this.dict[category]) return new WordSearchResult(searchTerm, []);
                 this.dict[category].forEach(word => {
-                    // if dialect is undefined, search all dialects, otherwise search the specified dialect
-                    if (dialect == undefined ? Object.values(word.value).some(value => value.toLowerCase().includes(searchTerm)) : word.value[dialect].toLowerCase().includes(searchTerm)) {
+                    if (dialect == undefined
+                        ? regexSearch
+                            ? Object.values(word.value).some(value => new RegExp(searchTerm, "g").test(value))
+                            : Object.values(word.value).some(value => value.includes(searchTerm))
+                        : regexSearch
+                            ? new RegExp(searchTerm, "g").test(word.value[dialect])
+                            : word.value[dialect].includes(searchTerm)
+                        ) {
                         let word_ = new Word(word.key, ...Object.values(word.value));
                         word_.category = category;
                         results.push(word_);
