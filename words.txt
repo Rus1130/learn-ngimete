@@ -50,7 +50,7 @@ alu	sky/air	Nouns
 tapu	turtle (shell)/hide	Nouns
 kaha tsi'an te	wood mover	Nouns
 gala tapu yá	deer skin	Nouns
-NODEF	sap	dont add
+mbúse	sap	Nouns
 nggusa	armsy	Cannibals and Mutants
 vin/ven	an annoying person	Nouns
 túwus	bonfire	Religious Terms
@@ -238,7 +238,7 @@ vovi'nona/vona	man	Nouns
 nggawi'nona/nggona	woman	Nouns
 kasë ngawu	oil	Nouns
 á'á yepwá	midnight	Nouns
-apelelala ya/apeya	nice, good	Adjectives
+apeya	nice, good	Adjectives
 sepu	bad	Adjectives
 süm'on	to steal, to commit a crime	'An Verbs
 mem pele wisi	paper, scroll, text	Nouns
@@ -247,7 +247,8 @@ tsi'on	to kidnap, forcefully move	'An Verbs
 damo kahalala	effigy	Nouns
 sümtiwi	to hope/wish	Verbs
 ndawi'an	to forcibly run, flee	'An Verbs
-atita	many	Adjectives
+atita	many (inanimate)	Adjectives
+atiya	many (animate)	Adjectives
 kalahala	polite "mbaba mboko"	Nouns
 hühä	exhaustion	Nouns
 ima'on	to knock (someone) unconscious 	'An Verbs
@@ -405,8 +406,8 @@ bátsi'an	to intrude	'An Verbs
 malá	remainder, leftover	Nouns
 gayana	between	Miscellaneous
 sebesikya	rule	Nouns
-kekéne	long	Adjectives
-sawasa	short	Adjectives
+kekéne	long (of length)	Adjectives
+sawasa	short (of length)	Adjectives
 witsuyo	to have	yo/so Verbs
 tsefeseyo	to suffer	yo/so Verbs
 witsunde'oso/witsundde'oso	to tidy one's appearance	yo/so Verbs
@@ -434,3 +435,24 @@ igyensayo	to awaken (after a long/deep sleep)	yo/so Verbs
 fene	to work (properly)	Verbs
 mayani	to make	Verbs
 sana	new (inanimate objects)	Adjectives
+wengki	old (inanimate objects)	Adjectives
+tsali/tsaya	young (animate objects)	Adjectives
+nena	old (animate objects)	Adjectives
+mótsi	to exit, to leave	Verbs
+mótsiyo	to zone out	yo/so Verbs
+mótsi'an	to kick (someone) out	'An Verbs
+sóhu	to await (for someone)	Verbs
+bíhu	to wait (for something)	Verbs
+ndaní	to not have something that you are supposed to have	Verbs
+esiya/masiya	to set aside for later, to save (for later)	Verbs
+wetsilu'an/tsutitiwi'an	to migrate	'An Verbs
+kyesatsa	window (of a house)	Nouns
+kene	inside	Miscellaneous
+sanwa/tsamwa	to read	Verbs
+sepesu	done (of an action)	Adjectives
+bíhu'an	to keep in place	'An Verbs
+bengya	to depart	Verbs
+wensu	long (of time)	Adjectives
+mbimbbi	short (of time)	Adjectives
+gelasa	only	Miscellaneous
+sono	to walk	Verbs
