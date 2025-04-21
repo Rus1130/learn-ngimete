@@ -253,7 +253,7 @@ kalahala	polite "mbaba mboko"	Nouns
 hühä	exhaustion	Nouns
 ima'on	to knock (someone) unconscious 	'An Verbs
 ngaowi'on	to defend (from attack)	'An Verbs
-mbigye	treasure/dearest (informally)	Nouns
+mbigye	treasure/dearest (informal)	Nouns
 angtiwí'o	ridiculous	Adjectives
 ndálohí	to survive/prosper/pass (time)	Verbs
 ndálohí máfëtär	pass (the days) safely	Phrases
@@ -331,7 +331,6 @@ samo	bed	Nouns
 wase	animal track(s)	Nouns
 sindda	to play	Verbs
 mafo	to resemble	Verbs
-kene	to be inside of	Verbs
 ndasi	to shine	Verbs
 som'on	to sacrifice (something), to give again	'An Verbs
 ndenti	blessing, favor	Nouns
@@ -355,7 +354,7 @@ müta	to stop, to halt	Verbs
 ngolo	to follow	Verbs
 nggave	to deconstruct, to deassemble	Verbs
 a'i'o	shit	Nouns
-asipi	to talk nonsensically	Verbs
+asipi	to  nonsensically	Verbs
 asipi'an	to speak in a possessed manner	'An Verbs
 asipi'on	to make excuses	'An Verbs
 -lo	ordinal (1st, 2nd, etc) expression	Phrases
@@ -447,7 +446,6 @@ ndaní	to not have something that you are supposed to have	Verbs
 esiya/masiya	to set aside for later, to save (for later)	Verbs
 wetsilu'an/tsutitiwi'an	to migrate	'An Verbs
 kyesatsa	window (of a house)	Nouns
-kene	inside	Miscellaneous
 sanwa/tsamwa	to read	Verbs
 sepesu	done (of an action)	Adjectives
 bíhu'an	to keep in place	'An Verbs
@@ -456,3 +454,24 @@ wensu	long (of time)	Adjectives
 mbimbbi	short (of time)	Adjectives
 gelasa	only	Miscellaneous
 sono	to walk	Verbs
+ngopo	to place, to arrange	Verbs
+gyadani	room	Nouns
+ngama	to lay, to lie/put down (something)	Verbs
+ngopoyo	to sit down	Verbs
+ngamayo	to lay down	Verbs
+esiyaso/masiyaso	to ration (due to a shortage)	ya/so Verbs
+gina	letter (a, b, etc.)	Nouns
+mewana	current (belonging to present time)	Adjectives
+pele'an	to know something you didn't desire to	'An Verbs
+máne	to feint, to deceive, to gaslight (with lies)	Verbs
+denddu	to block (from an attack), to shield, to barricade	Verbs
+nehu	to check, to verify	Verbs
+mababa	to punch	Verbs
+kífe	to thrust (a weapon), to pierce	Verbs
+ndayó	to strike, to inflict (a wound)	Verbs
+bene	to stimulate	Verbs
+bobiloko	to say repeatedly	Verbs
+ndisé	choice, option	Nouns
+gúhäsa	to be seen/perceived (by something)	Verbs
+bobilokoso	to mumble, to murmur	Verbs
+tëyá	obvious	Adjectives

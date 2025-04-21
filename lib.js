@@ -102,7 +102,7 @@ export class Dictionary {
                 for(let i = 0; i < this.practiceOrder.length; i++){
                     let cat = this.practiceOrder[i];
                     this.dict[cat].forEach(word => {
-                        if (regexSearch ? new RegExp(searchTerm, "g").test(word.key) : word.key.includes(searchTerm)) {
+                        if (regexSearch ? new RegExp(searchTerm, "i").test(word.key) : word.key.includes(searchTerm)) {
                             let word_ = new Word(word.key, ...Object.values(word.value));
                             word_.category = cat;
                             results.push(word_);
@@ -112,7 +112,7 @@ export class Dictionary {
             } else {
                 if(this.dict[category] == undefined) return new WordSearchResult(searchTerm, []);
                 this.dict[category].forEach(word => {
-                    if (regexSearch ? new RegExp(searchTerm, "g").test(word.key) : word.key.includes(searchTerm)) {
+                    if (regexSearch ? new RegExp(searchTerm, "i").test(word.key) : word.key.includes(searchTerm)) {
                         let word_ = new Word(word.key, ...Object.values(word.value))
                         word_.category = category;
                         results.push(word_);
@@ -126,10 +126,10 @@ export class Dictionary {
                     this.dict[cat].forEach(word => {
                         if (dialect == undefined 
                             ? regexSearch 
-                                ? Object.values(word.value).some(value => new RegExp(searchTerm, "g").test(value)) 
+                                ? Object.values(word.value).some(value => new RegExp(searchTerm, "i").test(value)) 
                                 : Object.values(word.value).some(value => value.includes(searchTerm)) 
                             : regexSearch
-                                ? new RegExp(searchTerm, "g").test(word.value[dialect])
+                                ? new RegExp(searchTerm, "i").test(word.value[dialect])
                                 : word.value[dialect].includes(searchTerm)
                         ) {
                             let word_ = new Word(word.key, ...Object.values(word.value));
@@ -143,10 +143,10 @@ export class Dictionary {
                 this.dict[category].forEach(word => {
                     if (dialect == undefined
                         ? regexSearch
-                            ? Object.values(word.value).some(value => new RegExp(searchTerm, "g").test(value))
+                            ? Object.values(word.value).some(value => new RegExp(searchTerm, "i").test(value))
                             : Object.values(word.value).some(value => value.includes(searchTerm))
                         : regexSearch
-                            ? new RegExp(searchTerm, "g").test(word.value[dialect])
+                            ? new RegExp(searchTerm, "i").test(word.value[dialect])
                             : word.value[dialect].includes(searchTerm)
                         ) {
                         let word_ = new Word(word.key, ...Object.values(word.value));

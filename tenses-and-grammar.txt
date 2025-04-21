@@ -1,5 +1,4 @@
 _me	plural (PL)	Grammar
-ka	question (QM) (if used alone, can be translated as "what?")	Grammar
 -le	verbalizer (VBLZ)	Grammar
 -te	nominalizer (NMLZ)	Grammar
 i	exclamatory, intensifier (EXCLAM, INTS)	Grammar
@@ -46,5 +45,9 @@ lu'u'u	zoic gnomic (ZO.GNO)	Tenses
 _gya	imperfective (IPFV) (incomplete action)	Grammar
 (noun) wa	locative (LOC)	Grammar
 wa (noun)	copula (COP)	Grammar
-_náha	focus (FOC)	Grammar
+náha_	focus (FOC)	Grammar
 kana	potential mood (POT); starts sentences	Grammar
+ka	question (QM) (if used alone, can be translated as "what?")	Grammar
+nen	question (HON.QM) (placed word finally)	Grammar
+kansa	irrealis mood (IRR)	Grammar
+kene	inessive (INE) (inside of something)	Grammar
