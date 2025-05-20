@@ -92,7 +92,7 @@ payepë	yesterday	Nouns
 ilu	there	Nouns
 lulu'i	here	Nouns
 ábe	breast(s) (chest)	Irregular Plural Nouns
-fusa	plain/valley	Nouns
+fusabó	valley	Nouns
 gemëte	nonsense, unintelligible	Nouns
 giya	word(s)	Irregular Plural Nouns
 e	archaic causative	dont add
@@ -337,7 +337,7 @@ ndenti	blessing, favor	Nouns
 i'i	god	Nouns
 si/siloa	to fly	Verbs
 kola/besi	rock, stone	Nouns
-sen/sam	but	Miscellaneous
+sen/sam	but, however	Miscellaneous
 lohíyam	still	Miscellaneous
 lohí	time	Nouns
 ka lohí kini yë X	can I have X time	Phrases
@@ -367,7 +367,7 @@ ngána	river	Nouns
 ani	friend, bro (informal)	Nouns
 ndasi ya	white	Adjectives
 simbbärnta	journey, adventure	Nouns
-kyesi	above	Miscellaneous
+kyesi	above, up	Miscellaneous
 saha	breath	Nouns
 íne	birth	Nouns
 peye	face	Nouns
@@ -382,7 +382,7 @@ népi	sun	dont add
 ápwa	moon	dont add
 hana	to enjoy, to like	Verbs
 mogü	to hate, to despise	Verbs
-niba	below	Miscellaneous
+niba	below, down	Miscellaneous
 gabu	frog	Nouns
 kekyene	iteration, version, edition	Nouns
 fesúa	to help	Verbs
@@ -473,5 +473,14 @@ bene	to stimulate	Verbs
 bobiloko	to say repeatedly	Verbs
 ndisé	choice, option	Nouns
 gúhäsa	to be seen/perceived (by something)	Verbs
-bobilokoso	to mumble, to murmur	Verbs
+bobilokoso	to mumble, to murmur	ya/so Verbs
 tëyá	obvious	Adjectives
+mukamala	expert, professional	Nouns
+tsim	to pray (to have a conversation with a deity)	Verbs
+bikyë	to pray (with the assumption that you will receive something from the deity)	Verbs
+temfe	to pray (to request something from the deity)	Verbs
+mundda	immediately, now, at this moment	Miscellaneous
+halóhëlu	as soon as possible	Phrases
+fóvaki	stealthy, sneaky	Adjectives
+fusa	plain(s), meadow(s)	Nouns
+gëlütu	cave	Nouns
