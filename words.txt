@@ -474,7 +474,7 @@ bobiloko	to say repeatedly	Verbs
 ndisé	choice, option	Nouns
 gúhäsa	to be seen/perceived (by something)	Verbs
 bobilokoso	to mumble, to murmur	ya/so Verbs
-tëyá	obvious	Adjectives
+tëyá/tehëyá	obvious	Adjectives
 mukamala	expert, professional	Nouns
 tsim	to pray (to have a conversation with a deity)	Verbs
 bikyë	to pray (with the assumption that you will receive something from the deity)	Verbs
@@ -484,3 +484,5 @@ halóhëlu	as soon as possible	Phrases
 fóvaki	stealthy, sneaky	Adjectives
 fusa	plain(s), meadow(s)	Nouns
 gëlütu	cave	Nouns
+teyíyofo	pity	Nouns
+teye	a short person	Nouns
