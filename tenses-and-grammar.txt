@@ -40,6 +40,14 @@ na'u'u	zoic far future (ZO.FFUT)	Tenses
 lu'u'u	zoic gnomic (ZO.GNO)	Tenses
 'üpayepë	zoic hesternial (ZO.HEST)	Tenses
 'üboyepë	zoic hodiernal (ZO.HOD)	Tenses
+mano'o	inanimate far past (INAN.FPST)	Tenses
+mano	inanimate near past (INAN.NPST)	Tenses
+payepëmo	inanimate hestiernal (INAN.HEST)	Tenses
+lümo	inanimate present (INAN.PRS)	Tenses
+boyepëmo	inanimate hodiernal (INAN.HOD)	Tenses
+nano	inanimate near future (INAN.NFUT)	Tenses
+nano'o	inanimate far future (INAN.FFUT)	Tenses
+u'ungo	inanimate gnomic (INAN.GNO)	Tenses
 -'an	abstracts a verb as an involuntary/forced action (nonviolitional, NVOL)	Grammar
 -'on	further abstraction of an -'an verb	Grammar
 _gya	imperfective (IPFV) (incomplete action)	Grammar
