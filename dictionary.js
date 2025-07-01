@@ -12,14 +12,15 @@ let setNames = [
     "Verbs",
     "Adjectives",
     "'An Verbs",
-    "yo/so Verbs",
+    "Reflexive Verbs",
     "Irregular Plural Nouns",
     "Nouns about Bones, Limbs, Body Parts, and Death",
     "Miscellaneous",
     "Interrogatives",
     "Cannibals and Mutants",
     "Religious Terms",
-    "Phrases"];
+    "Phrases"
+];
 
 let dict = new Dictionary(...setNames);
 
@@ -90,10 +91,10 @@ dict.addWord("Pronouns",
     new Word("first person plural possesive pronoun",         "vo"),
     new Word("first person plural reflexive pronoun",         "ve"),
     new Word("second person singular non-possesive pronoun",  "'a"),
-    new Word("second person singular possesive pronoun",      "ao", "'ao"),
+    new Word("second person singular possesive pronoun",      "ao",    "'ao"),
     new Word("second person singular reflexive pronoun",      "na"),
-    new Word("second person plural non-possesive pronoun",    "'ama",    "nga"),
-    new Word("second person plural possesive pronoun",        "'ame",   "ngo"),
+    new Word("second person plural non-possesive pronoun",    "'ama",  "nga"),
+    new Word("second person plural possesive pronoun",        "'ame",  "ngo"),
     new Word("second person plural reflexive pronoun",        "nge"),
     new Word("third person singular non-possesive pronoun",   "ite",   "iti"),
     new Word("third person singular possesive pronoun",       "ito",   "ikyo"),

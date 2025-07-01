@@ -102,7 +102,7 @@ e'e	where	Interrogatives
 ten/teng	when	Interrogatives
 tawu/tewu	how	Interrogatives
 mawu/mewu	who	Interrogatives
-süm	to need/get/want	Verbs
+süm	to want	Verbs
 tsi	to go	Verbs
 eme	to do	Verbs
 meowi	to build	Verbs
@@ -156,7 +156,7 @@ sepi	warm	Adjectives
 ärlu	cold	Adjectives
 engomo	bloody	Adjectives
 ngeka	dry	Adjectives
-wána/wá>NOUN<na	akin to/same	Adjectives
+wána/wá>NOUN<na	akin to/same (as)	Adjectives
 no'i	cowardly, scared	Adjectives
 kasë	black	Adjectives
 ge	no	Miscellaneous
@@ -342,7 +342,7 @@ lohíyam	still	Miscellaneous
 lohí	time	Nouns
 ka lohí kini yë X	can I have X time	Phrases
 sálohí	to miss (someone), to reminince (about something)	Verbs
-süm'an	to require	'An Verbs
+süm'an	to need/require	'An Verbs
 giya 	building 	Nouns
 welebing	misunderstanding, mistranslation, mishap	Nouns
 lohi	to change	Verbs
@@ -354,7 +354,7 @@ müta	to stop, to halt	Verbs
 ngolo	to follow	Verbs
 nggave	to deconstruct, to deassemble	Verbs
 a'i'o	shit	Nouns
-asipi	to  nonsensically	Verbs
+asipi	to talk nonsensically	Verbs
 asipi'an	to speak in a possessed manner	'An Verbs
 asipi'on	to make excuses	'An Verbs
 -lo	ordinal (1st, 2nd, etc) expression	Phrases
@@ -387,7 +387,7 @@ gabu	frog	Nouns
 kekyene	iteration, version, edition	Nouns
 fesúa	to help	Verbs
 nenta	to write	Verbs
-'ata	direction	Nouns
+'ata	direction, way	Nouns
 tine	few	Adjectives
 hatsamwa	simple, basic	Adjectives
 tsefese	to exist	Verbs
@@ -407,30 +407,30 @@ gayana	between	Miscellaneous
 sebesikya	rule	Nouns
 kekéne	long (of length)	Adjectives
 sawasa	short (of length)	Adjectives
-witsuyo	to have	yo/so Verbs
-tsefeseyo	to suffer	yo/so Verbs
-witsunde'oso/witsundde'oso	to tidy one's appearance	yo/so Verbs
-kuniyo	to embark	yo/so Verbs
-bátsiyo	to welcome	yo/so Verbs
+witsuyo	to have	Reflexive Verbs
+tsefeseyo	to suffer	Reflexive Verbs
+witsunde'oso/witsundde'oso	to tidy one's appearance	Reflexive Verbs
+kuniyo	to embark	Reflexive Verbs
+bátsiyo	to welcome	Reflexive Verbs
 kyelu	script, writing	Nouns
 seyaya	to list	Verbs
 nagyu	to fetch, to grab	Verbs
-seyayaso	to register one's self, to sign up	yo/so Verbs
+seyayaso	to register one's self, to sign up	Reflexive Verbs
 ndoba	basement, cellar	Verbs
 báli	porch, foyer	Verbs
-igyensa	to start, to begin	Verbs
+igyensa	to start, to begin, to initiate	Verbs
 ndo	to open	Verbs
-veseyo/vefeyo	to exert/strain one's self	yo/so Verbs
-wawáso	to trip, to miswalk	yo/so Verbs
-imaso	to collapse into sleep, to faint	yo/so Verbs
+veseyo/vefeyo	to exert/strain one's self	Reflexive Verbs
+wawáso	to trip, to miswalk	Reflexive Verbs
+imaso	to collapse into sleep, to faint	Reflexive Verbs
 eme'an	to be obliged to (perform an action)	'An Verbs
-emeso	to take charge, to assume leadership	yo/so Verbs
-ndawiso	to exercise/workout	yo/so Verbs
+emeso	to take charge, to assume leadership	Reflexive Verbs
+ndawiso	to exercise/workout	Reflexive Verbs
 timbba	to clean, to wash	Verbs
-timbbaso	to wash one's self	yo/so Verbs
-ndafoyo	to act different than usual	yo/so Verbs
-fesúaso	to self reflect, to think deeply	yo/so Verbs
-igyensayo	to awaken (after a long/deep sleep)	yo/so Verbs
+timbbaso	to wash one's self	Reflexive Verbs
+ndafoyo	to act different than usual	Reflexive Verbs
+fesúaso	to self reflect, to think deeply	Reflexive Verbs
+igyensayo	to awaken (after a long/deep sleep)	Reflexive Verbs
 fene	to work (properly)	Verbs
 mayani	to make	Verbs
 sana	new (inanimate objects)	Adjectives
@@ -438,12 +438,12 @@ wengki	old (inanimate objects)	Adjectives
 tsali/tsaya	young (animate objects)	Adjectives
 nena	old (animate objects)	Adjectives
 mótsi	to exit, to leave	Verbs
-mótsiyo	to zone out	yo/so Verbs
+mótsiyo	to zone out	Reflexive Verbs
 mótsi'an	to kick (someone) out	'An Verbs
 sóhu	to await (for someone)	Verbs
 bíhu	to wait (for something)	Verbs
 ndaní	to not have something that you are supposed to have	Verbs
-esiya/masiya	to set aside for later, to save (for later)	Verbs
+esiya/masiya	to set aside for later, to save (for later), to store	Verbs
 wetsilu'an/tsutitiwi'an	to migrate	'An Verbs
 kyesatsa	window (of a house)	Nouns
 sanwa/tsamwa	to read	Verbs
@@ -456,16 +456,16 @@ gelasa	only	Miscellaneous
 sono	to walk	Verbs
 ngopo	to place, to arrange	Verbs
 gyadani	room	Nouns
-ngama	to lay, to lie/put down (something)	Verbs
+ngama	to lay, to lie/put down (something), to deactivate, to turn off	Verbs
 ngopoyo	to sit down	Verbs
 ngamayo	to lay down	Verbs
-esiyaso/masiyaso	to ration (due to a shortage)	ya/so Verbs
-gina	letter (a, b, etc.)	Nouns
+esiyaso/masiyaso	to ration (due to a shortage)	Reflexive Verbs
+gina	letter (a, b, etc.), character, mark, stroke (of writing)	Nouns
 mewana	current (belonging to present time)	Adjectives
 pele'an	to know something you didn't desire to	'An Verbs
 máne	to feint, to deceive, to gaslight (with lies)	Verbs
 denddu	to block (from an attack), to shield, to barricade	Verbs
-nehu	to check, to verify	Verbs
+nehu	to check, to verify, to certify	Verbs
 mababa	to punch	Verbs
 kífe	to thrust (a weapon), to pierce	Verbs
 ndayó	to strike, to inflict (a wound)	Verbs
@@ -473,7 +473,7 @@ bene	to stimulate	Verbs
 bobiloko	to say repeatedly	Verbs
 ndisé	choice, option	Nouns
 gúhäsa	to be seen/perceived (by something)	Verbs
-bobilokoso	to mumble, to murmur	ya/so Verbs
+bobilokoso	to mumble, to murmur	Reflexive Verbs
 tëyá/tehëyá	obvious	Adjectives
 mukamala	expert, professional	Nouns
 tsim	to pray (to have a conversation with a deity)	Verbs
@@ -482,7 +482,23 @@ temfe	to pray (to request something from the deity)	Verbs
 mundda	immediately, now, at this moment	Miscellaneous
 halóhëlu	as soon as possible	Phrases
 fóvaki	stealthy, sneaky	Adjectives
-fusa	plain(s), meadow(s)	Nouns
+fusa	plain(s), meadow(s)	Irregular Plural Nouns
 gëlütu	cave	Nouns
 teyíyofo	pity	Nouns
 teye	a short person	Nouns
+ngopo'an	to act/serve as/take the role of	Verbs
+mele	to utilize, to use	Verbs
+tanta	to clear (an area)	Verbs
+fufó	to extinguish (a fire)	Verbs
+yensa	to get/obtain	Verbs
+ati le	to raise (animals)	Verbs
+benise	to nurture (someone)	Verbs
+kokena	to grow (plants)	Verbs
+opu'uken	to breed (animals)	Verbs
+kolo	to be certain, sure	Verbs
+ndayó'an	to break something	'An Verbs
+ngi	someone/somebody	Nouns
+gengi	no one/nobody	Nouns
+yukya	quiet	Adjectives
+pin/bin	to notice/acknowledge	Verbs
+ingka	smart, intelligent, knowledgable	Adjectives
