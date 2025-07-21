@@ -1,4 +1,4 @@
-ngawu/nggawu	rain	Nouns
+ngawu/nggawu	water, rain	Nouns
 bawë/mbawë	bird(s)	Nouns
 ngingi	monkey(s)/cannibal(s)	Cannibals and Mutants
 né	fire	Nouns
@@ -205,31 +205,31 @@ mbano	all foot bones	Nouns about Bones, Limbs, Body Parts, and Death
 ngi'angi'o	cannibal remains	Nouns about Bones, Limbs, Body Parts, and Death
 neneno	finger	Nouns about Bones, Limbs, Body Parts, and Death
 naoneno	finger bone	Nouns about Bones, Limbs, Body Parts, and Death
-nggawu'an	to chug/forcibly drink	'An Verbs
-tsuti'an	to stray away/get lost by wandering off	'An Verbs
-witsu'an	to search, to explore	'An Verbs
-fasu'i'an	to sniff	'An Verbs
-wisiwisi'an	to hide	'An Verbs
-getsilu'an	to smuggle	'An Verbs
-pelele'an	to study	'An Verbs
-yáni'an	to assume	'An Verbs
-nde'o'an	to scout/lookout	'An Verbs
-tiwi'an	to lift up	'An Verbs
-lowi'an	to drop	'An Verbs
-sene'an	to scream/yell	'An Verbs
-som'an	to give up (something)	'An Verbs
-bëm'an	to feel (an emotion you don't want to)	'An Verbs
-witsunde'o'an	to scour for food (or starve)	'An Verbs
-ngaowi'an	to fight back, assautl (something)	'An Verbs
-yíse'an	to fall in love	'An Verbs
-ima'an	to fall asleep	'An Verbs
-tapa'an	to press against	'An Verbs
+nggawu'an	to chug/forcibly drink	Abstracted Verbs
+tsuti'an	to stray away/get lost by wandering off	Abstracted Verbs
+witsu'an	to search, to explore	Abstracted Verbs
+fasu'i'an	to sniff	Abstracted Verbs
+wisiwisi'an	to hide	Abstracted Verbs
+getsilu'an	to smuggle	Abstracted Verbs
+pelele'an	to study	Abstracted Verbs
+yáni'an	to assume	Abstracted Verbs
+nde'o'an	to scout/lookout	Abstracted Verbs
+tiwi'an	to lift up	Abstracted Verbs
+lowi'an	to drop	Abstracted Verbs
+sene'an	to scream/yell	Abstracted Verbs
+som'an	to give up (something)	Abstracted Verbs
+bëm'an	to feel (an emotion you don't want to)	Abstracted Verbs
+witsunde'o'an	to scour for food (or starve)	Abstracted Verbs
+ngaowi'an	to fight back, assautl (something)	Abstracted Verbs
+yíse'an	to fall in love	Abstracted Verbs
+ima'an	to fall asleep	Abstracted Verbs
+tapa'an	to press against	Abstracted Verbs
 sána	to shoot (an arrow)	Verbs
 yana	sun	Nouns
 a'a	moon	Nouns
-ngá'an	to manslaughter	'An Verbs
-né'an	to commit arson/light ablaze	'An Verbs
-napa'an	to devour/gobble down	'An Verbs
+ngá'an	to manslaughter	Abstracted Verbs
+né'an	to commit arson/light ablaze	Abstracted Verbs
+napa'an	to devour/gobble down	Abstracted Verbs
 kahalala	stick/twig	Nouns
 peleli'i	god of knowledge 	Religious Terms
 gola	fat, obese	Adjectives
@@ -240,19 +240,19 @@ kasë ngawu	oil	Nouns
 á'á yepwá	midnight	Nouns
 apeya	nice, good	Adjectives
 sepu	bad	Adjectives
-süm'on	to steal, to commit a crime	'An Verbs
+süm'on	to steal, to commit a crime	Superabstracted Verbs
 mem pele wisi	paper, scroll, text	Nouns
 wetsilu/tsutitiwi	to travel	Verbs
-tsi'on	to kidnap, forcefully move	'An Verbs
+tsi'on	to kidnap, forcefully move	Superabstracted Verbs
 damo kahalala	effigy	Nouns
 sümtiwi	to hope/wish	Verbs
-ndawi'an	to forcibly run, flee	'An Verbs
+ndawi'an	to forcibly run, flee	Abstracted Verbs
 atita	many (inanimate)	Adjectives
 atiya	many (animate)	Adjectives
 kalahala	polite "mbaba mboko"	Nouns
 hühä	exhaustion	Nouns
-ima'on	to knock (someone) unconscious 	'An Verbs
-ngaowi'on	to defend (from attack)	'An Verbs
+ima'on	to knock (someone) unconscious 	Superabstracted Verbs
+ngaowi'on	to defend (from attack)	Superabstracted Verbs
 mbigye	treasure/dearest (informal)	Nouns
 angtiwí'o	ridiculous	Adjectives
 ndálohí	to survive/prosper/pass (time)	Verbs
@@ -263,7 +263,7 @@ kehibó	mountain(s)	Irregular Plural Nouns
 mbitsë	land	Nouns
 NODEF	bay	dont add
 NODEF	bone marrow	dont add
-kini'an	to sell	'An Verbs
+kini'an	to sell	Abstracted Verbs
 tapwá	seashell	Nouns
 kono	bottle	Nouns
 wi'ia kono/ewu ya kono	medicine	Nouns
@@ -288,8 +288,8 @@ sú'ufe	to cook	Verbs
 yani	soup	Nouns
 mate	to return (somewhere)	Verbs
 onta	to return (home, origin)	Verbs
-mate'an	to retreat	'An Verbs
-onta'an	to defeat	'An Verbs
+mate'an	to retreat	Abstracted Verbs
+onta'an	to defeat	Abstracted Verbs
 pese/pefe	colorful, fragrant	Adjectives
 ek	where	dont add
 ngi	person	dont add
@@ -332,7 +332,7 @@ wase	animal track(s)	Nouns
 sindda	to play	Verbs
 mafo	to resemble	Verbs
 ndasi	to shine	Verbs
-som'on	to sacrifice (something), to give again	'An Verbs
+som'on	to sacrifice (something), to give again	Superabstracted Verbs
 ndenti	blessing, favor	Nouns
 i'i	god	Nouns
 si/siloa	to fly	Verbs
@@ -342,7 +342,7 @@ lohíyam	still	Miscellaneous
 lohí	time	Nouns
 ka lohí kini yë X	can I have X time	Phrases
 sálohí	to miss (someone), to reminince (about something)	Verbs
-süm'an	to need/require	'An Verbs
+süm'an	to need/require	Abstracted Verbs
 giya 	building 	Nouns
 welebing	misunderstanding, mistranslation, mishap	Nouns
 lohi	to change	Verbs
@@ -355,8 +355,8 @@ ngolo	to follow	Verbs
 nggave	to deconstruct, to deassemble	Verbs
 a'i'o	shit	Nouns
 asipi	to talk nonsensically	Verbs
-asipi'an	to speak in a possessed manner	'An Verbs
-asipi'on	to make excuses	'An Verbs
+asipi'an	to speak in a possessed manner	Abstracted Verbs
+asipi'on	to make excuses	Superabstracted Verbs
 -lo	ordinal (1st, 2nd, etc) expression	Phrases
 u'i'i'a'i'u'i'i'i'i'a'i	to crash out	dont add
 vese/vefe	to work (a job, labor)	Verbs
@@ -377,7 +377,7 @@ yu'úla	to grieve	Verbs
 kuni mem te	messenger	Nouns
 fóse	absence	Nouns
 kálakü	nose-spitter (insult towards A'atsilwi speakers)	Nouns
-fógaäpüha	grunt-screecher (insult towards Standard speakers)	Nouns
+fogaäpüha	grunt-screecher (insult towards Standard speakers)	Nouns
 népi	sun	dont add
 ápwa	moon	dont add
 hana	to enjoy, to like	Verbs
@@ -388,7 +388,7 @@ kekyene	iteration, version, edition	Nouns
 fesúa	to help	Verbs
 nenta	to write	Verbs
 'ata	direction, way	Nouns
-tine	few	Adjectives
+tine/gimë	few	Adjectives
 hatsamwa	simple, basic	Adjectives
 tsefese	to exist	Verbs
 tama	name, label	Nouns
@@ -401,7 +401,7 @@ tuha	result	Nouns
 mbeno	to create	Verbs
 bátsi	to enter	Verbs
 naya	to demand	Verbs
-bátsi'an	to intrude	'An Verbs
+bátsi'an	to intrude	Abstracted Verbs
 malá	remainder, leftover	Nouns
 gayana	between	Miscellaneous
 sebesikya	rule	Nouns
@@ -423,7 +423,7 @@ ndo	to open	Verbs
 veseyo/vefeyo	to exert/strain one's self	Reflexive Verbs
 wawáso	to trip, to miswalk	Reflexive Verbs
 imaso	to collapse into sleep, to faint	Reflexive Verbs
-eme'an	to be obliged to (perform an action)	'An Verbs
+eme'an	to be obliged to (perform an action)	Abstracted Verbs
 emeso	to take charge, to assume leadership	Reflexive Verbs
 ndawiso	to exercise/workout	Reflexive Verbs
 timbba	to clean, to wash	Verbs
@@ -439,16 +439,16 @@ tsali/tsaya	young (animate objects)	Adjectives
 nena	old (animate objects)	Adjectives
 mótsi	to exit, to leave	Verbs
 mótsiyo	to zone out	Reflexive Verbs
-mótsi'an	to kick (someone) out	'An Verbs
+mótsi'an	to kick (someone) out	Abstracted Verbs
 sóhu	to await (for someone)	Verbs
 bíhu	to wait (for something)	Verbs
 ndaní	to not have something that you are supposed to have	Verbs
 esiya/masiya	to set aside for later, to save (for later), to store	Verbs
-wetsilu'an/tsutitiwi'an	to migrate	'An Verbs
+wetsilu'an/tsutitiwi'an	to migrate	Abstracted Verbs
 kyesatsa	window (of a house)	Nouns
 sanwa/tsamwa	to read	Verbs
 sepesu	done (of an action)	Adjectives
-bíhu'an	to keep in place	'An Verbs
+bíhu'an	to keep in place	Abstracted Verbs
 bengya	to depart	Verbs
 wensu	long (of time)	Adjectives
 mbimbbi	short (of time)	Adjectives
@@ -462,7 +462,7 @@ ngamayo	to lay down	Verbs
 esiyaso/masiyaso	to ration (due to a shortage)	Reflexive Verbs
 gina	letter (a, b, etc.), character, mark, stroke (of writing)	Nouns
 mewana	current (belonging to present time)	Adjectives
-pele'an	to know something you didn't desire to	'An Verbs
+pele'an	to know something you didn't desire to	Abstracted Verbs
 máne	to feint, to deceive, to gaslight (with lies)	Verbs
 denddu	to block (from an attack), to shield, to barricade	Verbs
 nehu	to check, to verify, to certify	Verbs
@@ -486,7 +486,7 @@ fusa	plain(s), meadow(s)	Irregular Plural Nouns
 gëlütu	cave	Nouns
 teyíyofo	pity	Nouns
 teye	a short person	Nouns
-ngopo'an	to act/serve as/take the role of	Verbs
+ngopo'an	to act/serve as/take the role of	Abstracted Verbs
 mele	to utilize, to use	Verbs
 tanta	to clear (an area)	Verbs
 fufó	to extinguish (a fire)	Verbs
@@ -496,9 +496,21 @@ benise	to nurture (someone)	Verbs
 kokena	to grow (plants)	Verbs
 opu'uken	to breed (animals)	Verbs
 kolo	to be certain, sure	Verbs
-ndayó'an	to break something	'An Verbs
+ndayó'an	to break something	Abstracted Verbs
 ngi	someone/somebody	Nouns
 gengi	no one/nobody	Nouns
 yukya	quiet	Adjectives
 pin/bin	to notice/acknowledge	Verbs
 ingka	smart, intelligent, knowledgable	Adjectives
+gábewa	strong	Adjectives
+yufe	weak	Adjectives
+mandda	to inform, to tell	Verbs
+manddayo	to realize, to learn	Reflexive Verbs
+nagyuso	to receive	Reflexive Verbs
+yáne	(look) like this, in this fashion/way	Phrases
+witsunggá'o	to hunt (down), to track (down)	Verbs
+witsungkalu'o	to speak out (against), to protest	Verbs
+witsumbbenise'o	to adopt (someone), to take in (someone)	Verbs
+witsumbbele	to find (something) viable (to use)	Verbs
+yeba	atmosphere (of a room)	Noun
+witsumbbátsi'an	to harass	Abstracted Verbs
