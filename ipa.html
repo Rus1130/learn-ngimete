@@ -125,6 +125,7 @@
         .replaceAll("./","/")
         .replaceAll(".​", "")
         .replaceAll(". ", " ")
+        .replaceAll("‿", ".")
     }
 
     function ortho(s){
@@ -195,6 +196,9 @@
         document.getElementById(index).addEventListener("click", function(){
             navigator.clipboard.writeText(window[index](s));
             document.getElementById(index).innerText = "copied!";
+            setTimeout(() => {
+                document.getElementById(index).innerText = "copy " + (index == "ipa" ? "IPA" : index);
+            }, 2000);
         })
     })
 </script>
