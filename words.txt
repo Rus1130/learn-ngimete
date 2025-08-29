@@ -512,7 +512,7 @@ witsunggá'o	to hunt (down), to track (down)	Verbs
 witsungkalu'o	to speak out (against), to protest	Verbs
 witsumbbenise'o	to adopt (someone), to take in (someone)	Verbs
 witsumbbele	to find (something) viable (to use)	Verbs
-yeba	atmosphere (of a room)	Noun
+yeba	atmosphere (of a room)	Nouns
 witsumbbátsi'an	to harass	Abstracted Verbs
 mbendi	difficult	Adjectives
 téyi	thank you	Phrases
