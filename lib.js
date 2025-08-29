@@ -230,6 +230,196 @@ export class Dictionary {
     }
 }
 
+function ortho(s){
+    const V = ["a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú", "ä", "ë", "ü"]
+    const C = ["b", "d", "f", "g", "h", "k", "l", "m", "n", "p", "s", "t", "v", "w", "y", "r"]
+    const C1 = ["m", "n", "s", "v", "w", "r"]
+    const A = ["b", "d", "f", "h", "k", "l", "t"]
+    const D = ["g", "p", "y"]
+    const P = ["o", "i", "u"]
+
+
+    for(let i = 0; i < s.length; i++){
+
+        if(s[i] == "-"){
+            let left = s[i-1]
+            let right = s[i+1]
+            
+            // C-C = ə
+            // P-C = ə
+            // V-V = c
+            // V-C1 = z
+            // V-D = c
+            // V-A = z
+            // a-C = ā
+
+            if(left == "a" && C.includes(right)) {
+                s = s.substring(0, i) + "ā" + s.substring(i+1)
+                continue
+            }
+            if(V.includes(left) && D.includes(right)) {
+                s = s.substring(0, i) + "c" + s.substring(i+1)
+                continue
+            }
+            if(P.includes(left) && C.includes(right)) {
+                s = s.substring(0, i) + "ə" + s.substring(i+1)
+                continue
+            }
+            if(C.includes(left) && C.includes(right)) {
+                s = s.substring(0, i) + "ə" + s.substring(i+1)
+                continue
+            }
+            if(V.includes(left) && V.includes(right)) {
+                s = s.substring(0, i) + "c" + s.substring(i+1)
+                continue
+            }
+            if(V.includes(left) && C1.includes(right)) {
+                s = s.substring(0, i) + "z" + s.substring(i+1)
+                continue
+            }
+            if(V.includes(left) && A.includes(right)) {
+                s = s.substring(0, i) + "z" + s.substring(i+1)
+                continue
+            }
+        }
+    }
+
+    s = s.replaceAll("aā", "ā")
+    return s;
+}
+
+function ipa(s){
+    s = ortho(s);
+    const r = [
+        [   
+            // replace combining vowels with their combined counterparts
+            { pattern: "á", value: "á" },
+            { pattern: "é", value: "é" },
+            { pattern: "í", value: "í" },
+            { pattern: "ó", value: "ó" },
+            { pattern: "ú", value: "ú" },
+            { pattern: "ä", value: "ä" },
+            { pattern: "ë", value: "ë" },
+            { pattern: "ü", value: "ü" },
+
+            { pattern: "ngg", value: "ᵑg" },
+            { pattern: "mbb", value: "m.b" },
+            { pattern: "ndd", value: "n.d" },
+            { pattern: ".", value: " ||"},
+            { pattern: ",", value: " |"}
+        ],
+        [
+            // delimiters 
+            { pattern: "ā", value: "a‿"},
+            { pattern: "c", value: "‿"},
+            { pattern: "ə", value: "‿"},
+            { pattern: "z", value: "‿"},
+
+            // consonants
+            { pattern: 'ng', value: "ŋ" },
+            { pattern: 'y', value: "j" },
+            { pattern: "gy", value: "c"},
+            { pattern: "ky", value: "c"},
+            { pattern: "'", value: "ʔ" },
+            { pattern: "nd", value: "ⁿd" },
+            { pattern: "mb", value: "ᵐb" },
+            { pattern: "ts", value: "t͡s" },
+
+            // vowels
+            { pattern: 'a', value: "a." },
+            { pattern: 'e', value: "e." },
+            { pattern: 'i', value: "i." },
+            { pattern: 'o', value: "o." },
+            { pattern: 'u', value: "u." },
+            { pattern: 'á', value: "aː." },
+            { pattern: 'é', value: "eː." },
+            { pattern: 'í', value: "iː." },
+            { pattern: 'ó', value: "oː." },
+            { pattern: 'ú', value: "uː." },
+            { pattern: 'är', value: "ɑː." },
+            { pattern: 'ä', value: "ɑ." },
+            { pattern: 'ë', value: "ə." },
+            { pattern: 'ü', value: "y." },
+        ],
+        [
+            { pattern: ".‿", value: "‿"},
+            { pattern: "a.o", value: "ao̯"},
+            { pattern: "e.o", value: "eo̯"},
+        ]
+    ]
+
+    let result = s;
+    const map = m => Object.fromEntries(m.map(({ pattern, value }) => [pattern, value]))
+
+    for(let i = 0; i < r.length; i++){
+        result = result.replace(new RegExp(Object.keys(map(r[i])).join("|"), "g"), match => map(r[i])[match] || match)
+    }
+
+    result = result.split(" ")
+    result.forEach((index, i) => {
+        if(result[i][result[i].length - 1] == ".") {
+            result[i] = result[i].substring(0, result[i].length - 1)
+        }
+    });
+
+    const V = "[aeiouːɑəy]";
+    const C = "[bdfghklmnpstvwjcŋʔ]";
+
+    result.forEach((index, i) => {            
+        // fix delimited syllable boundaries 
+        result[i] = index.replaceAll(new RegExp(`(${C+V}ː?)(\.)(${C})(‿)`, "g"), "$1$3$4")   
+
+        // fix non-delimited syllable boundaries
+        result[i] = result[i].replaceAll(new RegExp(`(${C+V}ː?)(\.)(${C})$`, "g"), "$1$3") 
+
+        // fix nasal syllable boundaries le.ŋki -> leŋ.ki
+        result[i] = result[i].replaceAll(new RegExp(`(\.)([mnŋ])(${C})`, "g"), "$2.$3")
+
+        // fix w/l syllable boundaries
+        result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])(${C})`, "g"), "$2.$3")
+        result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])$`, "g"), "$2")
+
+        // fix s syllable boundaries
+        result[i] = result[i].replaceAll(new RegExp(`(${V})\.s$`, "g"), "$1s.")
+        result[i] = result[i].replaceAll(new RegExp(`(${V}).s‿`, "g"), "$1s‿")
+
+        // fix .m.b and .n.d
+        result[i] = result[i].replaceAll(".m.b", "m.b")
+        result[i] = result[i].replaceAll(".n.d", "n.d")
+
+        // fix velar prenasalized syllable boundaries
+        //result[i] = result[i].replaceAll(new RegExp(`\.ŋg`, "g"), "ᵑg\.");
+    })
+
+    result = "[" + result.join(" ") + "]"
+
+    return result = result
+    .replaceAll("n", "n̪")
+    .replaceAll("g", "ɡ")
+    .replaceAll("./","/")
+    .replaceAll(".​", "")
+    .replaceAll(". ", " ")
+    .replaceAll("‿", ".")
+}
+
+export class Writer {
+    constructor(text){
+        this.text = text
+    }
+
+    ipa(){
+        return ipa(this.text)
+    }
+
+    ortho(){
+        return ortho(this.text)
+    }
+
+    both(){
+        return ortho(this.text) + "\n" + ipa(this.text);
+    }
+}
+
 export class Word {
     static setDialects(dialects) {
         Word.dialects = dialects;

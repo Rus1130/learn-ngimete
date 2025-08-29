@@ -1,0 +1,15 @@
+<head>
+
+</head>
+<body>
+
+</body>
+<script type="module">
+    import { dict } from './dictionary.js';
+
+    let words = [];
+
+    dict.waitForDictLoad().then(() => {
+        console.log(dict)
+    });
+</script>

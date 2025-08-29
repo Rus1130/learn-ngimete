@@ -115,7 +115,7 @@ më	to speak	Verbs
 ngale/nggale	to drink	Verbs
 sene	to shriek/make noise	Verbs
 owa le	to agree	Verbs
-tsi'an	to move	'An Verbs
+tsi'an	to move	Abstracted Verbs
 napa	to eat	Verbs
 tiwi	to rise	Verbs
 lowi	to lower	Verbs
@@ -516,8 +516,17 @@ yeba	atmosphere (of a room)	Noun
 witsumbbátsi'an	to harass	Abstracted Verbs
 mbendi	difficult	Adjectives
 téyi	thank you	Phrases
-kona	to carry, to bring	Verbs
+kona/kone	to carry, to bring	Verbs
 witsunddendu'o	to prevent (something), to block (an action)	Verbs
 kewes	a dangerous place, "Hell"	Nouns
 ngewus	clan, tribe	Nouns
 kéle	to strike up (an informal) conversation	Verbs
+bembbabeo	to flirt	Verbs
+bembbabeo'an	to unintentionally flirt (go with the flow)	Abstracted Verbs
+konayo/koneyo	to persevere	Verbs
+kéleyo	to introduce (oneself)	Verbs
+kéle'an	to participate in small talk out of politeness (despite not wanting to)	Abstracted Verbs
+gyeye	to nurse (a child)	Verbs
+kasëcya	dark	Adjectives
+léngá	a terror, a horror	Nouns
+vékye	to bring (as a side effect, unintentionally)	Verbs
