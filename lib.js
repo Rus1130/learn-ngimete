@@ -400,6 +400,7 @@ function ipa(s){
     .replaceAll(".​", "")
     .replaceAll(". ", " ")
     .replaceAll("‿", ".")
+    .replaceAll(/.$/g, "")
 }
 
 export class Writer {

@@ -1,15 +1,210 @@
-<head>
 
+<head>
+    <style>
+        .table-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .quality-table {
+            border-collapse: collapse;
+            font-family: sans-serif;
+            font-size: 13px;
+            margin: 20px;
+            width: auto;
+            min-width: 300px;
+        }
+
+        .quality-table th,
+        .quality-table td {
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            text-align: center;
+            width: auto;
+        }
+
+        .quality-table th {
+            background: #eee;
+            font-weight: 600;
+        }
+
+        .quality-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-
+    <div class="table-container">
+        <table id="sound-qualities-table" class="quality-table">
+            <tr>
+                <th>Sound</th>
+                <th>Sharpness</th>
+                <th>Form</th>
+                <th>Affinity</th>
+            </tr>
+        </table>
+        <table id="word-quality-table" class="quality-table">
+            <tr>
+                <th>Word</th>
+                <th>Quality 1</th>
+                <th>Quality 2</th>
+                <th>Affinity</th>
+            </tr>
+        </table>
+    </div>
 </body>
 <script type="module">
     import { dict } from './dictionary.js';
+    import { Writer } from './lib.js';
+
+    const letter_table = {
+         "f": { q1:  0.8, q2: -0.2 },
+         "v": { q1:  1  , q2: -1   },
+         "p": { q1: -0.3, q2:  0.3 },
+         "b": { q1: -0.5, q2:  0.5 },
+         "t": { q1: -0.5, q2:  0.5 },
+         "d": { q1: -0.7, q2:  0.7 },
+         "c": { q1: -0.5, q2:  0.2 },
+         "k": { q1: -1  , q2:  1   },
+         "g": { q1: -0.7, q2: -0.9 },
+         "ʔ": { q1:  0  , q2:  0   },
+        "ᵐb": { q1:  0.3, q2:  0.5 },
+        "ⁿd": { q1:  0.4, q2:  0.7 },
+        "ᵑg": { q1: -0.9, q2: -0.9 },
+         "m": { q1:  0.3, q2:  0.8 },
+         "n̪": { q1:  0.4, q2:  0.8 },
+         "ŋ": { q1: -1,   q2: -1   },
+         "s": { q1:  1,   q2:  1   },
+         "h": { q1:  0.2, q2:  0.2 },
+        "t͡s": { q1:  0.8, q2:  0.8 },
+         "w": { q1:  0.1, q2:  0.1 },
+         "j": { q1:  0.3, q2: -0.7 },
+         "l": { q1:  0.6, q2:  0.6 },
+        
+    }
+
+    const affinity_table = structuredClone(letter_table);
+
+    // clear all the values in affinity_table
+    for(let letter in affinity_table) {
+        affinity_table[letter].affinity = {};
+    }
+
+    function getOppositeQuality(quality){
+        if(quality == "Fire") return "Water";
+        if(quality == "Water") return "Fire";
+        if(quality == "Earth") return "Metal";
+        if(quality == "Metal") return "Earth";
+    }
 
     let words = [];
 
+    function addSound(sound, quality1, quality2, affinity) {
+        let table = document.getElementById("sound-qualities-table");
+        let row = table.insertRow(-1);
+
+        row.insertCell(0).textContent = sound;
+        row.insertCell(1).textContent = quality1;
+        row.insertCell(2).textContent = quality2;
+        row.insertCell(3).textContent = affinity;
+    }
+
+    function determineMainAffinity(q1, q2){
+        if (Math.sign(q1) == -1 && Math.sign(q2) == -1) {
+            return "Water";
+        } 
+        else if (Math.sign(q1) == -1 && Math.sign(q2) == 1) {
+            return "Earth";
+        } 
+        else if (Math.sign(q1) == 1 && Math.sign(q2) == -1) {
+            return "Fire";
+        } 
+        else if (Math.sign(q1) == 1 && Math.sign(q2) == 1) {
+            return "Metal";
+        }
+    }
+
+    function determineFireOrWater(q1){
+        return Math.sign(q1) == 1 ? "Fire" : "Water";
+    }
+    function determineEarthOrMetal(q2){
+        return Math.sign(q2) == 1 ? "Metal" : "Earth";
+    }
+
+    for(let letter in letter_table) {
+        let qualities = letter_table[letter];
+        let mainAffinity = "";
+        let sideAffinity = "";
+
+        let q1 = qualities.q1;
+        let q2 = qualities.q2;
+
+        // --- Determine main element by sign combo ---
+        mainAffinity = determineMainAffinity(q1, q2);
+
+        affinity_table[letter].affinity.main = mainAffinity;
+
+        // --- Strong vs Weak (based on magnitude) ---
+        let strength = (Math.abs(q1) + Math.abs(q2)) / 2; // average magnitude
+        let strengthLabel = strength > 0.5 ? "Strong" : "Weak";
+
+        affinity_table[letter].affinity.strength = strengthLabel;
+
+        let fullMainAffinity = strengthLabel + " " + mainAffinity;
+
+        // --- Side element: whichever axis has smaller magnitude ---
+        // get the difference between the absolute values of q1 and q2
+        let diff = Math.abs(Math.abs(q1) - Math.abs(q2));
+
+        if(diff == 0) sideAffinity = "(Balanced)"
+        else {
+            if(strengthLabel == "Weak"){
+                sideAffinity = Math.min(q1, q2);
+
+                let sideAffinitySource = Math.min(q1, q2) == q1 ? "q1" : "q2";
+
+                if(sideAffinitySource == "q1") sideAffinity = determineFireOrWater(q1);
+                else sideAffinity = determineEarthOrMetal(q2);
+
+                affinity_table[letter].affinity.influence = sideAffinity;
+
+                sideAffinity = `(${sideAffinity} Influence)`;
+            }
+        }
+
+        let totalAffinity = `${fullMainAffinity} ${sideAffinity}`;
+
+        if(q1 == 0 && q2 == 0) totalAffinity = "None";
+
+        addSound(letter, qualities.q1, qualities.q2, totalAffinity);
+    }
+
+    console.log(affinity_table)
+
+    function addWord(word, quality1, quality2, affinity) {
+        let table = document.getElementById("word-quality-table");
+        let row = table.insertRow(-1);
+
+        row.insertCell(0).textContent = word;
+        row.insertCell(1).textContent = quality1;
+        row.insertCell(2).textContent = quality2;
+        row.insertCell(3).textContent = affinity;
+    }
+
     dict.waitForDictLoad().then(() => {
         console.log(dict)
+
+        // filter out these categories from dict.dict: Connecting letters, vowel sounds, consonant sounds, grammar, phrases, pronouns, dont add, tenses
+        let excludedCategories = ["Connecting Letters", "Vowel Sounds", "Consonant Sounds", "Grammar", "Phrases", "Pronouns", "dont add", "Tenses", "Numerals"];
+        for (let category in dict.dict) {
+            if(excludedCategories.includes(category)) continue;
+            words.push(...dict.dict[category])
+        }
+
+        words.forEach(w => {
+            let word = new Writer(w.value.Standard).ipa().replaceAll(/[\[\]]/g, "");
+            addWord(word, 0, 0, "");
+        })
     });
 </script>
