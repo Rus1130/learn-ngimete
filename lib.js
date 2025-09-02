@@ -391,16 +391,18 @@ function ipa(s){
         //result[i] = result[i].replaceAll(new RegExp(`\.ŋg`, "g"), "ᵑg\.");
     })
 
-    result = "[" + result.join(" ") + "]"
+    result = result.join(" ")
 
-    return result = result
+    result = result
     .replaceAll("n", "n̪")
     .replaceAll("g", "ɡ")
     .replaceAll("./","/")
     .replaceAll(".​", "")
     .replaceAll(". ", " ")
     .replaceAll("‿", ".")
-    .replaceAll(/.$/g, "")
+    .replaceAll(/\.$/g, "")
+
+    return "[" + result + "]";
 }
 
 export class Writer {
