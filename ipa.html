@@ -10,6 +10,10 @@
 <script type="module">
     import { Writer } from './lib.js';
 
+    const bothButton = document.getElementById("both");
+    const orthoButton = document.getElementById("ortho");
+    const ipaButton = document.getElementById("ipa");
+
     // get query strings
     let urlParams = new URLSearchParams(window.location.search);
     // get the param called "s"
@@ -18,13 +22,27 @@
 
     document.getElementById("out").innerText = new Writer(s).both();
 
-    ["both", "ortho", "ipa"].forEach((index, i) => {
-        document.getElementById(index).addEventListener("click", function(){
-            navigator.clipboard.writeText(window[index](s));
-            document.getElementById(index).innerText = "copied!";
-            setTimeout(() => {
-                document.getElementById(index).innerText = "copy " + (index == "ipa" ? "IPA" : index);
-            }, 2000);
-        })
-    })
+    bothButton.addEventListener("click", function(){
+        navigator.clipboard.writeText(new Writer(s).both());
+        bothButton.innerText = "copied!";
+        setTimeout(() => {
+            bothButton.innerText = "copy both";
+        }, 2000);
+    });
+
+    orthoButton.addEventListener("click", function(){
+        navigator.clipboard.writeText(new Writer(s).ortho());
+        orthoButton.innerText = "copied!";
+        setTimeout(() => {
+            orthoButton.innerText = "copy ortho";
+        }, 2000);
+    });
+
+    ipaButton.addEventListener("click", function(){
+        navigator.clipboard.writeText(new Writer(s).ipa());
+        ipaButton.innerText = "copied!";
+        setTimeout(() => {
+            ipaButton.innerText = "copy IPA";
+        }, 2000);
+    });
 </script>
