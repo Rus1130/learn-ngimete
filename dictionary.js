@@ -102,10 +102,17 @@ dict.addWord("Pronouns",
     new Word("third person singular reflexive pronoun",       "ni"),
     new Word("third person plural non-possesive pronoun",     "ikyi",  "ki"),
     new Word("third person plural possesive pronoun",         "igyo",  "gyo"),
-    new Word("third person plural reflexive pronoun",         "si")
+    new Word("third person plural reflexive pronoun",         "si"),
+    new Word("first person honorific pronoun",                "hë"),
+    new Word("second person singular honorific pronoun",      "ha"),
+    new Word("second person plural honorific pronoun",        "he"),
+    new Word("third person singular honorific pronoun",       "ngi"),
+    new Word("third person plural honorific pronoun",         "hi"),
+    new Word("first person honorific pronoun",                "ho"),
+    new Word("second person honorific pronoun",               "hao"),
+    new Word("third person honorific pronoun",                "hó"),
 )
 
-dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/tenses-and-grammar.txt`, "\n", "\t", "/")
 dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/words.txt`, "\n", "\t", "/");
 
 function ortho(s){
