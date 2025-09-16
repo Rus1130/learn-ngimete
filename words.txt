@@ -323,7 +323,7 @@ goma	crotch/groin	Nouns about Bones, Limbs, Body Parts, and Death
 mafu	stomach, belly	Nouns about Bones, Limbs, Body Parts, and Death
 ka kome tiwi	why put up a fight when you know theres no point?/why try so hard?	Phrases
 káma	nation, realm	Nouns
-kama	shuteye	Nouns
+kama	rest/sleep	Nouns
 sana	door	Nouns
 nasobe'o	decoration	Nouns
 káli	heart	Nouns
@@ -530,3 +530,9 @@ gyeye	to nurse (a child)	Verbs
 kasëcya	dark	Adjectives
 léngá	a terror, a horror	Nouns
 vékye	to bring (as a side effect, unintentionally)	Verbs
+ndásana	to pass through, to go through	Verbs
+nandda	easy	Adjectives
+téha	to latch onto (something), to hold onto	Verbs
+teha	roof, top, cover	Verbs
+déha	to quit, to give up	Verbs
+deha	undesirable	Verbs
