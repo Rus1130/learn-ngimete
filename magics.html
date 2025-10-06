@@ -380,7 +380,10 @@
                     let diff = primary[1] - secondary[1];
                     let primaryModifier = getWordElementModifier(primary[1]);
                     let secondaryModifier = getWordElementModifier(secondary[1] - 2);
-                    affinity = `${primaryModifier} ${primary[0]} (${secondaryModifier} ${secondary[0]})`;
+
+                    if(primary[1] == secondary[1]){
+                        affinity = `Dual ${primary[0]}/${secondary[0]}`
+                    } else affinity = `${primaryModifier} ${primary[0]} (${secondaryModifier} ${secondary[0]})`;
                 }
 
                 addWord(word.key, qualityDiagram.join(" "), elementCount, affinity);
