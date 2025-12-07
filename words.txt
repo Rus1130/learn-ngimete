@@ -29,7 +29,7 @@ kilikali	lizard	Nouns
 kilikali tapu yá	lizard skin	Nouns
 ngawu te	drink	Nouns
 ken wisi	drug	Nouns
-kopa me	village/camp	Nouns
+kopāme	village/camp	Nouns
 noa ngingi	blue monkey(s)	Cannibals and Mutants
 gala	elk/deer	Nouns
 pula/närla	place	Nouns
@@ -37,7 +37,7 @@ sene ngingi	shrieker monkey(s)	Cannibals and Mutants
 bawë wisi/mbawë wisi	feather	Nouns
 tesi	pouch	Nouns
 fwí	arrow(s)	Irregular Plural Nouns
-ngawu tesi/nggawu tesi	waterskin	Nouns
+ngawu tesi/ada	waterskin	Nouns
 fwí tesi	quiver	Nouns
 hiho	stamina	Nouns
 nggala	fish	Nouns
@@ -78,7 +78,7 @@ papap	sexual intercourse	Nouns
 iela	back	Nouns about Bones, Limbs, Body Parts, and Death
 gyelu	waist	Nouns about Bones, Limbs, Body Parts, and Death
 nona	human/person	Nouns
-tike	animal	Nouns
+tíke	animal	Nouns
 keleni	body	Nouns about Bones, Limbs, Body Parts, and Death
 lata'a	part, piece	Nouns
 kaoleni	skeleton	Nouns about Bones, Limbs, Body Parts, and Death
@@ -136,7 +136,7 @@ kini	to lend	Verbs
 witsu	to find	Verbs
 tapa	to touch/feel (something)	Verbs
 fasu'i	to smell	Verbs
-bëm	to feel (an emotion)	Verbs
+bëm	to feel an emotion	Verbs
 nde'o	to see	Verbs
 wisiwisi	to cover	Verbs
 getsilu	to keep away	Verbs
@@ -220,7 +220,7 @@ sene'an	to scream/yell	Abstracted Verbs
 som'an	to give up (something)	Abstracted Verbs
 bëm'an	to feel (an emotion you don't want to)	Abstracted Verbs
 witsunde'o'an	to scour for food (or starve)	Abstracted Verbs
-ngaowi'an	to fight back, assautl (something)	Abstracted Verbs
+ngaowi'an	to fight back, assault (something)	Abstracted Verbs
 yíse'an	to fall in love	Abstracted Verbs
 ima'an	to fall asleep	Abstracted Verbs
 tapa'an	to press against	Abstracted Verbs
@@ -261,7 +261,7 @@ ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	did you have to wast
 ndálohí kama	to pull an all nighter	dont add
 kehibó	mountain(s)	Irregular Plural Nouns
 mbitsë	land	Nouns
-NODEF	bay	dont add
+máfu	bay	dont add
 NODEF	bone marrow	dont add
 kini'an	to sell	Abstracted Verbs
 tapwá	seashell	Nouns
@@ -295,7 +295,7 @@ ek	where	dont add
 ngi	person	dont add
 u	lative	dont add
 wulë	hello	dont add
-em	to go	dont add
+tsi	to go	dont add
 witsundehohan ya	hungry	dont add
 ë	and	dont add
 buntse/mbuntse	strange	Adjectives
@@ -365,7 +365,7 @@ panta	task, quest	Nouns
 üná	profession, trade	Nouns
 ngána	river	Nouns
 ani	friend, bro (informal)	Nouns
-ndasi ya	white	Adjectives
+ndaya	white	Adjectives
 simbbärnta	journey, adventure	Nouns
 kyesi	above, up	Miscellaneous
 saha	breath	Nouns
@@ -488,7 +488,7 @@ teyíyofo	pity	Nouns
 teye	a short person	Nouns
 ngopo'an	to act/serve as/take the role of	Abstracted Verbs
 mele	to utilize, to use	Verbs
-tanta	to clear (an area)	Verbs
+tanta	to clear (an area), to raze	Verbs
 fufó	to extinguish (a fire)	Verbs
 yensa	to get/obtain	Verbs
 benise	to nurture (someone)	Verbs
@@ -508,15 +508,15 @@ manddayo	to realize	Reflexive Verbs
 nagyuso	to receive	Reflexive Verbs
 yáne	(look) like this, in this fashion/way	Phrases
 witsunggá'o	to hunt (down), to track (down)	Verbs
-witsungkalu'o	to speak out (against), to protest	Verbs
+witsungkalu	to speak out (against), to protest	Verbs
 witsumbbenise'o	to adopt (someone), to take in (someone)	Verbs
-witsumbbele	to find (something) viable (to use)	Verbs
+witsumbbele'o	to find (something) viable (to use)	Verbs
 yeba	atmosphere (of a room), vibe	Nouns
 witsumbbátsi'an	to harass	Abstracted Verbs
 mbendi	difficult	Adjectives
 téyi	thank you	Phrases
 kona/kone	to carry, to bring	Verbs
-witsunddendu'o	to prevent (something), to block (an action)	Verbs
+witsunddenddu	to prevent (something), to block (an action)	Verbs
 kewes	a dangerous place, "Hell"	Nouns
 ngewus	clan, tribe	Nouns
 kéle	to strike up (an informal) conversation	Verbs
@@ -534,27 +534,27 @@ nandda	easy	Adjectives
 fén	to latch onto (something), to hold onto	Verbs
 kilu	roof, top, cover	Verbs
 sumpin	sibling	Nouns
-wónde	to love (like family)	Verbs
+wónde	to love like family	Verbs
 móse	to quit, to give up	Verbs
 léke	undesirable	Adjectives
-nuba	to raise (an animal)	Verbs
-ki'e/kyegya	to drag	Verbs
+nuba	to raise an animal	Verbs
+ki'e	to drag	Verbs
 bähu	sick	Adjectives
 fetsimwa	an attempt, "a try", "a go"	Nouns
 sä	nothing	Nouns
 këlä	sapling	Nouns
 kyawasana	fishing net	Nouns
 igyesa	to sleep deeply, to slumber	Verbs
-kómete	words (that someone speaks)	Irregular Plural Nouns
+kómete/kómëte	words (that someone speaks)	Irregular Plural Nouns
 eya	red	Adjectives
 géya	brown	Adjectives
 nggoye	to bubble, to boil	Verbs
 pífwe	reason	Nouns
 nahayo	to fascinate	Reflexive Verbs
 tapa'on	to interact	Superabstracted Verbs
-bähulala	uneasy	Adjectives
-adedayo	to commit a mistake	Verbs
-a/sin	about	Miscellaneous
+bähulala/yubaya	uneasy	Adjectives
+adedayo	to make a mistake	Verbs
+a/ngí	about, concerning	Miscellaneous
 kyone	real	Adjectives
 nu'á'o	diverse	Adjectives
 kësa	to unlock	Verbs
@@ -567,3 +567,46 @@ müta tapa gya sana (nam ndásana ano)	stop touching the door (and walk through 
 wandda	to dance	Verbs
 suli	to come, to move towards the speaker, to move nearer to the point of perspective	Verbs
 wanddayo	to twirl around, to spin around	Reflexive Verbs
+sipilana	to scare	Verbs
+gugulu	to search for a piece of information (via books, other people, etc)	Verbs
+besekya	to turn into (another physical form)	Verbs
+besekya'an	to change clothes	Abstracted Verbs
+semes	chief of a human village	Nouns
+nggáhetí	enemy(ies)	Irregular Plural Nouns
+yima	ok (all good)	Miscellaneous
+kahāme	forest	Nouns
+tike	peaceful	Adjectives
+sá	hushing sound	Phrases
+soma	to fear	Verbs
+kílu	rough (surface), rigid	Adjectives
+ndásanayo	to propose (an idea)	Verbs
+tápa	book	Nouns
+nggoyo	to exhaust (someone), to tire out (someone) repeatedly	Verbs
+nggoya	drained (of energy), exhausted	Adjectives
+nggongo	to bang, to slam	Verbs
+lenga	type	Nouns
+kalayo		
+keviwes	a (usually blessed) warrior/fighter with the highest valor/honor	Religious Terms
+yofo	wind(s), gust(s)	Irregular Plural Nouns
+mibe	clay	Nouns
+naogu	seafloor(s)/oceanfloor(s)	Irregular Plural Nouns
+fipe	grain(s)	Irregular Plural Nouns
+sisa	cereal crop, a crop capable of being milled into grain or flour	Nouns
+naohé	riverbed(s)	Irregular Plural Nouns
+sífi	flour, powder, processed grain	Nouns
+núba	stream, small offshoot	Nouns
+naopü	lakebed(s)	Irregular Plural Nouns
+na	surface, plane	Nouns
+mika	color	Nouns
+fufo	to wring out (a wet cloth), to straighten out/flatten out a piece of (dry) textile	Verbs
+naka	isolated, remote	Adjectives
+ádobo	civilization(s)	Irregular Plural Nouns
+kapa	a neighborhood; an obscure, very small settlement	Nouns
+nggahé	a large village centered around a river or a large village in general	Nouns
+nggaki	a settlement near a large body of water	Nouns
+feohiki	a (usually) well-known, very large settlement, city	Nouns
+sínaha	to roam, to wander aimlessly or without direction	Verbs
+gelasa	particular, specific	Adjectives
+nga	destination, end-point	Nouns
+anwe'e	somewhere, in/at/near an unspecific place	Miscellaneous
+ndáki	a bridge or crossing, a passageway (usually) wedged between something	Nouns
