@@ -44,7 +44,7 @@
 
                     def = word.value["A'atsilwi"];
                     def.split("").forEach((letter, i) => {
-                        if(!["N", ">", "<", "O", "U"].includes(letter)){
+                        if(!["N", ">", "<", "O", "U", "(", ")", "V"].includes(letter)){
                             if(distributionAatsilwi[letter]){
                                 distributionAatsilwi[letter]++;
                             } else {

@@ -27,7 +27,7 @@ us	rabbit	Nouns
 us tapu yá	rabbit skin	Nouns
 kilikali	lizard	Nouns
 kilikali tapu yá	lizard skin	Nouns
-ngawu te	drink	Nouns
+ngawu te/nggate	drink	Nouns
 ken wisi	drug	Nouns
 kopāme	village/camp	Nouns
 noa ngingi	blue monkey(s)	Cannibals and Mutants
@@ -158,7 +158,6 @@ engomo	bloody	Adjectives
 ngeka	dry	Adjectives
 wána/wá>NOUN<na	akin to/same (as)	Adjectives
 no'i	cowardly, scared	Adjectives
-kasë	black	Adjectives
 ge	no	Miscellaneous
 gege	definite no	Miscellaneous
 owaowa	definite yes	Miscellaneous
@@ -261,8 +260,8 @@ ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	did you have to wast
 ndálohí kama	to pull an all nighter	dont add
 kehibó	mountain(s)	Irregular Plural Nouns
 mbitsë	land	Nouns
-máfu	bay	dont add
-NODEF	bone marrow	dont add
+máfu	bay	Nouns
+pa'ü'o	bone marrow	Nouns
 kini'an	to sell	Abstracted Verbs
 tapwá	seashell	Nouns
 kono	bottle	Nouns
@@ -308,8 +307,8 @@ kole	comitative	dont add
 u'u	animal	dont add
 keloyani	lower body	Nouns about Bones, Limbs, Body Parts, and Death
 ketiyani	upper body	Nouns about Bones, Limbs, Body Parts, and Death
-kaoloyani	upper skeleton	Nouns about Bones, Limbs, Body Parts, and Death
-kaotiyani	lower skeleton	Nouns about Bones, Limbs, Body Parts, and Death
+kaoloyani	lower skeleton	Nouns about Bones, Limbs, Body Parts, and Death
+kaotiyani	upper skeleton	Nouns about Bones, Limbs, Body Parts, and Death
 ke'aki'o	skeletal limbs	Nouns about Bones, Limbs, Body Parts, and Death
 kili'olili	rib(s)	Nouns about Bones, Limbs, Body Parts, and Death
 tsena	chest	Nouns about Bones, Limbs, Body Parts, and Death
@@ -317,7 +316,7 @@ tane	shoulder	Nouns about Bones, Limbs, Body Parts, and Death
 táne'o	shoulder bone	Nouns about Bones, Limbs, Body Parts, and Death
 mbaonano	toe bones	Nouns about Bones, Limbs, Body Parts, and Death
 mbanano	toe	Nouns about Bones, Limbs, Body Parts, and Death
-hihwá	nostril(s)	Nouns about Bones, Limbs, Body Parts, and Death
+hihíwe	nostril(s)	Nouns about Bones, Limbs, Body Parts, and Death
 lebo	ear	Nouns about Bones, Limbs, Body Parts, and Death
 goma	crotch/groin	Nouns about Bones, Limbs, Body Parts, and Death
 mafu	stomach, belly	Nouns about Bones, Limbs, Body Parts, and Death
@@ -352,6 +351,7 @@ naha	to put on, to adorn	Verbs
 miwa	to be able to	Verbs
 müta	to stop, to halt	Verbs
 ngolo	to follow	Verbs
+nggolo	(usually nominal) water current	
 nggave	to deconstruct, to deassemble	Verbs
 a'i'o	shit	Nouns
 asipi	to talk nonsensically	Verbs
@@ -365,7 +365,6 @@ panta	task, quest	Nouns
 üná	profession, trade	Nouns
 ngána	river	Nouns
 ani	friend, bro (informal)	Nouns
-ndaya	white	Adjectives
 simbbärnta	journey, adventure	Nouns
 kyesi	above, up	Miscellaneous
 saha	breath	Nouns
@@ -416,7 +415,7 @@ kyelu	script, writing	Nouns
 seyaya	to list	Verbs
 nagyu	to fetch, to grab	Verbs
 seyayaso	to register one's self, to sign up	Reflexive Verbs
-ndoba	basement, cellar	Verbs
+ndaoba	basement, cellar	Verbs
 báli	porch, foyer	Verbs
 igyensa	to start, to begin, to initiate	Verbs
 ndo	to open	Verbs
@@ -546,8 +545,25 @@ këlä	sapling	Nouns
 kyawasana	fishing net	Nouns
 igyesa	to sleep deeply, to slumber	Verbs
 kómete/kómëte	words (that someone speaks)	Irregular Plural Nouns
-eya	red	Adjectives
-géya	brown	Adjectives
+kasë	black	Adjectives
+ndaya	white	Adjectives
+eya/eyu	red (fresh blood)	Adjectives
+engomo	dark red (dried blood)	Adjectives
+géya/génta	brown (rot)	Adjectives
+saga	light brown (debarked tree)	Adjectives
+wisi'a/wisiyu	green (leaf)	Adjectives
+ngaya/nggaya	light blue (rain)	Adjectives
+mepüya/mepüfu	sky blue (lake blue)	Adjectives
+súsë	dark blue (ocean)	Adjectives
+yaya	orange/yellow (sun)	Adjectives
+néya/néfë	orange-red (fire)	Adjectives
+toka	purple, pink, grue, any unnatural color	Adjectives
+ya'a	lighter variation of (color)	Adjectives
+iboya/ibuy(V)	darker variation of (color)	Adjectives
+wa'i/wa'(V)	saturated variation of (color), rejuvenated by fire, ember-touched, lit up by fire	Adjectives
+yoba/yob(V)	paler variation of (color)	Adjectives
+nélala	ember(s)	Irregular Plural Nouns
+ibo	shadow	Nouns
 nggoye	to bubble, to boil	Verbs
 pífwe	reason	Nouns
 nahayo	to fascinate	Reflexive Verbs
@@ -584,8 +600,7 @@ tápa	book	Nouns
 nggoyo	to exhaust (someone), to tire out (someone) repeatedly	Verbs
 nggoya	drained (of energy), exhausted	Adjectives
 nggongo	to bang, to slam	Verbs
-lenga	type	Nouns
-kalayo		
+lapa	type	Nouns
 keviwes	a (usually blessed) warrior/fighter with the highest valor/honor	Religious Terms
 yofo	wind(s), gust(s)	Irregular Plural Nouns
 mibe	clay	Nouns
@@ -602,11 +617,33 @@ fufo	to wring out (a wet cloth), to straighten out/flatten out a piece of (dry) 
 naka	isolated, remote	Adjectives
 ádobo	civilization(s)	Irregular Plural Nouns
 kapa	a neighborhood; an obscure, very small settlement	Nouns
-nggahé	a large village centered around a river or a large village in general	Nouns
-nggaki	a settlement near a large body of water	Nouns
+ngahé / nggahé	a large village centered around a river or a large village in general	Nouns
+ngaki / nggaki	a settlement near a large body of water	Nouns
 feohiki	a (usually) well-known, very large settlement, city	Nouns
 sínaha	to roam, to wander aimlessly or without direction	Verbs
 gelasa	particular, specific	Adjectives
 nga	destination, end-point	Nouns
 anwe'e	somewhere, in/at/near an unspecific place	Miscellaneous
 ndáki	a bridge or crossing, a passageway (usually) wedged between something	Nouns
+fihi	sand	Nouns
+kisi	grass	Nouns
+gyembbu	dirt	Nouns
+kabo	(usually of a surface) stone, slate	Nouns
+mipa	plant	Nouns
+mipātoka	coneflower	Nouns
+ému	spear	Nouns
+ëvënefu	shelf	Nouns
+gyolo	tail	Nouns
+imono	fluffy	Adjectives
+ímova	shiny	Adjectives
+ongome	cloud	Nouns
+ódemu	square, box	Nouns
+úmoke	basket	Nouns
+ühela	axe	Nouns
+veka	ocean wave(s)	Irregular Plural Nouns
+daga	table	Nouns
+sema	after	Miscellanous
+sengki	before	Miscellanous
+néti	sunrise	Nouns
+néválu	sunset	Nouns
+boha	passive agressive "ani"	Nouns
