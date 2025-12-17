@@ -135,6 +135,10 @@ dict.addWord("Pronouns",
     new Word("third person plural reflexive pronoun",     "si"),
 )
 
+dict.addWord("Tenses",
+    
+)
+
 dict.addWord("Grammar",
     new Word("Dative", "ma_"),
     new Word("Lative", "bo_"),

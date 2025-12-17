@@ -372,26 +372,26 @@ function ipa(s){
         }
     });
 
-    const V = "[aeiouːɑəy]";
-    const C = "[bdfghklmnpstvwjcŋʔ]";
+    const V = "aeiouːɑəy";
+    const C = "bdfghklmnpstvwjcŋʔ";
 
     result.forEach((index, i) => {            
         // fix delimited syllable boundaries 
-        result[i] = index.replaceAll(new RegExp(`(${C+V}ː?)(\.)(${C})(‿)`, "g"), "$1$3$4")   
+        result[i] = index.replaceAll(new RegExp(`([${C+V}]ː?)(\.)([${C}])(‿)`, "g"), "$1$3$4")   
 
         // fix non-delimited syllable boundaries
-        result[i] = result[i].replaceAll(new RegExp(`(${C+V}ː?)(\.)(${C})$`, "g"), "$1$3") 
+        result[i] = result[i].replaceAll(new RegExp(`([${C+V}]ː?)(\.)([${C}])$`, "g"), "$1$3") 
 
         // fix nasal syllable boundaries le.ŋki -> leŋ.ki
-        result[i] = result[i].replaceAll(new RegExp(`(\.)([mnŋ])(${C})`, "g"), "$2.$3")
+        result[i] = result[i].replaceAll(new RegExp(`(\.)([mnŋ])([${C}])`, "g"), "$2.$3")
 
         // fix w/l syllable boundaries
-        result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])(${C})`, "g"), "$2.$3")
+        result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])([${C}])`, "g"), "$2.$3")
         result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])$`, "g"), "$2")
 
         // fix s syllable boundaries
-        result[i] = result[i].replaceAll(new RegExp(`(${V})\.s$`, "g"), "$1s.")
-        result[i] = result[i].replaceAll(new RegExp(`(${V}).s‿`, "g"), "$1s‿")
+        result[i] = result[i].replaceAll(new RegExp(`([${V}])\.s$`, "g"), "$1s.")
+        result[i] = result[i].replaceAll(new RegExp(`([${V}]).s‿`, "g"), "$1s‿")
 
         // fix .m.b and .n.d
         result[i] = result[i].replaceAll(".m.b", "m.b")
