@@ -113,6 +113,10 @@ dict.addWord("Pronouns",
     new Word("third person honorific pronoun",                "hó"),
 )
 
+dispatchEvent.addWord("Grammar",
+    
+)
+
 dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/words.txt`, "\n", "\t", "/");
 
 function ortho(s){
@@ -178,7 +182,7 @@ dict.waitForDictLoad().then(() => {
         let cat = dict.practiceOrder[i];
         dict.dict[cat].forEach(word => {
             for(let j = 0; j < Object.keys(word.value).length; j++){
-                if(cat != "Grammar") word.value[Object.keys(word.value)[j]] = ortho(word.value[Object.keys(word.value)[j]]).replaceAll("-", "")
+                word.value[Object.keys(word.value)[j]] = ortho(word.value[Object.keys(word.value)[j]]).replaceAll("-", "")
             }
         })
     }
