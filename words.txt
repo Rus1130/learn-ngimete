@@ -351,7 +351,7 @@ naha	to put on, to adorn	Verbs
 miwa	to be able to	Verbs
 müta	to stop, to halt	Verbs
 ngolo	to follow	Verbs
-nggolo	(usually nominal) water current	
+nggolo	(usually nominal) water current	Nouns
 nggave	to deconstruct, to deassemble	Verbs
 a'i'o	shit	Nouns
 asipi	to talk nonsensically	Verbs

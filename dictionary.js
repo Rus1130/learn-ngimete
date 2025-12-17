@@ -23,7 +23,7 @@ let setNames = [
     "Phrases"
 ];
 
-let dict = new Dictionary(...setNames);
+const dict = new Dictionary(...setNames);
 
 Word.setDialects(["Standard", "A'atsilwi"])
 
@@ -85,36 +85,54 @@ dict.addWord("Connecting Letters",
 )
 
 dict.addWord("Pronouns", 
-    new Word("first person singular non-possesive pronoun",   "yë"),
-    new Word("first person singular possesive pronoun",       "yo"),
-    new Word("first person singular reflexive pronoun",       "mo"),
-    new Word("first person plural non-possesive pronoun",     "vë"),
-    new Word("first person plural possesive pronoun",         "vo"),
-    new Word("first person plural reflexive pronoun",         "ve"),
-    new Word("second person singular non-possesive pronoun",  "'a"),
-    new Word("second person singular possesive pronoun",      "ao",    "'ao"),
-    new Word("second person singular reflexive pronoun",      "na"),
-    new Word("second person plural non-possesive pronoun",    "'ama",  "nga"),
-    new Word("second person plural possesive pronoun",        "'ame",  "ngo"),
-    new Word("second person plural reflexive pronoun",        "nge"),
-    new Word("third person singular non-possesive pronoun",   "ite",   "iti"),
-    new Word("third person singular possesive pronoun",       "ito",   "ikyo"),
-    new Word("third person singular reflexive pronoun",       "ni"),
-    new Word("third person plural non-possesive pronoun",     "ikyi",  "ki"),
-    new Word("third person plural possesive pronoun",         "igyo",  "gyo"),
-    new Word("third person plural reflexive pronoun",         "si"),
-    new Word("first person honorific pronoun",                "hë"),
-    new Word("second person singular honorific pronoun",      "ha"),
-    new Word("second person plural honorific pronoun",        "he"),
-    new Word("third person singular honorific pronoun",       "ngi"),
-    new Word("third person plural honorific pronoun",         "hi"),
-    new Word("first person honorific pronoun",                "ho"),
-    new Word("second person honorific pronoun",               "hao"),
-    new Word("third person honorific pronoun",                "hó"),
-)
+    // non possessives
+    new Word("first person singular non-possesive pronoun",    "yë"),
+    new Word("first person plural non-possesive pronoun",      "vë"),
+    new Word("second person singular non-possessive pronoun",  "'a"),
+    new Word("second person plural non-possessive pronoun",    "'ama",  "nga"),
+    new Word("third person singular non-possessive pronoun",   "ite",   "iti"),
+    new Word("third person plural non-possessive pronoun",     "ikyi",  "ki"),
 
-dispatchEvent.addWord("Grammar",
-    
+    // non possessives respectful
+    new Word("first person non-possessive respectful pronoun",            "hë"),
+    new Word("second person singular non-possessive respectful pronoun",  "ha"),
+    new Word("second person plural non-possessive respectful pronoun",    "he"),
+    new Word("third person singular non-possessive respectful pronoun",   "ngi"),
+    new Word("third person plural non-possessive respectful pronoun",     "hi"),
+
+    // possessives
+    new Word("first person singular possesive pronoun",   "yo"),
+    new Word("first person plural possesive pronoun",     "vo"),
+    new Word("second person singular possesive pronoun",  "'ao"),
+    new Word("second person plural possesive pronoun",    "'ame",  "ngo"),
+    new Word("third person singular possesive pronoun",   "ito"),
+    new Word("third person plural possesive pronoun",     "igyo",  "yaki"),
+
+    // possessives respectful
+    new Word("first person possessive respectful pronoun",   "ho"),
+    new Word("second person possessive respectful pronoun",  "hao"),
+    new Word("third person possessive respectful pronoun",   "hó"),
+
+    // anti-possessives
+    new Word("first person singular anti-possesive pronoun",   "go"),
+    new Word("first person plural anti-possesive pronoun",     "gevo"),
+    new Word("second person singular anti-possesive pronoun",  "gao"),
+    new Word("second person plural anti-possesive pronoun",    "game",  "gamo"),
+    new Word("third person singular anti-possesive pronoun",   "geto",  "gito"),
+    new Word("third person plural anti-possesive pronoun",     "gegyo", "gayaki"),
+
+    // anti-possessives respectful
+    new Word("first person anti-possessive respectful pronoun",   "geho"),
+    new Word("second person anti-possessive respectful pronoun",  "gehao"),
+    new Word("third person anti-possessive respectful pronoun",   "gehó"),
+
+    // reflexives
+    new Word("first person singular reflexive pronoun",   "mo"),
+    new Word("first person plural reflexive pronoun",     "ve"),
+    new Word("second person singular reflexive pronoun",  "na"),
+    new Word("second person plural reflexive pronoun",    "nge"),
+    new Word("third person singular reflexive pronoun",   "ni"),
+    new Word("third person plural reflexive pronoun",     "si"),
 )
 
 dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/words.txt`, "\n", "\t", "/");

@@ -1,6 +1,13 @@
 export class Dictionary {
     dict = {};
-    dictLoadedFromLink = "not loaded";
+    /**
+     * @description Indicates whether the dictionary has finished loading from a URL.
+     * @example
+     * null - not started loading
+     * false - loading in progress
+     * true - loading complete
+     */
+    dictLoadedFromLink = null;
 
 
     constructor(categories) {
@@ -12,16 +19,19 @@ export class Dictionary {
     }
 
     async waitForDictLoad() {
-        if(this.dictLoadedFromLink == "not loaded") return false;
-        while(this.dictLoadedFromLink != "loaded") {
+        if(this.dictLoadedFromLink == null) return false;
+        while(this.dictLoadedFromLink != true) {
             await new Promise(resolve => setTimeout(resolve, 100));
         }
     }
-
+    
+    getAllCategories() {
+        return Object.keys(this.dict);
+    }
 
     async bulkAddFromUrl(url, entryDelimiter, definitionDelimiter, dialectDelimiter) {
         try {
-            this.dictLoadedFromLink = "loading";
+            this.dictLoadedFromLink = false;
             let response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
             let data = await response.text()
@@ -41,7 +51,7 @@ export class Dictionary {
                 }
                 this.addWord(category, new Word(english, ...other));
             })
-            this.dictLoadedFromLink = "loaded";
+            this.dictLoadedFromLink = true;
         } catch (error) {}
     }
 
