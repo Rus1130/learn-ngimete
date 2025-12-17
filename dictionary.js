@@ -87,27 +87,27 @@ dict.addWord("Connecting Letters",
 
 dict.addWord("Pronouns", 
     // non possessives
-    new Word("first person singular non-possesive pronoun",    "yë"),
-    new Word("first person plural non-possesive pronoun",      "vë"),
-    new Word("second person singular non-possessive pronoun",  "'a"),
-    new Word("second person plural non-possessive pronoun",    "'ama",  "nga"),
-    new Word("third person singular non-possessive pronoun",   "ite",   "iti"),
-    new Word("third person plural non-possessive pronoun",     "ikyi",  "ki"),
+    new Word("first person singular pronoun",    "yë"),
+    new Word("first person plural pronoun",      "vë"),
+    new Word("second person singular pronoun",  "'a"),
+    new Word("second person plural pronoun",    "'ama",  "nga"),
+    new Word("third person singular pronoun",   "ite",   "iti"),
+    new Word("third person plural pronoun",     "ikyi",  "ki"),
 
     // non possessives respectful
-    new Word("first person non-possessive respectful pronoun",            "hë"),
-    new Word("second person singular non-possessive respectful pronoun",  "ha"),
-    new Word("second person plural non-possessive respectful pronoun",    "he"),
-    new Word("third person singular non-possessive respectful pronoun",   "ngi"),
-    new Word("third person plural non-possessive respectful pronoun",     "hi"),
+    new Word("first person respectful pronoun",            "hë"),
+    new Word("second person singular respectful pronoun",  "ha"),
+    new Word("second person plural respectful pronoun",    "he"),
+    new Word("third person singular respectful pronoun",   "ngi"),
+    new Word("third person plural respectful pronoun",     "hi"),
 
     // possessives
-    new Word("first person singular possesive pronoun",   "yo"),
-    new Word("first person plural possesive pronoun",     "vo"),
-    new Word("second person singular possesive pronoun",  "'ao"),
-    new Word("second person plural possesive pronoun",    "'ame",  "ngo"),
-    new Word("third person singular possesive pronoun",   "ito"),
-    new Word("third person plural possesive pronoun",     "igyo",  "yaki"),
+    new Word("first person singular possessive pronoun",   "yo"),
+    new Word("first person plural possessive pronoun",     "vo"),
+    new Word("second person singular possessive pronoun",  "'ao"),
+    new Word("second person plural possessive pronoun",    "'ame",  "ngo"),
+    new Word("third person singular possessive pronoun",   "ito"),
+    new Word("third person plural possessive pronoun",     "igyo",  "yaki"),
 
     // possessives respectful
     new Word("first person possessive respectful pronoun",   "ho"),
@@ -115,12 +115,12 @@ dict.addWord("Pronouns",
     new Word("third person possessive respectful pronoun",   "hó"),
 
     // anti-possessives
-    new Word("first person singular anti-possesive pronoun",   "go"),
-    new Word("first person plural anti-possesive pronoun",     "gevo"),
-    new Word("second person singular anti-possesive pronoun",  "gao"),
-    new Word("second person plural anti-possesive pronoun",    "game",  "gamo"),
-    new Word("third person singular anti-possesive pronoun",   "geto",  "gito"),
-    new Word("third person plural anti-possesive pronoun",     "gegyo", "gayaki"),
+    new Word("first person singular anti-possessive pronoun",   "go"),
+    new Word("first person plural anti-possessive pronoun",     "gevo"),
+    new Word("second person singular anti-possessive pronoun",  "gao"),
+    new Word("second person plural anti-possessive pronoun",    "game",  "gamo"),
+    new Word("third person singular anti-possessive pronoun",   "geto",  "gito"),
+    new Word("third person plural anti-possessive pronoun",     "gegyo", "gayaki"),
 
     // anti-possessives respectful
     new Word("first person anti-possessive respectful pronoun",   "geho"),
