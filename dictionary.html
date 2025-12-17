@@ -56,17 +56,16 @@
         font-size: 12px;
     }
 
-    button:focus {
-        outline: none;
-    }
-
-    /* Button */
-    .dropbtn {
+    button {
         background-color: #f0f0f0;
         border: 1px solid #ccc;
         padding: 3px 8px;
         cursor: pointer;
         font-size: 12px;
+    }
+
+    button:focus {
+        outline: none;
     }
 
     /* Dropdown content */
@@ -120,6 +119,7 @@
                     <!-- Checkboxes will be generated dynamically here -->
                 </div>
             </div>
+            <button id="category-toggle">Toggle All Categories</button>
         </div>
     </div>
     <div id="container">
@@ -132,6 +132,7 @@ import { dict } from './dictionary.js';
 const dropdown = document.getElementById("exclude-categories-dropdown");
 const excludeCategoriesButton = document.getElementById("exclude-categories-button");
 const dropbtn = dropdown.querySelector(".dropbtn");
+const categoryToggleButton = document.getElementById("category-toggle");
 
 const input = document.getElementById("input");
 const output = document.getElementById("output");
@@ -293,10 +294,21 @@ dropbtn.addEventListener("click", () => {
     dropdown.classList.toggle("show");
 });
 
+categoryToggleButton.addEventListener("click", () => {
+    const checkboxes = dropdown.querySelectorAll('input[name="exclude-category"]');
+    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+
+    checkboxes.forEach(cb => {
+        cb.checked = !allChecked;
+    });
+
+    updateDictionary();
+});
+
 // Close dropdown if clicked outside
 window.addEventListener("click", (e) => {
     if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove("show");
+        if(e.target !== categoryToggleButton) dropdown.classList.remove("show");
     }
 });
 
