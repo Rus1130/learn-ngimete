@@ -44,12 +44,12 @@
 
                     def = word.value["A'atsilwi"];
                     def.split("").forEach((letter, i) => {
-                        if(!["N", ">", "<", "O", "U", "(", ")", "V"].includes(letter)){
-                            if(distributionAatsilwi[letter]){
-                                distributionAatsilwi[letter]++;
-                            } else {
-                                distributionAatsilwi[letter] = 1;
-                            }
+                        // if its a capital letter or symbol, do not count
+                        if(/[A-Z<>()]/.test(letter)) return;
+                        if(distributionAatsilwi[letter]){
+                            distributionAatsilwi[letter]++;
+                        } else {
+                            distributionAatsilwi[letter] = 1;
                         }
                     })
                 })

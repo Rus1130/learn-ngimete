@@ -135,6 +135,17 @@ dict.addWord("Pronouns",
     new Word("third person plural reflexive pronoun",     "si"),
 )
 
+dict.addWord("Grammar",
+    new Word("Dative", "ma_"),
+    new Word("Lative", "bo_"),
+    new Word("Ablative", "_pa"),
+    new Word("Genitive", "o-"),
+    new Word("Vocative", "í"),
+    new Word("Locative", "_wa"),
+    new Word("Instrumental", "-to"),
+    new Word("Comitative", "kole_", "ndwa_")
+)
+
 dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/words.txt`, "\n", "\t", "/");
 
 function ortho(s){

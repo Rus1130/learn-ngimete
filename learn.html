@@ -1,0 +1,258 @@
+<style>
+    th {
+        text-align: left;
+    }
+    table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    tr {
+        border-bottom-style: dashed;
+        border-bottom-width: 1px;
+        border-bottom-color: #ccc;
+    }
+
+    td {
+        padding: 5px 5px 5px;
+    }
+
+    th {
+        padding-left: 5px;
+    }
+
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    #choose-sets-menu {
+        display: grid;
+        gap: 8px;
+    }
+    #words-list {
+        height: 580px;
+        width: 800px;
+        border: 1px solid black;
+        overflow-y: scroll;
+    }
+    #header {
+        position: absolute;
+    }
+    #in-progress {
+        height: 590px;
+        width: 820px;
+        border: 1px solid black;
+        position: absolute;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 100;
+    }
+
+    #in-progress button {
+        height: 50px;
+        width: 150px;
+        border: 1px solid black;
+        font-size: 15pt;
+        cursor: pointer;
+    }
+
+    .choose-set-button {
+        height: 30px;
+        width: 600px;
+        border: 1px solid black;
+        line-height: 30px;
+        padding-left: 8px;
+        cursor: pointer;
+    }
+    .choose-set-button:hover {
+        background-color: lightgray;
+    }
+    .study-set-button {
+        height: 30px;
+        width: 30px;
+        padding-left: 8px;
+        border: none;
+        cursor: pointer;
+        float: right;
+        background-color: #04a6fd;
+    }
+
+    .study-set-button:hover {
+        background-color: #2f89f1;
+    }
+</style>
+<head>
+    <script src="dictionary.js" type="module"></script>
+</head>
+<body>
+    <div id="header">
+        <input type="radio" id="dialect-standard" name="dialect" value="Standard" checked>
+        <label for="dialect-standard">Standard</label>
+        <input type="radio" id="dialect-aatsilwi" name="dialect" value="A'atsilwi">
+        <label for="dialect-aatsilwi">A'atsilwi</label>
+        <br>
+        <button onclick="location.href='dictionary.html'">Dictionary</button>
+        <button onclick="location.href='stats.html'">Statistics</button>
+        <br> 
+        press BACKSPACE to return to set selection<br>
+        <div id="press-enter" style="display: none">press ENTER to study the selected set</div>
+    </div>
+    <div id="container">
+        <div id="in-progress" style="display: none;">
+            <div style="font-size: 25pt;">Study in progress...</div>
+            <br><br>
+            <button id="end-study">End Study</button>
+        </div>
+        <div id="choose-sets-menu"></div>
+        <div id="words-list" style="display: none;">
+            <div id="back-button">< Back</div>
+        </div>
+    </div>
+    
+</body>
+<script type="module">
+    import { dict } from './dictionary.js';
+    import { Word } from './lib.js';
+
+    const chooseSetsMenu = document.getElementById('choose-sets-menu');
+    const wordsList = document.getElementById('words-list');
+    const pressEnterText = document.getElementById('press-enter');
+
+    const studyInProgress = document.getElementById('in-progress');
+
+    // set the dialect to the dialect that is checked
+    let dialect = 'Standard';
+    let studySet = null;
+
+    let ableToStudy = false;
+
+    dict.studied = {};
+
+    document.querySelectorAll('input[name="dialect"]').forEach((radio) => {
+        radio.addEventListener('change', () => {
+            dialect = radio.value;
+            chooseSetsMenu.innerHTML = '';
+            updateWords();
+        });
+    });
+
+    function generateURL() {
+        let wordsToStudy = [];
+        let studySetWords = dict.dict[studySet];
+
+        while (wordsToStudy.length < 4) {
+            let randomIndex = Math.floor(Math.random() * studySetWords.length);
+            let randomWord = studySetWords[randomIndex];
+
+            if (!dict.studied[randomWord.key] && !wordsToStudy.includes(randomWord)) {
+                wordsToStudy.push(randomWord);
+            }
+        }
+
+        let wordIndexes = wordsToStudy.map((word) => {
+            return dict.dict[studySet].indexOf(word);
+        });
+
+        let urlArray = [
+            "s=" + encodeURIComponent(dict.practiceOrder.indexOf(studySet)),
+            "d=" + encodeURIComponent(Word.dialects.indexOf(dialect)),
+            "w=" + wordIndexes.join(',')
+        ]
+
+        let url = `study.html?${urlArray.join('&')}`;
+
+        return url
+    }
+
+    function openStudyWindow(){
+        window.open(generateURL(), '_blank',`width=650, height=${screen.height * 0.8}`);
+        studyInProgress.style.display = 'flex';
+        wordsList.style.display = 'none';
+        ableToStudy = false;
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && ableToStudy) {
+            chooseSetsMenu.style.display = 'grid';
+            wordsList.style.display = 'none';
+            pressEnterText.style.display = 'none';
+            ableToStudy = false;
+        }
+
+        if(e.key === "Enter" && ableToStudy && studySet != "Interrogatives") {
+            openStudyWindow();
+        }
+    });
+
+    document.getElementById('end-study').addEventListener('click', () => {
+        studyInProgress.style.display = 'none';
+        wordsList.style.display = 'block';
+        ableToStudy = true;
+    });
+
+    function updateWords() {
+        dict.waitForDictLoad().then(() => {
+            dict.practiceOrder.forEach((set, i) => {
+                let words = dict.dict[set];
+
+                let terms = [];
+                let definitions = [];
+
+                words.forEach((word) => {
+                    terms.push(word.key);
+                    definitions.push(word.value[dialect]);
+                })
+
+                let setDiv = document.createElement('div');
+                setDiv.classList.add('choose-set-button');
+                setDiv.innerText = `Set ${i + 1}: ${set}`;
+
+                let studyButton = document.createElement('button');
+                studyButton.classList.add('study-set-button');
+                studyButton.innerText = '>';
+
+                if(set != "Interrogatives"){
+                    studyButton.addEventListener('click', () => {
+                        studySet = set;
+                        //wordsList.style.display = 'none';
+                        openStudyWindow();
+                    });
+                }
+
+                setDiv.appendChild(studyButton);
+
+                chooseSetsMenu.appendChild(setDiv);
+
+
+
+                setDiv.addEventListener('click', () => {
+                    chooseSetsMenu.style.display = 'none';
+                    wordsList.style.display = 'block';
+                    wordsList.innerHTML = '';
+                    
+                    studySet = set;
+                    ableToStudy = true;
+
+                    let table = "<table><tr style='position: sticky; top: 0px; background-color: white;'><th>Word</th><th>Definition</th></tr>"
+                    terms.forEach((term, i) => {
+                        term = term.replaceAll(">","&gt;").replaceAll("<","&lt;")
+                        definitions[i] = definitions[i].replaceAll(">","&gt;").replaceAll("<","&lt;")
+                        table += `<tr><td>${term}</td><td>${definitions[i]}</td></tr>`
+                    })
+                    table += "</table>"
+                    if(set != "Interrogatives") pressEnterText.style.display = 'block';
+                    wordsList.innerHTML = table;
+
+                });
+            });
+        });
+    }
+
+    updateWords();
+
+</script>
