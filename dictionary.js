@@ -7,6 +7,7 @@ let setNames = [
     "Pronouns",
     "Tenses",
     "Grammar", 
+    "Demonstratives",
     "Numerals",
     "Nouns",
     "Verbs",
@@ -136,18 +137,43 @@ dict.addWord("Pronouns",
 )
 
 dict.addWord("Tenses",
-    
+
 )
 
 dict.addWord("Grammar",
-    new Word("Dative", "ma_"),
-    new Word("Lative", "bo_"),
-    new Word("Ablative", "_pa"),
-    new Word("Genitive", "o-"),
-    new Word("Vocative", "í"),
-    new Word("Locative", "_wa"),
-    new Word("Instrumental", "-to"),
-    new Word("Comitative", "kole_", "ndwa_")
+    new Word("Dative Case", "ma_"),
+    new Word("Lative Case", "bo_"),
+    new Word("Ablative Case", "_pa"),
+    new Word("Genitive Case", "o-"),
+    new Word("Vocative Case", "í"),
+    new Word("Locative Case", "_wa"),
+    new Word("Negative Locative Case", "_ga"),
+    new Word("Adessive Case", "_ko"),
+    new Word("Instrumental Case", "-to"),
+    new Word("Comitative Case", "kole_", "ndwa_"),
+    new Word("Essive-Formal Case", "-kyene"),
+    new Word("Essive-Modal Case", "-kita"),
+    new Word("Verbalizer", "-le"),
+    new Word("Nominalizer", "-te"),
+    new Word("Adjectivizer", "-ya"),
+    new Word("Adverbializer", "wána_", "wá>NOUN<na"),
+    new Word("Diminutive", "=(o)lili"),
+    new Word("Augmentative", "=(a)lala"),
+    new Word("Derivation", "='an"),
+    new Word("Secondary Derivation", "='on"),
+    new Word("Copula", "wa_"),
+    new Word("Negative Copula", "ga_"),
+    new Word("Plural", "_me"),
+    new Word("Potential Mood", "kana_"),
+    new Word("Irrealis Mood", "kansa_"),
+    new Word("Imperfective Aspect", "_gya"),
+    new Word("Question Marker", "ka"),
+    new Word("Respectful Question Marker", "nen", "neng"),
+    new Word("Respect Marker", "pá")
+)
+
+dict.addWord("Demonstratives",
+
 )
 
 dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/words.txt`, "\n", "\t", "/");

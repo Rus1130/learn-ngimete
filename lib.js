@@ -50,7 +50,8 @@ export class Dictionary {
                     other = other.map(x => x.replaceAll(" ", "-").trim())
                 }
                 this.addWord(category, new Word(english, ...other));
-            })
+            });
+
             this.dictLoadedFromLink = true;
         } catch (error) {}
     }
