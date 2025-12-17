@@ -56,6 +56,10 @@
         font-size: 12px;
     }
 
+    button:focus {
+        outline: none;
+    }
+
     /* Button */
     .dropbtn {
         background-color: #f0f0f0;
@@ -81,6 +85,7 @@
     /* Show dropdown on button click */
     .dropdown.show .dropdown-content {
         display: block;
+        user-select: none;
     }
 
     /* Style checkboxes */
@@ -110,7 +115,7 @@
             <input type="checkbox" id="regex-search" name="regex-search" value="regex-search"><br>
             <label for="exclude-categories-dropdown">Exclude Categories:</label>
             <div id="exclude-categories-dropdown" class="dropdown">
-                <button type="button" class="dropbtn" id="exclude-categories-button">Select Categories</button>
+                <button type="button" class="dropbtn" id="exclude-categories-button">Select Categories ▼</button>
                 <div class="dropdown-content" id="exclude-categories">
                     <!-- Checkboxes will be generated dynamically here -->
                 </div>
@@ -161,7 +166,7 @@ async function generateCategoryCheckboxes() {
 
     const container = document.getElementById("exclude-categories");
     container.innerHTML = "";
-    
+
     const categories = dict.practiceOrder
 
     categories.forEach(category => {
@@ -172,8 +177,8 @@ async function generateCategoryCheckboxes() {
         checkbox.name = "exclude-category";
         checkbox.value = category;
         checkbox.id = id;
-
-        if(["Vowel Sounds", "Consonant Sounds", "Connecting Letters", "Grammar"].includes(category)) {
+        
+        if(["Consonant Sounds", "Vowel Sounds", "Connecting Letters" ,"Grammar"].includes(category)) {
             checkbox.checked = true;
         }
 
@@ -186,6 +191,16 @@ async function generateCategoryCheckboxes() {
         wrapper.appendChild(label);
 
         container.appendChild(wrapper);
+
+        // Shift+Click behavior: check all other checkboxes
+        checkbox.addEventListener("click", (e) => {
+            if (e.shiftKey) {
+                const allCheckboxes = container.querySelectorAll('input[name="exclude-category"]');
+                allCheckboxes.forEach(cb => {
+                    if (cb !== checkbox) cb.checked = true;
+                });
+            }
+        });
     });
 
     // Update dictionary when a checkbox is toggled
