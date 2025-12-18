@@ -483,16 +483,17 @@ const remap = [
 ]
 
 const GROUPS = {
-    "V": "aeiouɑəyAEIOUQ",
-    "C": "bdfghklmnpstvwjcŋʔMNSBDG",
-    "N": "mnŋ",
+    "1": "aeiouɑəyAEIOUQ", // V
+    "2": "bdfghklmnpstvwjcŋʔMNSBDG", // C
+    "3": "mnŋ", // N
+    "4": "s", // S
 };
 
 const SYLLABLES = [
-    "(C)V(S)",
-    "(C)V(N)",
-    "(C)V(G)",
-    "(C)V",
+    "214",
+    "(2)1(3)",
+    "(2)1(4)",
+    "(2)1",
 ];
 
 function syllabifyWord(word, groups, templates) {
@@ -570,8 +571,10 @@ function ipa(input) {
         .map(s => syllabifyWord(s, GROUPS, SYLLABLES))
         .join(" ");
     
-    s = s.replaceAll(/([mnŋ])\.([aeiouɑəy])/g, ".$1$2");
+    s = s.replaceAll(/([mnŋ])\.([aeiouɑəyAEIOUQ])/g, ".$1$2");
+    s = s.replaceAll(/.f.w/g, ".fw");
     s = s.replaceAll(/\.([MN])/g, "$1");
+    s = s.replaceAll(/([bdfghklmnpstvwjcŋʔMNSBDG])([aeiouɑəyAEIOUQ]).s[^aeiouɑəyAEIOUQ]/g, "$1$2s ")
     s = applyRules(s, IPA_FIXES);
 
     s = s.replaceAll("...", ".");
