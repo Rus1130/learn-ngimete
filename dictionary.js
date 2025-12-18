@@ -87,8 +87,8 @@ dict.addWord("Connecting Letters",
 
 dict.addWord("Pronouns", 
     // non possessives
-    new Word("first person singular pronoun",    "yë"),
-    new Word("first person plural pronoun",      "vë"),
+    new Word("first person singular pronoun",   "yë"),
+    new Word("first person plural pronoun",     "vë"),
     new Word("second person singular pronoun",  "'a"),
     new Word("second person plural pronoun",    "'ama",  "nga"),
     new Word("third person singular pronoun",   "ite",   "iti"),
