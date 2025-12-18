@@ -35,13 +35,17 @@
         overflow: auto;
         max-height: calc(100% - 102px);
     }
-    #popout {
+
+    #corner {
         position: absolute;
         right: 7px;
         top: 9px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
 
-    input[type="checkbox"]:focus, #input:focus {
+    input[type="checkbox"]:focus, #input:focus, button:focus {
         outline: none;
     }
 
@@ -62,10 +66,6 @@
         padding: 3px 8px;
         cursor: pointer;
         font-size: 12px;
-    }
-
-    button:focus {
-        outline: none;
     }
 
     /* Dropdown content */
@@ -98,7 +98,9 @@
 </head>
 <body>
     <div id="nav">
-        <button id="popout">Popout Dictionary</button>
+        <div id="corner">
+            <button id="popout">Popout Dictionary</button>
+        </div>
         <div>
             <span>Search:</span>
             <textarea id="input"></textarea><br>
@@ -106,7 +108,7 @@
             <input type="checkbox" id="dialect-standard" name="dialect" value="Standard" checked> <span class="dialect-span">Standard</span>
             <input type="checkbox" id="dialect-aatsilwi" name="dialect" value="A'atsilwi" checked> <span class="dialect-span">A'atsilwi</span>
             <br>
-            <label for="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)">Search ngimëte instead</label>
+            <label for="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)">Search through ngimëte instead</label>
             <input type="checkbox" id="swap" name="swap" value="swap" title="when checked, swaps from searching through the terms (english) to searching through the definitions (ngimëte)"><br>
             <label for="regex-search">Regex Search</label>
             <input type="checkbox" id="regex-search" name="regex-search" value="regex-search"><br>
