@@ -435,7 +435,7 @@ export class Writer {
 }
 
 export class Word {
-    static setDialects(dialects) {
+    static setDialects(dialects = ["Standard"]) {
         Word.dialects = dialects;
     }
     
@@ -459,10 +459,8 @@ export class Word {
 
         // for each dialect that isnt the standard one
         Word.dialects.forEach(dialect => {
-            if(dialect != "Standard"){
-                if((this.value[dialect] == undefined)){
-                    this.value[dialect] = this.value["Standard"];
-                }
+            if((this.value[dialect] == undefined)){
+                this.value[dialect] = this.value["Standard"];
             }
         });
     }

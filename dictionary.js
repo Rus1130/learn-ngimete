@@ -137,7 +137,44 @@ dict.addWord("Pronouns",
 )
 
 dict.addWord("Tenses",
+    // human
+    new Word("human far past", "mana'a"),
+    new Word("human near past", "mana"),
+    new Word("human near future", "na"),
+    new Word("human far future", "na'a"),
+    new Word("human hesternal", "paye"),
+    new Word("human hodiernal", "boye"),
+    new Word("human gnomic", "ndoní"),
 
+    // animal
+    new Word("animal far past", "lana'a"),
+    new Word("animal near past", "lana"),
+    new Word("animal present", "lawana"),
+    new Word("animal near future", "la"),
+    new Word("animal far future", "la'a"),
+    new Word("animal hesternal", "pale"),
+    new Word("animal hodiernal", "bole"),
+    new Word("animal gnomic", "ndolí"),
+
+    // cannibal
+    new Word("cannibal far past", "ngana'a"),
+    new Word("cannibal near past", "ngana"),
+    new Word("cannibal present", "ngawana"),
+    new Word("cannibal near future", "nga"),
+    new Word("cannibal far future", "nga'a"),
+    new Word("cannibal hesternal", "panga"),
+    new Word("cannibal hodiernal", "bonga"),
+    new Word("cannibal gnomic", "ndongí"),
+
+    // inanimate
+    new Word("inanimate far past", "mano'o"),
+    new Word("inanimate near past", "mano"),
+    new Word("inanimate present", "mawana"),
+    new Word("inanimate near future", "no"),
+    new Word("inanimate far future", "no'o"),
+    new Word("inanimate hesternal", "pamo"),
+    new Word("inanimate hodiernal", "bomo"),
+    new Word("inanimate gnomic", "ndomó"),
 )
 
 dict.addWord("Grammar",
@@ -169,11 +206,42 @@ dict.addWord("Grammar",
     new Word("Imperfective Aspect", "_gya"),
     new Word("Question Marker", "ka"),
     new Word("Respectful Question Marker", "nen", "neng"),
-    new Word("Respect Marker", "pá")
+    new Word("Respect Marker", "pá"),
+    new Word("Causative", "mbo"),
+    new Word("Terminative Verbal Coordinator", "to'a"),
+    new Word("Momentane Verbal Coordinator", "só"),
+    new Word("Simultaneous Verbal Coordinator", "fá"),
+    new Word("Interruptative Verbal Coordinator", "nde" ),
+    new Word("Sequential", "lo"),
 )
 
 dict.addWord("Demonstratives",
+    // Proximals
+    new Word("this (human)", "luna"),
+    new Word("this (animal)", "nu'u"),
+    new Word("this (cannibal)", "nunga"),
+    new Word("this (direction)", "nata"),
+    new Word("this (object)", "ilu"),
+    new Word("this (reflexive object)", "ilo"),
+    new Word("this (place)", "lulu'i"),
 
+    // Medials
+    new Word("that (human)", "yona"),
+    new Word("that (animal)", "yu'u"),
+    new Word("that (cannibal)", "yonga"),
+    new Word("that (direction)", "yata"),
+    new Word("that (object)", "inu"),
+    new Word("that (reflexive object)", "ino"),
+    new Word("that (place)", "lu'i"),
+
+    // Distals
+    new Word("that over there (human)", "hona"),
+    new Word("that over there (animal)", "hu'u"),
+    new Word("that over there (cannibal)", "honga"),
+    new Word("that over there (direction)", "hata"),
+    new Word("that over there (object)", "ano"),
+    new Word("that over there (reflexive object)", "ano"),
+    new Word("that over there (place)", "nu'i"),
 )
 
 dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/words.txt`, "\n", "\t", "/");

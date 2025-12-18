@@ -197,6 +197,7 @@ async function generateCategoryCheckboxes() {
                 allCheckboxes.forEach(cb => {
                     if (cb !== checkbox) cb.checked = true;
                 });
+                e.target.checked = false;
             }
         });
     });
@@ -313,5 +314,5 @@ window.addEventListener("click", (e) => {
 generateCategoryCheckboxes();
 setTimeout(() => {
     updateDictionary();
-}, 200);
+}, 250);
 </script>

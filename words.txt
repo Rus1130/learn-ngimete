@@ -203,6 +203,7 @@ mbano	all foot bones	Nouns about Bones, Limbs, Body Parts, and Death
 ábao	human remains	Nouns about Bones, Limbs, Body Parts, and Death
 ngi'angi'o	cannibal remains	Nouns about Bones, Limbs, Body Parts, and Death
 neneno	finger	Nouns about Bones, Limbs, Body Parts, and Death
+nenenwá	fingernail(s)	Nouns about Bones, Limbs, Body Parts, and Death
 naoneno	finger bone	Nouns about Bones, Limbs, Body Parts, and Death
 nggawu'an	to chug/forcibly drink	Abstracted Verbs
 tsuti'an	to stray away/get lost by wandering off	Abstracted Verbs
@@ -236,14 +237,14 @@ gola ngingi	large ngingi	Cannibals and Mutants
 vovi'nona/vona	man	Nouns
 nggawi'nona/nggona	woman	Nouns
 kasë ngawu	oil	Nouns
-á'á yepwá	midnight	Nouns
+á'á yepwá/ágo	midnight	Nouns
 apeya	nice, good	Adjectives
 sepu	bad	Adjectives
 süm'on	to steal, to commit a crime	Superabstracted Verbs
 mem pele wisi	paper, scroll, text	Nouns
 wetsilu/tsutitiwi	to travel	Verbs
 tsi'on	to kidnap, forcefully move	Superabstracted Verbs
-damo kahalala	effigy	Nouns
+hógu	effigy	Nouns
 sümtiwi	to hope/wish (by extension; to desire)	Verbs
 ndawi'an	to forcibly run, flee	Abstracted Verbs
 atita	many (inanimate)	Adjectives
@@ -258,8 +259,9 @@ ndálohí	to survive/prosper/pass (time)	Verbs
 ndálohí máfëtär	pass (the days) safely	Phrases
 ka ati alo'a napa'an yam pula/ka ati äwa napa'an yam näla	did you have to waste all the food by eating it when you weren't hungry?"	Phrases
 ndálohí kama	to pull an all nighter	dont add
-kehibó	mountain(s)	Irregular Plural Nouns
+kehibó	(usually high elevation, snow tipped) mountain(s)	Irregular Plural Nouns
 mbitsë	land	Nouns
+kehibwá	low elevation mountain(s)	Irregular Plural Nouns
 máfu	bay	Nouns
 pa'ü'o	bone marrow	Nouns
 kini'an	to sell	Abstracted Verbs
@@ -544,11 +546,11 @@ sä	nothing	Nouns
 këlä	sapling	Nouns
 kyawasana	fishing net	Nouns
 igyesa	to sleep deeply, to slumber	Verbs
-kómete/kómëte	words (that someone speaks)	Irregular Plural Nouns
+kómëte	words (that someone speaks)	Irregular Plural Nouns
 kasë	black	Adjectives
 ndaya	white	Adjectives
 eya/eyu	red (fresh blood)	Adjectives
-engomo	dark red (dried blood)	Adjectives
+engoya	dark red (dried blood)	Adjectives
 géya/génta	brown (rot)	Adjectives
 saga	light brown (debarked tree)	Adjectives
 wisi'a/wisiyu	green (leaf)	Adjectives
@@ -560,7 +562,7 @@ néya/néfë	orange-red (fire)	Adjectives
 toka	purple, pink, grue, any unnatural color	Adjectives
 ya'a	lighter variation of (color)	Adjectives
 iboya/ibuy(V)	darker variation of (color)	Adjectives
-wa'i/wa'(V)	saturated variation of (color), rejuvenated by fire, ember-touched, lit up by fire	Adjectives
+wa'i	saturated variation of (color), rejuvenated by fire, ember-touched, lit up by fire	Adjectives
 yoba/yob(V)	paler variation of (color)	Adjectives
 nélala	ember(s)	Irregular Plural Nouns
 ibo	shadow	Nouns
@@ -580,9 +582,9 @@ sätä	to go against societal norms	Verbs
 kyénä	fish that has just been caught, a body that has just died	Nouns
 ndeniwus	to bless	Verbs
 müta tapa gya sana (nam ndásana ano)	stop touching the door (and walk through it) "stop being indecisive (and commit to something)"	Phrases
-wandda	to dance	Verbs
+wandda	to twirl around, to spin around, (by extension) to wag (a tail)	Verbs
 suli	to come, to move towards the speaker, to move nearer to the point of perspective	Verbs
-wanddayo	to twirl around, to spin around	Reflexive Verbs
+wanddayo	to come, to move towards the speaker, to move nearer to the point of perspective	Reflexive Verbs
 sipilana	to scare	Verbs
 gugulu	to search for a piece of information (via books, other people, etc)	Verbs
 besekya	to turn into (another physical form)	Verbs
@@ -630,11 +632,12 @@ kisi	grass	Nouns
 gyembbu	dirt	Nouns
 kabo	(usually of a surface) stone, slate	Nouns
 mipa	plant	Nouns
-mipātoka	coneflower	Nouns
+mipātoka/sásiztoka	coneflower	Nouns
 ému	spear	Nouns
 ëvënefu	shelf	Nouns
 gyolo	tail	Nouns
-imono	fluffy	Adjectives
+imono	fur	Nouns
+imono ya	fluffy	Adjectives
 ímova	shiny	Adjectives
 ongome	cloud	Nouns
 ódemu	square, box	Nouns
@@ -644,6 +647,36 @@ veka	ocean wave(s)	Irregular Plural Nouns
 daga	table	Nouns
 sema	after	Miscellanous
 sengki	before	Miscellanous
-néti	sunrise	Nouns
-néválu	sunset	Nouns
+népiki	sunrise	Nouns
+nétoki	sunset	Nouns
 boha	passive agressive "ani"	Nouns
+fesána	to aim, to predict	Verbs
+sána fwí te	archer	Nouns
+fwígiwes	a (usually blessed) high-ranking archer (sharpshooter)	Nouns
+wandda ketiyani te	dancer	Nouns
+tanta mbitsë te	someone who hacks (down trees, plants, or something in the way), clearer	Nouns
+mipa kokena te	farmer	Nouns
+néti	altar (usually for fire)	Nouns
+sásu	flower	Nouns
+sása	cyclic, repetitive, (by extension) predictable	Adjectives
+upwá	sepal(s)	Irregular Plural Nouns
+sási	petal(s) (of a flower)	Irregular Plural Nouns
+hele	to bring about (something from somewhere known to another known place)	Verbs
+heleyo	to retrace ones (own) places or steps	Reflexive Verbs
+hele'an	to unwillingly bring along someone (who doesnt know where a place you do is)	Abstracted Verbs
+népa/vopa	the first few houses surrounding a túwus (bonfire) of the settlement	Nouns
+néki/voki	the neighborhood of homes surrounding a túwus (bonfire) of a large settlement	Nouns
+néhiki	the sector of a large, usually well known, settlement with the túwus (bonfire)	Nouns
+hetivi	a long double-bladed weapon, sword	Nouns
+hevi	any short, bladed weapon	Nouns
+gavi	blade, edge	Nouns
+ngivi	a short curved-blade weapon (usually) used to slash or reap, war sickle	Nouns
+ngitivi	a long curved-bladed weapon (usually) used to slash or reap, war scythe	Nouns
+évimu	a short weapon used to stab or thrust, dagger	Nouns
+évitimu	a long weapon used to stab or thrust, lance, bayonet	Nouns
+ngana	agricultural sickle	Nouns
+ngatina	agricultural scythe	Nouns
+hena	cutting knife, food knife	Nouns
+gugu	neck	Nouns about Bones, Limbs, Body Parts, and Death
+kingi	to hit on an anvil to shape	Verbs
+ngátoyos	"execution by ngingi", where a criminal is non-lethally crucified low to the ground, wounded so blood is spilled, and left to the ngingi	Verbs
