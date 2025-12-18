@@ -192,12 +192,16 @@ async function generateCategoryCheckboxes() {
 
         // Shift+Click behavior: check all other checkboxes
         checkbox.addEventListener("click", (e) => {
+            // get how many checkboxes are checked
+            updateCheckedBoxText();
+
             if (e.shiftKey) {
                 const allCheckboxes = container.querySelectorAll('input[name="exclude-category"]');
                 allCheckboxes.forEach(cb => {
                     if (cb !== checkbox) cb.checked = true;
                 });
                 e.target.checked = false;
+                updateCheckedBoxText();
             }
         });
     });
@@ -206,6 +210,14 @@ async function generateCategoryCheckboxes() {
     container.querySelectorAll('input[name="exclude-category"]').forEach(cb =>
         cb.addEventListener("input", updateDictionary)
     );
+}
+
+function updateCheckedBoxText(){
+    const container = document.getElementById("exclude-categories");
+    const checkedBoxes = container.querySelectorAll('input[name="exclude-category"]:checked').length;
+
+    if(checkedBoxes === 0) excludeCategoriesButton.innerText = "Select Categories ▼";
+    else excludeCategoriesButton.innerText = `${checkedBoxes} Catagor${checkedBoxes == 1 ? "y" : "ies"} Excluded ▼`;
 }
 
 function getExcludedCategories(letterChecked) {
@@ -227,7 +239,7 @@ function generateTable(results) {
     const hasCategory = !removeCategoryColumn;
 
     let table = `
-        <tr style="position: sticky; top: 0px; background-color: white;">
+        <tr style="position: sticky; top: 0px; background-color: white; user-select: none;">
             <td style="width: 50px; font-weight: bold;">#</td>
             <th>Word</th>
             <th>Definition</th>
@@ -301,6 +313,7 @@ categoryToggleButton.addEventListener("click", () => {
     });
 
     updateDictionary();
+    updateCheckedBoxText();
 });
 
 // Close dropdown if clicked outside
@@ -314,5 +327,6 @@ window.addEventListener("click", (e) => {
 generateCategoryCheckboxes();
 setTimeout(() => {
     updateDictionary();
+    updateCheckedBoxText();
 }, 250);
 </script>
