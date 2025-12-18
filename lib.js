@@ -299,121 +299,286 @@ function ortho(s){
     return s;
 }
 
-function ipa(s){
-    s = ortho(s);
-    const r = [
-        [   
-            // replace combining vowels with their combined counterparts
-            { pattern: "á", value: "á" },
-            { pattern: "é", value: "é" },
-            { pattern: "í", value: "í" },
-            { pattern: "ó", value: "ó" },
-            { pattern: "ú", value: "ú" },
-            { pattern: "ä", value: "ä" },
-            { pattern: "ë", value: "ë" },
-            { pattern: "ü", value: "ü" },
+// function ipa(s){
+//     s = ortho(s);
 
-            { pattern: "ngg", value: "ᵑg" },
-            { pattern: "mbb", value: "m.b" },
-            { pattern: "ndd", value: "n.d" },
-            { pattern: ".", value: " ||"},
-            { pattern: ",", value: " |"}
-        ],
-        [
-            // delimiters 
-            { pattern: "ā", value: "a‿"},
-            { pattern: "c", value: "‿"},
-            { pattern: "ə", value: "‿"},
-            { pattern: "z", value: "‿"},
+//     console.log(s)
 
-            // consonants
-            { pattern: 'ng', value: "ŋ" },
-            { pattern: 'y', value: "j" },
-            { pattern: "gy", value: "c"},
-            { pattern: "ky", value: "c"},
-            { pattern: "'", value: "ʔ" },
-            { pattern: "nd", value: "ⁿd" },
-            { pattern: "mb", value: "ᵐb" },
-            { pattern: "ts", value: "t͡s" },
+//     const r = [
+//         [   
+//             // replace combining vowels with their combined counterparts
+//             { pattern: "á", value: "á" },
+//             { pattern: "é", value: "é" },
+//             { pattern: "í", value: "í" },
+//             { pattern: "ó", value: "ó" },
+//             { pattern: "ú", value: "ú" },
+//             { pattern: "ä", value: "ä" },
+//             { pattern: "ë", value: "ë" },
+//             { pattern: "ü", value: "ü" },
 
-            // vowels
-            { pattern: 'a', value: "a." },
-            { pattern: 'e', value: "e." },
-            { pattern: 'i', value: "i." },
-            { pattern: 'o', value: "o." },
-            { pattern: 'u', value: "u." },
-            { pattern: 'á', value: "aː." },
-            { pattern: 'é', value: "eː." },
-            { pattern: 'í', value: "iː." },
-            { pattern: 'ó', value: "oː." },
-            { pattern: 'ú', value: "uː." },
-            { pattern: 'är', value: "ɑː." },
-            { pattern: 'ä', value: "ɑ." },
-            { pattern: 'ë', value: "ə." },
-            { pattern: 'ü', value: "y." },
-        ],
-        [
-            { pattern: ".‿", value: "‿"},
-            { pattern: "a.o", value: "ao̯"},
-            { pattern: "e.o", value: "eo̯"},
-        ]
-    ]
+//             { pattern: "ngg", value: "ᵑg" },
+//             { pattern: "mbb", value: "m.b" },
+//             { pattern: "ndd", value: "n.d" },
+//             { pattern: ".", value: " ||"},
+//             { pattern: ",", value: " |"}
+//         ],
+//         [
+//             // delimiters 
+//             { pattern: "ā", value: "a‿"},
+//             { pattern: "c", value: "‿"},
+//             { pattern: "ə", value: "‿"},
+//             { pattern: "z", value: "‿"},
 
-    let result = s;
-    const map = m => Object.fromEntries(m.map(({ pattern, value }) => [pattern, value]))
+//             // consonants
+//             { pattern: 'ng', value: "ŋ" },
+//             { pattern: 'y', value: "j" },
+//             { pattern: "gy", value: "c"},
+//             { pattern: "ky", value: "c"},
+//             { pattern: "'", value: "ʔ" },
+//             { pattern: "nd", value: "ⁿd" },
+//             { pattern: "mb", value: "ᵐb" },
+//             { pattern: "ts", value: "t͡s" },
 
-    for(let i = 0; i < r.length; i++){
-        result = result.replace(new RegExp(Object.keys(map(r[i])).join("|"), "g"), match => map(r[i])[match] || match)
+//             // vowels
+//             { pattern: 'a', value: "a." },
+//             { pattern: 'e', value: "e." },
+//             { pattern: 'i', value: "i." },
+//             { pattern: 'o', value: "o." },
+//             { pattern: 'u', value: "u." },
+//             { pattern: 'á', value: "aː." },
+//             { pattern: 'é', value: "eː." },
+//             { pattern: 'í', value: "iː." },
+//             { pattern: 'ó', value: "oː." },
+//             { pattern: 'ú', value: "uː." },
+//             { pattern: 'är', value: "ɑː." },
+//             { pattern: 'ä', value: "ɑ." },
+//             { pattern: 'ë', value: "ə." },
+//             { pattern: 'ü', value: "y." },
+//         ],
+//         [
+//             { pattern: ". ", value: " "},
+//             { pattern: "a.o", value: "ao̯"},
+//             { pattern: "e.o", value: "eo̯"},
+//         ]
+//     ]
+
+//     let result = s;
+//     const map = m => Object.fromEntries(m.map(({ pattern, value }) => [pattern, value]))
+
+//     for(let i = 0; i < r.length; i++){
+//         result = result.replace(new RegExp(Object.keys(map(r[i])).join("|"), "g"), match => map(r[i])[match] || match)
+//     }
+
+//     result = result.split(" ")
+//     result.forEach((index, i) => {
+//         if(result[i][result[i].length - 1] == ".") {
+//             result[i] = result[i].substring(0, result[i].length - 1)
+//         }
+//     });
+
+//     const V = "aeiouːɑəy";
+//     const C = "bdfghklmnpstvwjcŋʔ";
+
+//     result.forEach((index, i) => {            
+//         // fix delimited syllable boundaries 
+//         result[i] = index.replaceAll(new RegExp(`([${C+V}]ː?)(\.)([${C}])(‿)`, "g"), "$1$3$4")   
+
+//         // fix non-delimited syllable boundaries
+//         result[i] = result[i].replaceAll(new RegExp(`([${C+V}]ː?)(\.)([${C}])$`, "g"), "$1$3") 
+
+//         // fix nasal syllable boundaries le.ŋki -> leŋ.ki
+//         result[i] = result[i].replaceAll(new RegExp(`(\.)([mnŋ])([${C}])`, "g"), "$2.$3")
+
+//         // fix w/l syllable boundaries
+//         result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])([${C}])`, "g"), "$2.$3")
+//         result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])$`, "g"), "$2")
+
+//         // fix s syllable boundaries
+//         result[i] = result[i].replaceAll(new RegExp(`([${V}])\.s$`, "g"), "$1s.")
+//         result[i] = result[i].replaceAll(new RegExp(`([${V}]).s‿`, "g"), "$1s‿")
+
+//         // fix .m.b and .n.d
+//         result[i] = result[i].replaceAll(".m.b", "m.b")
+//         result[i] = result[i].replaceAll(".n.d", "n.d")
+
+//         // fix velar prenasalized syllable boundaries
+//         //result[i] = result[i].replaceAll(new RegExp(`\.ŋg`, "g"), "ᵑg\.");
+//     })
+
+//     result = result.join(" ")
+
+//     result = result
+//     .replaceAll("n", "n̪")
+//     .replaceAll("g", "ɡ")
+//     .replaceAll("./","/")
+//     .replaceAll(".​", "")
+//     .replaceAll(". ", " ")
+//     .replaceAll("‿", ".")
+//     .replaceAll(/\.$/g, "")
+
+//     return "[" + result + "]";
+// }
+
+function normalize(str) {
+    return str.normalize("NFC");
+}
+
+function applyRules(str, rules) {
+    for (const { re, to } of rules) {
+        str = str.replace(re, to);
+    }
+    return str;
+}
+
+const ORTHO_RULES = [
+    // multigraphs first
+    { re: /mbb/g, to: "M" }, // m.b
+    { re: /ndd/g, to: "N" }, // n.d
+    { re: /ng/g, to: "ŋ" },
+    { re: /gy|ky/g, to: "c" },
+    { re: /ts/g, to: "S" }, // t͡s
+    { re: /y/g, to: "j" },
+
+    // prenasalization
+    { re: /nd/g, to: "D" }, // ⁿd
+    { re: /mb/g, to: "B" }, // ᵐb
+    { re: /ngg/g, to: "G" }, // ᵑg
+
+    // glottal
+    { re: /'/g, to: "ʔ" },
+
+    // vowels
+    { re: /a/g, to: "a" },
+    { re: /e/g, to: "e" },
+    { re: /i/g, to: "i" },
+    { re: /o/g, to: "o" },
+    { re: /u/g, to: "u" },
+    { re: /á/g, to: "A" }, // aː
+    { re: /é/g, to: "E" }, // eː
+    { re: /í/g, to: "I" }, // iː
+    { re: /ó/g, to: "O" }, // oː
+    { re: /ú/g, to: "U" }, // uː
+
+    { re: /ä/g, to: "ɑ" },
+    { re: /ë/g, to: "ə" },
+    { re: /ü/g, to: "y" },
+    { re: /är/g, to: "Q" }, // ɑː
+
+    { re: /\.\./g, to: "." },
+];
+
+const remap = [
+    { re: /A/g, to: "aː" },
+    { re: /E/g, to: "eː" },
+    { re: /I/g, to: "iː" },
+    { re: /O/g, to: "oː" },
+    { re: /U/g, to: "uː" },
+    { re: /Q/g, to: "ɑː" },
+    { re: /B/g, to: "ᵐb" },
+    { re: /D/g, to: "ⁿd" },
+    { re: /G/g, to: "ᵑg" },
+    { re: /S/g, to: "t͡s" },
+    { re: /M/g, to: "m.b" },
+    { re: /N/g, to: "n.d" },
+]
+
+const GROUPS = {
+    "V": "aeiouɑəyAEIOUQ",
+    "C": "bdfghklmnpstvwjcŋʔMNSBDG",
+    "N": "mnŋ",
+};
+
+const SYLLABLES = [
+    "(C)V(S)",
+    "(C)V(N)",
+    "(C)V(G)",
+    "(C)V",
+];
+
+function syllabifyWord(word, groups, templates) {
+    const compiled = templates
+        .map(t => compileTemplate(t, groups))
+        .sort((a, b) => b.source.length - a.source.length);
+
+    let out = [];
+    let i = 0;
+
+    while (i < word.length) {
+        let slice = word.slice(i);
+        let matched = false;
+
+        for (const re of compiled) {
+            const m = slice.match(re);
+            if (m) {
+                out.push(m[0]);
+                i += m[0].length;
+                matched = true;
+                break;
+            }
+        }
+
+        if (!matched) {
+            // fallback: consume one char to avoid infinite loop
+            out.push(word[i]);
+            i++;
+        }
     }
 
-    result = result.split(" ")
-    result.forEach((index, i) => {
-        if(result[i][result[i].length - 1] == ".") {
-            result[i] = result[i].substring(0, result[i].length - 1)
+    return out.join(".");
+}
+
+const IPA_FIXES = [
+    { re: /n/g, to: "n̪" },
+    { re: /ŋ.g/g, to: "ᵑg" },
+
+    { re: /g/g, to: "ɡ" },
+    { re: /ao/g, to: "ao̯" },
+    { re: /eo/g, to: "eo̯" },
+];
+
+function compileTemplate(tpl, groups) {
+    let re = "^";
+
+    for (let i = 0; i < tpl.length; i++) {
+        const ch = tpl[i];
+
+        if (groups[ch]) {
+            re += `[${groups[ch]}]`;
+        } else if (ch === "(") {
+            re += "(?:";
+        } else if (ch === ")") {
+            re += ")?";
         }
-    });
+    }
 
-    const V = "aeiouːɑəy";
-    const C = "bdfghklmnpstvwjcŋʔ";
+    return new RegExp(re);
+}
 
-    result.forEach((index, i) => {            
-        // fix delimited syllable boundaries 
-        result[i] = index.replaceAll(new RegExp(`([${C+V}]ː?)(\.)([${C}])(‿)`, "g"), "$1$3$4")   
 
-        // fix non-delimited syllable boundaries
-        result[i] = result[i].replaceAll(new RegExp(`([${C+V}]ː?)(\.)([${C}])$`, "g"), "$1$3") 
+function ipa(input) {
+    let s = normalize(ortho(input));
 
-        // fix nasal syllable boundaries le.ŋki -> leŋ.ki
-        result[i] = result[i].replaceAll(new RegExp(`(\.)([mnŋ])([${C}])`, "g"), "$2.$3")
+    s = s.replaceAll("z", ".");
+    s = s.replaceAll("c", ".");
+    s = s.replaceAll("ə", ".");
+    s = s.replaceAll("ā", "a.");
 
-        // fix w/l syllable boundaries
-        result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])([${C}])`, "g"), "$2.$3")
-        result[i] = result[i].replaceAll(new RegExp(`(\.)([wl])$`, "g"), "$2")
+    s = applyRules(s, ORTHO_RULES);
 
-        // fix s syllable boundaries
-        result[i] = result[i].replaceAll(new RegExp(`([${V}])\.s$`, "g"), "$1s.")
-        result[i] = result[i].replaceAll(new RegExp(`([${V}]).s‿`, "g"), "$1s‿")
+    s = s
+        .split(" ")
+        .map(s => syllabifyWord(s, GROUPS, SYLLABLES))
+        .join(" ");
+    
+    s = s.replaceAll(/([mnŋ])\.([aeiouɑəy])/g, ".$1$2");
+    s = s.replaceAll(/\.([MN])/g, "$1");
+    s = applyRules(s, IPA_FIXES);
 
-        // fix .m.b and .n.d
-        result[i] = result[i].replaceAll(".m.b", "m.b")
-        result[i] = result[i].replaceAll(".n.d", "n.d")
+    s = s.replaceAll("...", ".");
 
-        // fix velar prenasalized syllable boundaries
-        //result[i] = result[i].replaceAll(new RegExp(`\.ŋg`, "g"), "ᵑg\.");
-    })
+    s = applyRules(s, remap);
 
-    result = result.join(" ")
-
-    result = result
-    .replaceAll("n", "n̪")
-    .replaceAll("g", "ɡ")
-    .replaceAll("./","/")
-    .replaceAll(".​", "")
-    .replaceAll(". ", " ")
-    .replaceAll("‿", ".")
-    .replaceAll(/\.$/g, "")
-
-    return "[" + result + "]";
+    return `[${s}]`;
 }
 
 export class Writer {

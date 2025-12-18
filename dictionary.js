@@ -222,7 +222,7 @@ dict.addWord("Demonstratives",
     new Word("this (cannibal)", "nunga"),
     new Word("this (direction)", "nata"),
     new Word("this (object)", "ilu"),
-    new Word("this (reflexive object)", "ilo"),
+    new Word("this (reflexive)", "ilo"),
     new Word("this (place)", "lulu'i"),
 
     // Medials
@@ -231,7 +231,7 @@ dict.addWord("Demonstratives",
     new Word("that (cannibal)", "yonga"),
     new Word("that (direction)", "yata"),
     new Word("that (object)", "inu"),
-    new Word("that (reflexive object)", "ino"),
+    new Word("that (reflexive)", "ino"),
     new Word("that (place)", "lu'i"),
 
     // Distals
@@ -240,7 +240,7 @@ dict.addWord("Demonstratives",
     new Word("that over there (cannibal)", "honga"),
     new Word("that over there (direction)", "hata"),
     new Word("that over there (object)", "ano"),
-    new Word("that over there (reflexive object)", "ano"),
+    new Word("that over there (reflexive)", "ano"),
     new Word("that over there (place)", "nu'i"),
 )
 
@@ -260,25 +260,34 @@ function ortho(s){
         if(s[i] == "-"){
             let left = s[i-1]
             let right = s[i+1]
-            
-            // C-C = ə
+
+            // a-C = ā
             // P-C = ə
-            // V-V = c
             // V-C1 = z
             // V-D = c
             // V-A = z
-            // a-C = ā
+            // C-C = ə
+            // V-V = c
+
 
             if(left == "a" && C.includes(right)) {
                 s = s.substring(0, i) + "ā" + s.substring(i+1)
+                continue
+            }
+            if(P.includes(left) && C.includes(right)) {
+                s = s.substring(0, i) + "ə" + s.substring(i+1)
+                continue
+            }
+            if(V.includes(left) && C1.includes(right)) {
+                s = s.substring(0, i) + "z" + s.substring(i+1)
                 continue
             }
             if(V.includes(left) && D.includes(right)) {
                 s = s.substring(0, i) + "c" + s.substring(i+1)
                 continue
             }
-            if(P.includes(left) && C.includes(right)) {
-                s = s.substring(0, i) + "ə" + s.substring(i+1)
+            if(V.includes(left) && A.includes(right)) {
+                s = s.substring(0, i) + "z" + s.substring(i+1)
                 continue
             }
             if(C.includes(left) && C.includes(right)) {
@@ -289,14 +298,31 @@ function ortho(s){
                 s = s.substring(0, i) + "c" + s.substring(i+1)
                 continue
             }
-            if(V.includes(left) && C1.includes(right)) {
-                s = s.substring(0, i) + "z" + s.substring(i+1)
-                continue
-            }
-            if(V.includes(left) && A.includes(right)) {
-                s = s.substring(0, i) + "z" + s.substring(i+1)
-                continue
-            }
+
+            // if(V.includes(left) && D.includes(right)) {
+            //     s = s.substring(0, i) + "c" + s.substring(i+1)
+            //     continue
+            // }
+            // if(P.includes(left) && C.includes(right)) {
+            //     s = s.substring(0, i) + "ə" + s.substring(i+1)
+            //     continue
+            // }
+            // if(C.includes(left) && C.includes(right)) {
+            //     s = s.substring(0, i) + "ə" + s.substring(i+1)
+            //     continue
+            // }
+            // if(V.includes(left) && V.includes(right)) {
+            //     s = s.substring(0, i) + "c" + s.substring(i+1)
+            //     continue
+            // }
+            // if(V.includes(left) && C1.includes(right)) {
+            //     s = s.substring(0, i) + "z" + s.substring(i+1)
+            //     continue
+            // }
+            // if(V.includes(left) && A.includes(right)) {
+            //     s = s.substring(0, i) + "z" + s.substring(i+1)
+            //     continue
+            // }
         }
     }
 
