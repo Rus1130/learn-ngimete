@@ -45,6 +45,7 @@
 </head>
 <body>
     <div class="table-container">
+        <div>
         <table id="sound-qualities-table" class="quality-table">
             <tr>
                 <th>Sound</th>
@@ -53,6 +54,68 @@
                 <th>Affinity</th>
             </tr>
         </table>
+        <table class="quality-table">
+            <tr>
+                <th colspan="4">Quality Diagram Legend</th>
+            </tr>
+            <tr>
+                <td><b>F</b></td>
+                <td>Fire</td>
+                <td><b>W</b></td>
+                <td>Water</td>
+            </tr>
+            <tr>
+                <td><b>E</b></td>
+                <td>Earth</td>
+                <td><b>M</b></td>
+                <td>Metal</td>
+            </tr>
+            <tr> 
+                <td><b>!</b></td>
+                <td>Strong</td>
+                <td><b>~</b></td>
+                <td>Weak</td>
+            </tr>
+            <tr>
+                <td><b>=</b></td>
+                <td>Balanced</td>
+                <td><b>0</b></td>
+                <td>No Influence</td>
+            </tr>
+            <tr>
+                <td>P<b>&lt;</b>S</td>
+                <td colspan="3">Primary Affinity with Secondary Influence</td>
+            </tr>
+        </table>
+        <table id="diagram" class="quality-table">
+            <!-- Top axis label -->
+            <tr>
+                <th rowspan="2" colspan="2" style="text-align:center;">element (σ)</th>
+                <th colspan="2">Form (μ)</th>
+            </tr>
+
+            <!-- Column descriptors -->
+            <tr>
+                <th>negative</th>
+                <th>positive</th>
+            </tr>
+
+            <!-- Row A -->
+            <tr>
+                <th rowspan="2">sharpness (α)</th>
+                <th>negative</th>
+                <td id="cell-a-a">water</td>
+                <td id="cell-a-b">earth</td>
+            </tr>
+
+            <!-- Row B -->
+            <tr>
+                <th>positive</th>
+                <td id="cell-b-a">fire</td>
+                <td id="cell-b-b">metal</td>
+            </tr>
+        </table>
+        </div>
         <table id="word-quality-table" class="quality-table">
             <tr>
                 <th>Word</th>
