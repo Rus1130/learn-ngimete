@@ -532,8 +532,8 @@ const IPA_FIXES = [
     //{ re: /ŋ.g/g, to: ".ᵑg" },
 
     { re: /g/g, to: "ɡ" },
-    { re: /a.o/g, to: "ao̯" },
-    { re: /e.o/g, to: "eo̯" },
+    { re: /a\.o/g, to: "ao̯" },
+    { re: /e\.o/g, to: "eo̯" },
 ];
 
 function compileTemplate(tpl, groups) {
@@ -573,31 +573,36 @@ function ipa(input) {
         .map(s => syllabifyWord(s, GROUPS, SYLLABLES))
         .join(" ");
     
-    s = s.replaceAll(/([mnŋ])\.([aeiouɑəyAEIOUQ])/g, ".$1$2");
-    s = s.replaceAll(/(\.?)f\.w/g, "$1fw");
-    s = s.replaceAll(/\.([MN])/g, "$1");
-    s = s.replaceAll(
+    s = s
+        .replaceAll(/([mnŋ])\.([aeiouɑəyAEIOUQ])/g, ".$1$2")
+        .replaceAll(/(\.?)f\.w/g, "$1fw")
+        .replaceAll(/\.([MN])/g, "$1")
+        .replaceAll(
         /([bdfghklmnpstvwjcŋʔMNSBDG])([aeiouɑəyAEIOUQ])\.s(?=[^aeiouɑəyAEIOUQ]|$)/g,
         "$1$2s"
-    );
+    )
     s = applyRules(s, IPA_FIXES);
 
-    s = s.replaceAll("...", ".");
-    s = s.replaceAll(" ..", ".");
+    s = s
+        .replaceAll("...", ".")
+        .replaceAll(" ..", ".");
 
     s = applyRules(s, remap);
     
-    s = s.replaceAll("ɑ.r", "ɑː");
-
-    s = s.replaceAll(".|.|", " || ")
-    s = s.replaceAll(".|", " | ")
+    s = s
+        .replaceAll("ɑ.r", "ɑː")
+        .replaceAll(".|.|", " || ")
+        .replaceAll(".|", " | ")
 
 
     let result = `[${s}]`
 
 
-    result = result.replaceAll(" || ]", "]")
-    result = result.replaceAll(" | ]", "]")
+    result = result
+        .replaceAll(" || ]", "]")
+        .replaceAll(" | ]", "]")
+        .replaceAll(" ||  ", " || ")
+        .replaceAll(" |  ", " | ")
 
 
     return result;
@@ -605,18 +610,23 @@ function ipa(input) {
 
 export class Writer {
     constructor(text){
-        this.text = text
+        this.text = text.trim();
     }
 
     ipa(){
-        return this.text.split("\n").map(ipa).join("\n")
+        return this.text.split("\n").map(ipa).join("\n").replaceAll("[]", "\n")
     }
 
     ortho(){
         return ortho(this.text)
     }
 
-    both(){
+    both(alternateMode = false){
+        if(alternateMode){
+            return this.text.split("\n").map(line => {
+                return `${ortho(line)}\n${ipa(line).replaceAll("[]", "")}`
+            }).join("\n")
+        }
         return `${this.ortho()}\n${this.ipa()}`
     }
 }

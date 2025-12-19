@@ -330,6 +330,10 @@ window.addEventListener("click", (e) => {
     }
 });
 
+input.addEventListener("keydown", (e) => {
+    if(e.key === "Enter") e.preventDefault();
+});
+
 // --- Initial Load ---
 generateCategoryCheckboxes();
 setTimeout(() => {
