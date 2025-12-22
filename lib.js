@@ -434,7 +434,6 @@ const ORTHO_RULES = [
     // multigraphs first
     { re: /mbb/g, to: "M" }, // m.b
     { re: /ndd/g, to: "N" }, // n.d
-    { re: /ng/g, to: "ŋ" },
     { re: /gy|ky/g, to: "c" },
     { re: /ts/g, to: "S" }, // t͡s
     { re: /y/g, to: "j" },
@@ -443,6 +442,7 @@ const ORTHO_RULES = [
     { re: /nd/g, to: "D" }, // ⁿd
     { re: /mb/g, to: "B" }, // ᵐb
     { re: /ngg/g, to: "G" }, // ᵑg
+    { re: /ng/g, to: "ŋ" },
 
     // glottal
     { re: /'/g, to: "ʔ" },
@@ -476,7 +476,7 @@ const remap = [
     { re: /Q/g, to: "ɑː" },
     { re: /B/g, to: "ᵐb" },
     { re: /D/g, to: "ⁿd" },
-    { re: /G/g, to: "ᵑg" },
+    { re: /G/g, to: "ᵑɡ" },
     { re: /S/g, to: "t͡s" },
     { re: /M/g, to: "m.b" },
     { re: /N/g, to: "n.d" },
@@ -492,7 +492,6 @@ const GROUPS = {
 const SYLLABLES = [
     "214",
     "(2)1(3)",
-    "(2)1(4)",
     "(2)1",
 ];
 
@@ -530,11 +529,11 @@ function syllabifyWord(word, groups, templates) {
 
 const IPA_FIXES = [
     { re: /n/g, to: "n̪" },
-    { re: /ŋ.g/g, to: "ᵑg" },
+    //{ re: /ŋ.g/g, to: ".ᵑg" },
 
     { re: /g/g, to: "ɡ" },
-    { re: /ao/g, to: "ao̯" },
-    { re: /eo/g, to: "eo̯" },
+    { re: /a\.o/g, to: "ao̯" },
+    { re: /e\.o/g, to: "eo̯" },
 ];
 
 function compileTemplate(tpl, groups) {
@@ -559,6 +558,9 @@ function compileTemplate(tpl, groups) {
 function ipa(input) {
     let s = normalize(ortho(input));
 
+    s = s.replaceAll(".", "||");
+    s = s.replaceAll(",", "|");
+
     s = s.replaceAll("z", ".");
     s = s.replaceAll("c", ".");
     s = s.replaceAll("ə", ".");
@@ -571,34 +573,61 @@ function ipa(input) {
         .map(s => syllabifyWord(s, GROUPS, SYLLABLES))
         .join(" ");
     
-    s = s.replaceAll(/([mnŋ])\.([aeiouɑəyAEIOUQ])/g, ".$1$2");
-    s = s.replaceAll(/.f.w/g, ".fw");
-    s = s.replaceAll(/\.([MN])/g, "$1");
-    s = s.replaceAll(/([bdfghklmnpstvwjcŋʔMNSBDG])([aeiouɑəyAEIOUQ]).s[^aeiouɑəyAEIOUQ]/g, "$1$2s ")
+    s = s
+        .replaceAll(/([mnŋ])\.([aeiouɑəyAEIOUQ])/g, ".$1$2")
+        .replaceAll(/(\.?)f\.w/g, "$1fw")
+        .replaceAll(/\.([MN])/g, "$1")
+        .replaceAll(
+        /([bdfghklmnpstvwjcŋʔMNSBDG])([aeiouɑəyAEIOUQ])\.s(?=[^aeiouɑəyAEIOUQ]|$)/g,
+        "$1$2s"
+    )
     s = applyRules(s, IPA_FIXES);
 
-    s = s.replaceAll("...", ".");
+    s = s
+        .replaceAll("...", ".")
+        .replaceAll(" ..", ".");
 
     s = applyRules(s, remap);
+    
+    s = s
+        .replaceAll("ɑ.r", "ɑː")
+        .replaceAll(".|.|", " || ")
+        .replaceAll(".|", " | ")
 
-    return `[${s}]`;
+
+    let result = `[${s}]`
+
+
+    result = result
+        .replaceAll(" || ]", "]")
+        .replaceAll(" | ]", "]")
+        .replaceAll(" ||  ", " || ")
+        .replaceAll(" |  ", " | ")
+
+
+    return result;
 }
 
 export class Writer {
     constructor(text){
-        this.text = text
+        this.text = text.trim();
     }
 
     ipa(){
-        return ipa(this.text)
+        return this.text.split("\n").map(ipa).join("\n").replaceAll("[]", "\n")
     }
 
     ortho(){
         return ortho(this.text)
     }
 
-    both(){
-        return ortho(this.text) + "\n" + ipa(this.text);
+    both(alternateMode = false){
+        if(alternateMode){
+            return this.text.split("\n").map(line => {
+                return `${ortho(line)}\n${ipa(line).replaceAll("[]", "")}`
+            }).join("\n")
+        }
+        return `${this.ortho()}\n${this.ipa()}`
     }
 }
 

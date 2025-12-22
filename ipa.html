@@ -2,7 +2,6 @@
     textarea {
         resize: none;
     }
-
     textarea:focus {
         outline: none;
     }
@@ -37,10 +36,10 @@
     <button id="both" style="padding: 10px;">copy both</button>
     <button id="ortho" style="padding: 10px;">copy ortho</button>
     <button id="ipa" style="padding: 10px;">copy IPA</button>
-    <!-- <label for="lineup">
-        <input type="checkbox" id="lineup" checked>
-        Line Up
-    </label> -->
+    <label for="alternate-mode">
+        <input type="checkbox" id="alternate-mode" checked>
+        Alternate lines
+    </label>
 </body>
 <script type="module">
 import { Writer } from './lib.js';
@@ -51,16 +50,19 @@ const output = document.getElementById("out");
 const bothButton = document.getElementById("both");
 const orthoButton = document.getElementById("ortho");
 const ipaButton = document.getElementById("ipa");
-// const lineUpCheckbox = document.getElementById("lineup");
+const alternateModeCheckbox = document.getElementById("alternate-mode");
 
 function setOutputText(text) {
     output.value = text;
 
-    // Reset height to auto to recalc
     output.style.height = "auto";
 
-    // Set height to scrollHeight to fit content
     output.style.height = output.scrollHeight + "px";
+}
+
+function setInputHeight(){
+    input.style.height = "auto";
+    input.style.height = input.scrollHeight + "px";
 }
 
 function updateOutput() {
@@ -71,20 +73,20 @@ function updateOutput() {
     }
 
     const w = new Writer(value);
-    let text = w.both();
+    let text = w.both(alternateModeCheckbox.checked);
     
     setOutputText(text);
 }
 
-
+input.addEventListener("input", setInputHeight);
 input.addEventListener("input", updateOutput);
-// lineUpCheckbox.addEventListener("change", updateOutput);
+alternateModeCheckbox.addEventListener("change", updateOutput);
 
 bothButton.addEventListener("click", () => {
     const value = input.value;
     if (!value) return;
 
-    navigator.clipboard.writeText(new Writer(value).both());
+    navigator.clipboard.writeText(new Writer(value).both(alternateModeCheckbox.checked));
     bothButton.innerText = "copied!";
     setTimeout(() => bothButton.innerText = "copy both", 2000);
 });
