@@ -217,18 +217,18 @@ export class Dictionary {
                     `d=${dialect}`
                 ]
                 let elem = element;
-                elem.src = `https://rus1130.github.io/learn-ngimete/dictionary.html?${urlParams.join("&")}`;
+                elem.src = `https://rus1130.github.io/ngimete/dictionary.html?${urlParams.join("&")}`;
                 elem.style.height = height;
                 elem.style.width = width;
                 elem.style.border = "none";
             break;
             case "window":
                 // open it in a new window
-                window.open(`https://rus1130.github.io/learn-ngimete/dictionary.html?b=false`, "_blank", `height=${width},width=${width}`);
+                window.open(`https://rus1130.github.io/ngimete/dictionary.html?b=false`, "_blank", `height=${width},width=${width}`);
             break;
             default:
             case "tab":
-                window.open("https://rus1130.github.io/learn-ngimete/dictionary.html");
+                window.open("https://rus1130.github.io/ngimete/dictionary.html");
             break;
 
         }

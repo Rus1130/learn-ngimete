@@ -244,7 +244,7 @@ dict.addWord("Demonstratives",
     new Word("that over there (place)", "nu'i"),
 )
 
-dict.bulkAddFromUrl(`https://rus1130.github.io/learn-ngimete/words.txt`, "\n", "\t", "/");
+dict.bulkAddFromUrl(`https://rus1130.github.io/ngimete/words.txt`, "\n", "\t", "/");
 
 function ortho(s){
     const V = ["a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú", "ä", "ë", "ü"]
